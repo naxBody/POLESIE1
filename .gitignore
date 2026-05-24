@@ -1,53 +1,57 @@
-# Examples
-*.pyc
+```
+# Python
 __pycache__/
-*.log
-*.tmp
-*.swp
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ENV
 .env
-.env.local
-.env.
-.vscode/
-.idea/
-dist/
-build/
-target/
-node_modules/
+.env.*
 .venv/
 venv/
-.mypy_cache/
-.pytest_cache/
+ENV/
+env.bak/
+.venv.bak/
+
+# Generated SQL files
+polesie/sql/*.sql
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# Coverage reports
 coverage/
 htmlcov/
 .coverage
-.gradle/
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
-.DS_Store
-Thumbs.db
-*.class
-*.exe
-*.dll
-*.so
-*.a
-*.out
+*.coverage
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# MyPy cache
+.mypy_cache/
+# Pytest cache
+.pytest_cache/
+```

@@ -1,8 +1,9 @@
 -- ============================================
 -- БАЗА ДАННЫХ СИСТЕМЫ УПРАВЛЕНИЯ ПРОИЗВОДСТВОМ
 -- ОАО "Полесьеэлектромаш" (Беларусь)
--- ОПТИМИЗИРОВАННАЯ ВЕРСИЯ (17 таблиц)
--- Удалены: production_stages, notifications, activity_log, warehouse_transactions
+-- ОПТИМИЗИРОВАННАЯ ВЕРСИЯ (20 таблиц)
+-- Удалены: production_stages, notifications, activity_log, warehouse_transactions, passport_templates
+-- Добавлены: material_categories, materials (для миграции из JSON)
 -- ============================================
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -398,17 +399,52 @@ CREATE TABLE `product_documents` (
   INDEX `idx_type` (`document_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Шаблоны разделов паспорта изделия
-CREATE TABLE `passport_templates` (
+-- ============================================
+-- ТАБЛИЦЫ ДЛЯ МАТЕРИАЛОВ (2 таблицы)
+-- Добавлены для миграции данных из JSON
+-- ============================================
+
+-- Категории материалов
+CREATE TABLE `material_categories` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `section_key` VARCHAR(50) NOT NULL COMMENT 'Уникальный ключ раздела (например: header, specs, safety)',
-  `title` VARCHAR(255) NOT NULL COMMENT 'Заголовок раздела',
-  `content_template` TEXT COMMENT 'Шаблон содержимого (может содержать HTML)',
-  `sort_order` INT DEFAULT 0 COMMENT 'Порядок отображения',
-  `is_active` BOOLEAN DEFAULT 1 COMMENT 'Показывать ли раздел',
-  `custom_fields` JSON DEFAULT NULL COMMENT 'Дополнительные настройки (шрифт, отступы и т.д.)',
-  UNIQUE KEY `unique_section` (`section_key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Шаблоны разделов паспорта изделия';
+  `code` VARCHAR(50) UNIQUE,
+  `name` VARCHAR(200) NOT NULL,
+  `parent_id` INT DEFAULT NULL,
+  `level` INT DEFAULT 1,
+  `description` TEXT,
+  `is_active` BOOLEAN DEFAULT TRUE,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (`parent_id`) REFERENCES `material_categories`(`id`) ON DELETE SET NULL,
+  INDEX `idx_code` (`code`),
+  INDEX `idx_parent` (`parent_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Категории и подкатегории материалов';
+
+-- Материалы и сырьё (расширенный справочник)
+CREATE TABLE `materials` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `code` VARCHAR(50) NOT NULL UNIQUE,
+  `name_full` VARCHAR(500) NOT NULL,
+  `name_short` VARCHAR(200),
+  `category_id` INT,
+  `base_unit_id` INT,
+  `specifications` JSON,
+  `current_stock` DECIMAL(15,3) DEFAULT 0.00,
+  `min_stock` DECIMAL(15,3) DEFAULT 0.00,
+  `location` VARCHAR(100),
+  `supplier_id` INT,
+  `last_price` DECIMAL(15,2),
+  `currency` CHAR(3) DEFAULT 'BYN',
+  `is_active` BOOLEAN DEFAULT TRUE,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (`category_id`) REFERENCES `material_categories`(`id`) ON DELETE SET NULL,
+  FOREIGN KEY (`base_unit_id`) REFERENCES `units`(`id`) ON DELETE SET NULL,
+  FOREIGN KEY (`supplier_id`) REFERENCES `contractors`(`id`) ON DELETE SET NULL,
+  INDEX `idx_code` (`code`),
+  INDEX `idx_category` (`category_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Справочник материалов и сырья';
 
 -- ============================================
 -- НАЧАЛЬНЫЕ ДАННЫЕ
@@ -479,16 +515,5 @@ INSERT INTO `system_settings` (`setting_key`, `setting_value`, `setting_type`, `
 ('timezone', 'Europe/Minsk', 'string', 'Часовой пояс'),
 ('language', 'ru', 'string', 'Язык интерфейса'),
 ('items_per_page', '20', 'integer', 'Количество записей на странице');
-
--- Шаблоны паспорта изделия
-INSERT INTO `passport_templates` (`section_key`, `title`, `content_template`, `sort_order`, `is_active`) VALUES
-('header', 'ПАСПОРТ', '<h2 style="text-align: center;">{product_name}</h2><p style="text-align: center;">Паспорт изделия</p>', 1, 1),
-('manufacturer', 'СВЕДЕНИЯ ОБ ИЗГОТОВИТЕЛЕ', '<p><strong>Изготовитель:</strong> {org_name}</p><p><strong>Адрес:</strong> {org_address}</p><p><strong>Телефон:</strong> {org_phone}</p><p><strong>Email:</strong> {org_email}</p>', 2, 1),
-('basic_info', 'ОСНОВНЫЕ СВЕДЕНИЯ ОБ ИЗДЕЛИИ', '<p><strong>Наименование:</strong> {product_name}</p><p><strong>Модель:</strong> {product_model}</p><p><strong>Заводской номер:</strong> {serial_number}</p><p><strong>Дата изготовления:</strong> {manufacture_date}</p>', 3, 1),
-('specs', 'ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ', '<table border="1" cellpadding="5" cellspacing="0" width="100%"><tr><th>Параметр</th><th>Значение</th></tr>{specs_rows}</table>', 4, 1),
-('warranty', 'ГАРАНТИЙНЫЕ ОБЯЗАТЕЛЬСТВА', '<p>Гарантийный срок эксплуатации: <strong>{warranty_period}</strong> мес.</p><p>Гарантия действительна при соблюдении правил эксплуатации.</p><p>Дата начала гарантии: {warranty_start}</p><p>Дата окончания гарантии: {warranty_end}</p>', 5, 1),
-('safety', 'ТРЕБОВАНИЯ БЕЗОПАСНОСТИ', '<ul><li>К работе допускаются лица, изучившие инструкцию.</li><li>Запрещается эксплуатация неисправного изделия.</li><li>Регулярно проводите техническое обслуживание.</li></ul>', 6, 1),
-('storage', 'УСЛОВИЯ ХРАНЕНИЯ И ТРАНСПОРТИРОВКИ', '<p>Изделие должно храниться в сухих помещениях при температуре от -20 до +40°C.</p><p>Транспортировка допускается любым видом крытого транспорта.</p>', 7, 1),
-('acceptance', 'СВИДЕТЕЛЬСТВО О ПРИЕМКЕ', '<p>Изделие {product_name} заводской номер {serial_number} изготовлено и принято в соответствии с обязательными требованиями государственных стандартов, действующей технической документацией и признано годным для эксплуатации.</p><p><strong>Ответственное лицо:</strong> _________________ / М.П.</p>', 8, 1);
 
 COMMIT;

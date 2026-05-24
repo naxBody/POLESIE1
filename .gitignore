@@ -2,19 +2,17 @@
 # Compiled and build artifacts
 *.pyc
 __pycache__/
-*.o
-*.obj
-dist/
-build/
-target/
 
 # Dependencies
 .venv/
 venv/
 node_modules/
-.julia/
-zig-cache/
-.deps/
+dist/
+build/
+target/
+.gradle/
+.mypy_cache/
+.pytest_cache/
 
 # Logs and temp files
 *.log
@@ -30,21 +28,17 @@ zig-cache/
 # Editors
 .vscode/
 .idea/
-*.swp
-*.swo
 
-# OS specific
+# System files
 .DS_Store
 Thumbs.db
 
-# Testing and coverage
-.coverage
+# Coverage
 coverage/
 htmlcov/
-.pytest_cache/
-.mypy_cache/
+.coverage
 
-# Archives and compressed files
+# Compressed files
 *.zip
 *.gz
 *.tar

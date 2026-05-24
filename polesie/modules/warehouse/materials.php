@@ -29,9 +29,9 @@ $availableCombinations = []; // Доступные комбинации свой
 // Получение остатков из базы данных
 $warehouseQuantities = [];
 try {
-    $stmt = $pdo->query("SELECT article, current_quantity FROM warehouse_materials WHERE is_active = TRUE");
+    $stmt = $pdo->query("SELECT code, current_stock FROM materials WHERE current_stock IS NOT NULL");
     while ($row = $stmt->fetch()) {
-        $warehouseQuantities[$row['article']] = $row['current_quantity'];
+        $warehouseQuantities[$row['code']] = $row['current_stock'];
     }
 } catch (Exception $e) {
     // Если таблица не существует или ошибка - продолжаем без количеств

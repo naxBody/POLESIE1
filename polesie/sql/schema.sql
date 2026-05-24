@@ -7,7 +7,8 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- Полное удаление всех таблиц
-DROP TABLE IF EXISTS `serial_numbers`;
+DROP TABLE IF EXISTS `product_documents`;
+DROP TABLE IF EXISTS `product_serial_numbers`;
 DROP TABLE IF EXISTS `quality_checks`;
 DROP TABLE IF EXISTS `production_tasks_materials`;
 DROP TABLE IF EXISTS `production_tasks`;
@@ -192,14 +193,40 @@ CREATE TABLE `quality_checks` (
   CONSTRAINT `fk_qc_inspector` FOREIGN KEY (`inspector_id`) REFERENCES `users`(`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 14. СЕРИЙНЫЕ НОМЕРА
-CREATE TABLE `serial_numbers` (
+-- 14. СЕРИЙНЫЕ НОМЕРА ПРОДУКЦИИ
+CREATE TABLE `product_serial_numbers` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `product_id` INT NOT NULL,
   `serial_number` VARCHAR(100) NOT NULL UNIQUE,
   `production_date` DATE,
   `task_id` INT,
   `status` ENUM('active', 'warranty', 'archived') DEFAULT 'active',
-  CONSTRAINT `fk_sn_product` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE CASCADE,
-  CONSTRAINT `fk_sn_task` FOREIGN KEY (`task_id`) REFERENCES `production_tasks`(`id`) ON DELETE SET NULL
+  `warranty_start` DATE,
+  `warranty_end` DATE,
+  `notes` TEXT,
+  `technical_specs` JSON,
+  `passport_data` JSON,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  CONSTRAINT `fk_psn_product` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_psn_task` FOREIGN KEY (`task_id`) REFERENCES `production_tasks`(`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 15. ДОКУМЕНТЫ ПРОДУКЦИИ
+CREATE TABLE `product_documents` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `serial_number_id` INT NOT NULL,
+  `document_type` ENUM('manual', 'certificate', 'test_report', 'warranty_card', 'other') NOT NULL,
+  `file_name` VARCHAR(255) NOT NULL,
+  `file_path` VARCHAR(500) NOT NULL,
+  `file_size` INT,
+  `mime_type` VARCHAR(100),
+  `description` TEXT,
+  `uploaded_by` INT,
+  `uploaded_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT `fk_pd_serial` FOREIGN KEY (`serial_number_id`) REFERENCES `product_serial_numbers`(`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_pd_user` FOREIGN KEY (`uploaded_by`) REFERENCES `users`(`id`) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 16. ДОПОЛНИТЕЛЬНАЯ ТАБЛИЦА (закомментировано, используется product_serial_numbers)
+-- DROP TABLE IF EXISTS `serial_numbers`;

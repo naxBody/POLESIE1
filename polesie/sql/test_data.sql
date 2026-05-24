@@ -6,19 +6,20 @@
 -- 1. ОЧИСТКА ТАБЛИЦ (чтобы избежать дублей при повторном запуске)
 SET FOREIGN_KEY_CHECKS = 0;
 
-TRUNCATE TABLE serial_numbers;
-TRUNCATE TABLE quality_checks;
-TRUNCATE TABLE production_tasks;
-TRUNCATE TABLE order_items;
-TRUNCATE TABLE orders;
-TRUNCATE TABLE products;
-TRUNCATE TABLE materials;
-TRUNCATE TABLE product_categories;
-TRUNCATE TABLE material_categories;
-TRUNCATE TABLE contractors;
-TRUNCATE TABLE base_units;
-TRUNCATE TABLE users;
-TRUNCATE TABLE user_roles;
+DROP TABLE IF EXISTS serial_numbers;
+DROP TABLE IF EXISTS quality_checks;
+DROP TABLE IF EXISTS production_tasks_materials;
+DROP TABLE IF EXISTS production_tasks;
+DROP TABLE IF EXISTS order_items;
+DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS materials;
+DROP TABLE IF EXISTS product_categories;
+DROP TABLE IF EXISTS material_categories;
+DROP TABLE IF EXISTS contractors;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS user_roles;
+DROP TABLE IF EXISTS base_units;
 
 SET FOREIGN_KEY_CHECKS = 1;
 
@@ -41,13 +42,13 @@ INSERT INTO `users` (`username`, `password_hash`, `full_name`, `role_id`, `email
 ('sidorov', '$2y$10$dummyhash...', 'Сидор Сидоров', 4, 'sidorov@polesie.by', 1);
 
 -- Единицы измерения
-INSERT INTO `base_units` (`name`, `code`, `symbol`) VALUES
-('Штука', 'pcs', 'шт'),
-('Килограмм', 'kg', 'кг'),
-('Метр', 'm', 'м'),
-('Тонна', 't', 'т'),
-('Литр', 'l', 'л'),
-('Набор', 'set', 'наб');
+INSERT INTO `base_units` (`name`, `short_name`, `code`, `type`) VALUES
+('Штука', 'шт', 'pcs', 'piece'),
+('Килограмм', 'кг', 'kg', 'weight'),
+('Метр', 'м', 'm', 'length'),
+('Тонна', 'т', 't', 'weight'),
+('Литр', 'л', 'l', 'volume'),
+('Набор', 'наб', 'set', 'piece');
 
 -- Контрагенты (Поставщики и Клиенты)
 INSERT INTO `contractors` (`name`, `inn`, `type`, `contact_person`, `phone`, `email`, `address`) VALUES
@@ -140,13 +141,13 @@ INSERT INTO `products` (`article`, `name`, `category_id`, `base_unit_id`, `speci
 -- ============================================
 
 -- Заказы от клиентов
-INSERT INTO `orders` (`order_number`, `contractor_id`, `status`, `order_date`, `delivery_date`, `total_amount`, `currency`, `notes`) VALUES
-('ORD-2023-001', 4, 'completed', '2023-10-01', '2023-10-10', 1500.00, 'BYN', 'Срочный заказ'),
-('ORD-2023-002', 5, 'processing', '2023-10-05', '2023-10-20', 4500.00, 'BYN', 'Отгрузка частями'),
-('ORD-2023-003', 4, 'new', '2023-10-10', '2023-10-25', 0.00, 'BYN', 'Ожидает подтверждения');
+INSERT INTO `orders` (`order_number`, `customer_id`, `status`, `order_date`, `delivery_date`, `total_amount`, `comment`) VALUES
+('ORD-2023-001', 4, 'completed', '2023-10-01', '2023-10-10', 1500.00, 'Срочный заказ'),
+('ORD-2023-002', 5, 'processing', '2023-10-05', '2023-10-20', 4500.00, 'Отгрузка частями'),
+('ORD-2023-003', 4, 'new', '2023-10-10', '2023-10-25', 0.00, 'Ожидает подтверждения');
 
 -- Позиции заказов
-INSERT INTO `order_items` (`order_id`, `product_id`, `quantity`, `price_at_order`, `total_price`) VALUES
+INSERT INTO `order_items` (`order_id`, `product_id`, `quantity`, `price`, `total`) VALUES
 (1, 1, 2, 250.00, 500.00),
 (1, 4, 1, 780.00, 780.00),
 (1, 11, 1, 250.00, 250.00),
@@ -155,7 +156,7 @@ INSERT INTO `order_items` (`order_id`, `product_id`, `quantity`, `price_at_order
 (3, 2, 5, 320.00, 1600.00);
 
 -- Производственные задания
-INSERT INTO `production_tasks` (`task_number`, `product_id`, `quantity_plan`, `quantity_fact`, `status`, `start_date`, `end_date_plan`, `responsible_user_id`) VALUES
+INSERT INTO `production_tasks` (`task_number`, `product_id`, `quantity_plan`, `quantity_fact`, `status`, `start_date`, `end_date`, `responsible_id`) VALUES
 ('TASK-001', 1, 10, 10, 'completed', '2023-09-20', '2023-09-25', 3),
 ('TASK-002', 2, 5, 5, 'completed', '2023-09-25', '2023-09-30', 3),
 ('TASK-003', 4, 3, 2, 'in_progress', '2023-10-01', '2023-10-10', 3),
@@ -163,19 +164,19 @@ INSERT INTO `production_tasks` (`task_number`, `product_id`, `quantity_plan`, `q
 ('TASK-005', 7, 1, 0, 'planned', '2023-10-20', '2023-10-25', 3);
 
 -- Проверки качества (ОТК)
-INSERT INTO `quality_checks` (`task_id`, `inspector_id`, `check_date`, `result`, `defect_count`, `comments`) VALUES
-(1, 4, '2023-09-25', 'passed', 0, 'Все параметры в норме'),
-(2, 4, '2023-09-30', 'passed', 0, 'Соответствует чертежу'),
-(3, 4, '2023-10-05', 'failed', 1, 'Превышена вибрация на одном двигателе'),
-(3, 4, '2023-10-06', 'passed', 0, 'Дефект устранен, повторная проверка OK'),
-(4, 4, '2023-10-18', 'pending', 0, 'Ожидается сборка'),
-(5, 4, '2023-10-22', 'pending', 0, 'Не начато'),
-(1, 4, '2023-09-24', 'process', 0, 'Промежуточный контроль обмотки');
+INSERT INTO `quality_checks` (`entity_type`, `entity_id`, `inspector_id`, `check_date`, `result`, `defect_description`) VALUES
+('task', 1, 4, '2023-09-25', 'passed', NULL),
+('task', 2, 4, '2023-09-30', 'passed', NULL),
+('task', 3, 4, '2023-10-05', 'failed', 'Превышена вибрация на одном двигателе'),
+('task', 3, 4, '2023-10-06', 'passed', 'Дефект устранен, повторная проверка OK'),
+('task', 4, 4, '2023-10-18', 'passed', NULL),
+('task', 5, 4, '2023-10-22', 'passed', NULL),
+('task', 1, 4, '2023-09-24', 'passed', 'Промежуточный контроль обмотки');
 
 -- Серийные номера
-INSERT INTO `serial_numbers` (`product_id`, `serial_number`, `production_date`, `status`, `order_id`) VALUES
-(1, 'SN-ADM80-230901', '2023-09-20', 'active', 1),
-(1, 'SN-ADM80-230902', '2023-09-20', 'active', 1),
-(2, 'SN-ADM90-230905', '2023-09-25', 'active', NULL),
-(4, 'SN-ADM132-231001', '2023-10-05', 'active', NULL),
-(4, 'SN-ADM132-231002', '2023-10-06', 'active', NULL);
+INSERT INTO `serial_numbers` (`product_id`, `serial_number`, `production_task_id`, `production_date`, `status`) VALUES
+(1, 'SN-ADM80-230901', 1, '2023-09-20', 'active'),
+(1, 'SN-ADM80-230902', 1, '2023-09-20', 'active'),
+(2, 'SN-ADM90-230905', 2, '2023-09-25', 'active'),
+(4, 'SN-ADM132-231001', 3, '2023-10-05', 'active'),
+(4, 'SN-ADM132-231002', 3, '2023-10-06', 'active');

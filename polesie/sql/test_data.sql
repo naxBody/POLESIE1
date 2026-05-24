@@ -146,7 +146,7 @@ INSERT INTO `quality_checks` (`task_id`, `product_id`, `check_date`, `inspector_
 (5, 5, '2024-01-23 10:00:00', 2, 'pass', NULL, 1, 0);
 
 -- 14. СЕРИЙНЫЕ НОМЕРА
-INSERT INTO `serial_numbers` (`product_id`, `serial_number`, `production_date`, `task_id`, `status`) VALUES
+INSERT INTO `product_serial_numbers` (`product_id`, `serial_number`, `production_date`, `task_id`, `status`) VALUES
 (1, 'SN-ADM80A4-2024-0001', '2024-01-12', 1, 'active'),
 (1, 'SN-ADM80A4-2024-0002', '2024-01-12', 1, 'active'),
 (2, 'SN-ADM90L4-2024-0001', '2024-01-15', 2, 'active'),

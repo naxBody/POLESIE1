@@ -1,25 +1,13 @@
 -- ============================================
 -- ПОЛЕСЬЕ ПРОДАКШН: ТЕСТОВЫЕ ДАННЫЕ
 -- ============================================
+USE `polesie_production`;
+
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
--- Очистка всех таблиц перед вставкой
-TRUNCATE TABLE `serial_numbers`;
-TRUNCATE TABLE `quality_checks`;
-TRUNCATE TABLE `production_tasks_materials`;
-TRUNCATE TABLE `production_tasks`;
-TRUNCATE TABLE `order_items`;
-TRUNCATE TABLE `orders`;
-TRUNCATE TABLE `products`;
-TRUNCATE TABLE `materials`;
-TRUNCATE TABLE `product_categories`;
-TRUNCATE TABLE `material_categories`;
-TRUNCATE TABLE `contractors`;
-TRUNCATE TABLE `users`;
-TRUNCATE TABLE `user_roles`;
-TRUNCATE TABLE `base_units`;
+
 
 SET FOREIGN_KEY_CHECKS = 1;
 

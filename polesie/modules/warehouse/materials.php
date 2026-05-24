@@ -29,9 +29,9 @@ $availableCombinations = []; // Доступные комбинации свой
 // Получение остатков из базы данных
 $warehouseQuantities = [];
 try {
-    $stmt = $pdo->query("SELECT code, current_stock FROM materials WHERE current_stock IS NOT NULL");
+    $stmt = $pdo->query("SELECT code, current_stock FROM materials");
     while ($row = $stmt->fetch()) {
-        $warehouseQuantities[$row['code']] = $row['current_stock'];
+        $warehouseQuantities[$row['code']] = floatval($row['current_stock']);
     }
 } catch (Exception $e) {
     // Если таблица не существует или ошибка - продолжаем без количеств
@@ -50,8 +50,8 @@ if (file_exists($jsonPath)) {
                     foreach ($subcategory['materials'] as $material) {
                         $material['parent_category'] = $category;
                         $material['subcategory'] = $subcategory;
-                        // Добавляем количество из склада
-                        $material['warehouse_quantity'] = $warehouseQuantities[$material['code_internal']] ?? null;
+                        // Добавляем количество из склада: сначала из JSON, если нет - из БД
+                        $material['warehouse_quantity'] = $material['warehouse_quantity'] ?? ($warehouseQuantities[$material['code_internal']] ?? null);
                         $allMaterials[] = $material;
                     }
                 }

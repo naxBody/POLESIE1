@@ -12,11 +12,9 @@ target/
 .venv/
 venv/
 node_modules/
-.pip-tools/
-.tox/
-.coverage
-coverage/
-htmlcov/
+.julia/
+zig-cache/
+.deps/
 
 # Logs and temp files
 *.log
@@ -27,7 +25,7 @@ htmlcov/
 # Environment
 .env
 .env.local
-.env.*
+*.env.*
 
 # Editors
 .vscode/
@@ -35,11 +33,18 @@ htmlcov/
 *.swp
 *.swo
 
-# OS
+# OS specific
 .DS_Store
 Thumbs.db
 
-# Compression
+# Testing and coverage
+.coverage
+coverage/
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# Archives and compressed files
 *.zip
 *.gz
 *.tar
@@ -58,4 +63,8 @@ Thumbs.db
 *.Z
 *.lz
 *.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
 ```

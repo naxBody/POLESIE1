@@ -9,6 +9,7 @@ import json
 import mysql.connector
 from mysql.connector import Error
 import sys
+import os
 from typing import Optional
 
 # Конфигурация подключения к БД
@@ -340,9 +341,13 @@ def main():
     
     # Загружаем JSON файлы
     print("\nЗагрузка JSON файлов...")
-    materials_data = load_json_file('/workspace/list_materials.json')
-    passports_data = load_json_file('/workspace/passports.json')
-    production_data = load_json_file('/workspace/production.json')
+    
+    # Вычисляем путь до корня проекта относительно расположения скрипта
+    PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    
+    materials_data = load_json_file(os.path.join(PROJECT_ROOT, 'list_materials.json'))
+    passports_data = load_json_file(os.path.join(PROJECT_ROOT, 'passports.json'))
+    production_data = load_json_file(os.path.join(PROJECT_ROOT, 'production.json'))
     
     if not materials_data:
         print("✗ Не удалось загрузить list_materials.json")

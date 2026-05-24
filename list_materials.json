@@ -1,0 +1,3838 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "code": "MET",
+      "name_ru": "Металлы и металлопрокат",
+      "name_en": "Metals & Rolled Products",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 11,
+          "code": "MET_STEEL_STRUCTURAL",
+          "name_ru": "Сталь конструкционная",
+          "parent_id": 1,
+          "level": 2,
+          "code_format": "ST-{form}-{grade}-{diameter}",
+          "code_format_ru": "СТ-{форма}-{марка}-{диаметр}, где: ST - сталь, форма - тип проката (BAR - пруток, SHEET - лист), марка - марка стали (например, 45, 40Х, Ст3сп5), диаметр - размер в мм (для прутка) или толщина (для листа)",
+          "materials": [
+            {
+              "id": 1101,
+              "code_internal": "ST-BAR-45-010",
+              "name_full": "Пруток стальной круглый 45 ГОСТ 1050",
+              "name_short": "Пруток 45 Ø10",
+              "category_id": 11,
+              "base_unit": "кг",
+              "specifications": {
+                "material_grade": "45",
+                "standard_doc": "ГОСТ 1050-2013",
+                "product_form": "круглый пруток",
+                "diameter_mm": [
+                  10,
+                  12,
+                  14,
+                  16,
+                  18,
+                  20,
+                  22,
+                  25,
+                  28,
+                  30,
+                  32,
+                  35,
+                  40,
+                  45,
+                  50,
+                  55,
+                  60,
+                  65,
+                  70,
+                  75,
+                  80,
+                  85,
+                  90,
+                  95,
+                  100
+                ],
+                "length_m": [
+                  3,
+                  4,
+                  6
+                ],
+                "treatment": "горячекатаный",
+                "density_kg_m3": 7850,
+                "tensile_strength_mpa": 600,
+                "yield_strength_mpa": 355
+              },
+              "is_critical": false,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение, защита от коррозии",
+              "warehouse_quantity": 321.52,
+              "min_quantity": 64.3
+            },
+            {
+              "id": 1102,
+              "code_internal": "ST-BAR-40X-010",
+              "name_full": "Пруток стальной легированный 40Х ГОСТ 4543",
+              "name_short": "Пруток 40Х Ø10",
+              "category_id": 11,
+              "base_unit": "кг",
+              "specifications": {
+                "material_grade": "40Х",
+                "standard_doc": "ГОСТ 4543-2016",
+                "product_form": "круглый пруток",
+                "diameter_mm": [
+                  10,
+                  12,
+                  14,
+                  16,
+                  18,
+                  20,
+                  22,
+                  25,
+                  28,
+                  30,
+                  32,
+                  35,
+                  40,
+                  45,
+                  50,
+                  55,
+                  60,
+                  65,
+                  70,
+                  75,
+                  80,
+                  85,
+                  90,
+                  95,
+                  100,
+                  110,
+                  120,
+                  130,
+                  140,
+                  150
+                ],
+                "length_m": [
+                  3,
+                  4,
+                  6
+                ],
+                "treatment": "термообработанный",
+                "density_kg_m3": 7850,
+                "tensile_strength_mpa": 980,
+                "yield_strength_mpa": 835,
+                "alloy_elements": {
+                  "C": "0.36-0.44%",
+                  "Cr": "0.8-1.1%",
+                  "Mn": "0.5-0.8%",
+                  "Si": "0.17-0.37%"
+                }
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение, защита от коррозии",
+              "warehouse_quantity": 17.38,
+              "min_quantity": 3.48
+            },
+            {
+              "id": 1103,
+              "code_internal": "ST-SHEET-ST3-003",
+              "name_full": "Лист стальной горячекатаный Ст3сп5 ГОСТ 14637",
+              "name_short": "Лист Ст3сп5 3мм",
+              "category_id": 11,
+              "base_unit": "кг",
+              "specifications": {
+                "material_grade": "Ст3сп5",
+                "standard_doc": "ГОСТ 14637-2016",
+                "product_form": "лист",
+                "thickness_mm": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16,
+                  18,
+                  20,
+                  22,
+                  25,
+                  28,
+                  30,
+                  32,
+                  35,
+                  40,
+                  45,
+                  50
+                ],
+                "width_mm": [
+                  1250,
+                  1500,
+                  2000,
+                  2500
+                ],
+                "length_mm": [
+                  2500,
+                  3000,
+                  6000,
+                  8000,
+                  12000
+                ],
+                "density_kg_m3": 7850,
+                "tensile_strength_mpa": 370,
+                "yield_strength_mpa": 235
+              },
+              "is_critical": false,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение, защита от влаги",
+              "warehouse_quantity": 141.14,
+              "min_quantity": 28.23
+            }
+          ],
+          "available_combinations": {
+            "_code_format": "ST-{form}-{grade}-{diameter}",
+            "_code_format_ru": "СТ-{форма}-{марка}-{диаметр}",
+            "examples": [
+              "ST-BAR-45-20"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "ST",
+                "desc": "Сталь конструкционная"
+              },
+              {
+                "code": "BAR",
+                "desc": "Форма проката (BAR - пруток, SHEET - лист)"
+              },
+              {
+                "code": "45",
+                "desc": "Марка стали"
+              },
+              {
+                "code": "20",
+                "desc": "Размер в мм (диаметр для прутка, толщина для листа)"
+              }
+            ]
+          }
+        },
+        {
+          "id": 12,
+          "code": "MET_CAST_IRON",
+          "name_ru": "Чугун литейный",
+          "parent_id": 1,
+          "level": 2,
+          "code_format": "CAST-{grade}-{form}",
+          "code_format_ru": "ЧГН-{марка}-{форма}, где: CAST - чугун, марка - марка чугуна (СЧ - серый, ВЧ - высокопрочный), форма - тип заготовки (CHU - чушка литейная)",
+          "materials": [
+            {
+              "id": 1201,
+              "code_internal": "CAST-SC15-CHU",
+              "name_full": "Чугун серый СЧ15 ГОСТ 1412 (чушка)",
+              "name_short": "Чугун СЧ15",
+              "category_id": 12,
+              "base_unit": "кг",
+              "specifications": {
+                "material_grade": "СЧ15",
+                "standard_doc": "ГОСТ 1412-2018",
+                "product_form": "чушка литейная",
+                "weight_per_piece_kg": [
+                  15,
+                  20,
+                  25
+                ],
+                "tensile_strength_mpa": 150,
+                "hardness_hb": "170-220",
+                "chemical_composition": {
+                  "C": "3.0-3.4%",
+                  "Si": "1.8-2.4%",
+                  "Mn": "0.5-0.8%",
+                  "P": "≤0.2%",
+                  "S": "≤0.15%"
+                },
+                "application": "станины, корпуса, фланцы"
+              },
+              "is_critical": false,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение, защита от влаги",
+              "warehouse_quantity": 115.49,
+              "min_quantity": 23.1
+            },
+            {
+              "id": 1202,
+              "code_internal": "CAST-VC40-CHU",
+              "name_full": "Чугун высокопрочный ВЧ40 ГОСТ 7293 (чушка)",
+              "name_short": "Чугун ВЧ40",
+              "category_id": 12,
+              "base_unit": "кг",
+              "specifications": {
+                "material_grade": "ВЧ40",
+                "standard_doc": "ГОСТ 7293-2018",
+                "product_form": "чушка литейная",
+                "weight_per_piece_kg": [
+                  15,
+                  20,
+                  25
+                ],
+                "tensile_strength_mpa": 400,
+                "elongation_percent": 18,
+                "hardness_hb": "140-200",
+                "chemical_composition": {
+                  "C": "3.2-3.8%",
+                  "Si": "2.0-2.8%",
+                  "Mn": "0.3-0.6%",
+                  "Mg": "0.03-0.07%",
+                  "P": "≤0.08%",
+                  "S": "≤0.02%"
+                },
+                "application": "усиленные корпуса, валы, шестерни"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение, защита от влаги",
+              "warehouse_quantity": 369.55,
+              "min_quantity": 73.91
+            }
+          ],
+          "available_combinations": {
+            "_code_format": "CAST-{grade}-{form}",
+            "_code_format_ru": "ЧГН-{марка}-{форма}",
+            "examples": [
+              "CAST-SЧ-CHU"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "CAST",
+                "desc": "Чугун литейный"
+              },
+              {
+                "code": "SЧ",
+                "desc": "Марка чугуна (СЧ - серый, ВЧ - высокопрочный)"
+              },
+              {
+                "code": "CHU",
+                "desc": "Форма заготовки (CHU - чушка литейная)"
+              }
+            ]
+          }
+        },
+        {
+          "id": 13,
+          "code": "MET_ALUMINUM",
+          "name_ru": "Алюминий и сплавы",
+          "parent_id": 1,
+          "level": 2,
+          "code_format": "AL-{grade}-{form}",
+          "code_format_ru": "АЛ-{марка}-{форма}, где: AL - алюминий, марка - марка сплава (АК7, АК9, АВ-87), форма - тип заготовки (CHU - чушка литейная)",
+          "materials": [
+            {
+              "id": 1301,
+              "code_internal": "AL-AK7-CHU",
+              "name_full": "Сплав алюминиевый литейный АК7 ГОСТ 1583 (чушка)",
+              "name_short": "Алюминий АК7",
+              "category_id": 13,
+              "base_unit": "кг",
+              "specifications": {
+                "material_grade": "АК7",
+                "standard_doc": "ГОСТ 1583-2020",
+                "product_form": "чушка литейная",
+                "weight_per_piece_kg": [
+                  15,
+                  20
+                ],
+                "density_kg_m3": 2700,
+                "tensile_strength_mpa": 180,
+                "elongation_percent": 3,
+                "hardness_hb": 70,
+                "chemical_composition": {
+                  "Si": "6.0-8.0%",
+                  "Cu": "≤0.6%",
+                  "Mg": "0.2-0.5%",
+                  "Fe": "≤1.0%",
+                  "Mn": "≤0.5%",
+                  "Zn": "≤0.3%",
+                  "Al": "остальное"
+                },
+                "application": "корпуса электродвигателей, роторы (литье под давлением)"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение, защита от влаги",
+              "warehouse_quantity": 339.97,
+              "min_quantity": 67.99
+            },
+            {
+              "id": 1302,
+              "code_internal": "AL-AK9-CHU",
+              "name_full": "Сплав алюминиевый литейный АК9 ГОСТ 1583 (чушка)",
+              "name_short": "Алюминий АК9",
+              "category_id": 13,
+              "base_unit": "кг",
+              "specifications": {
+                "material_grade": "АК9",
+                "standard_doc": "ГОСТ 1583-2020",
+                "product_form": "чушка литейная",
+                "weight_per_piece_kg": [
+                  15,
+                  20
+                ],
+                "density_kg_m3": 2710,
+                "tensile_strength_mpa": 200,
+                "elongation_percent": 2,
+                "hardness_hb": 80,
+                "chemical_composition": {
+                  "Si": "8.0-10.5%",
+                  "Cu": "≤1.0%",
+                  "Mg": "0.3-0.5%",
+                  "Fe": "≤1.2%",
+                  "Mn": "≤0.5%",
+                  "Zn": "≤0.5%",
+                  "Al": "остальное"
+                },
+                "application": "корпуса электродвигателей, щиты подшипниковые"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение, защита от влаги",
+              "warehouse_quantity": 446.63,
+              "min_quantity": 89.33
+            },
+            {
+              "id": 1303,
+              "code_internal": "AL-AV87-CHU",
+              "name_full": "Сплав алюминиевый литейный АВ-87 ГОСТ 1583 (чушка)",
+              "name_short": "Алюминий АВ-87",
+              "category_id": 13,
+              "base_unit": "кг",
+              "specifications": {
+                "material_grade": "АВ-87",
+                "standard_doc": "ГОСТ 1583-2020",
+                "product_form": "чушка литейная",
+                "weight_per_piece_kg": [
+                  15,
+                  20
+                ],
+                "density_kg_m3": 2700,
+                "tensile_strength_mpa": 220,
+                "elongation_percent": 4,
+                "hardness_hb": 75,
+                "chemical_composition": {
+                  "Si": "6.5-8.5%",
+                  "Mg": "0.35-0.6%",
+                  "Ti": "0.05-0.2%",
+                  "Fe": "≤0.6%",
+                  "Cu": "≤0.3%",
+                  "Al": "остальное"
+                },
+                "application": "корпуса электродвигателей с повышенной коррозионной стойкостью"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение, защита от влаги",
+              "warehouse_quantity": 48.03,
+              "min_quantity": 9.61
+            }
+          ],
+          "available_combinations": {
+            "_code_format": "AL-{grade}-{form}",
+            "_code_format_ru": "АЛ-{марка}-{форма}",
+            "examples": [
+              "AL-AK7-CHU"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "AL",
+                "desc": "Алюминий и сплавы"
+              },
+              {
+                "code": "AK7",
+                "desc": "Марка сплава (АК7, АК9, АВ-87)"
+              },
+              {
+                "code": "CHU",
+                "desc": "Форма заготовки (CHU - чушка литейная)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "code": "ELEC",
+      "name_ru": "Электротехнические материалы",
+      "name_en": "Electrical Engineering Materials",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 21,
+          "code": "ELEC_COPPER_WIRE",
+          "name_ru": "Медный обмоточный провод",
+          "parent_id": 2,
+          "level": 2,
+          "materials": [
+            {
+              "id": 2101,
+              "code_internal": "CU-WIRE-PETV2-050",
+              "name_full": "Провод обмоточный ПЭТВ-2 медный эмальпровод 0.50 мм",
+              "name_short": "ПЭТВ-2 0.50 мм",
+              "category_id": 21,
+              "base_unit": "кг",
+              "alt_unit": "м",
+              "conversion_factor": 0.00222,
+              "specifications": {
+                "product_type": "эмальпровод",
+                "mark": "ПЭТВ-2",
+                "standard_doc": "ГОСТ 21947-2019",
+                "conductor_material": "медь М0к",
+                "conductor_diameter_mm": [
+                  0.5,
+                  0.53,
+                  0.56,
+                  0.6,
+                  0.63,
+                  0.67,
+                  0.7,
+                  0.75,
+                  0.8,
+                  0.85,
+                  0.9,
+                  0.95,
+                  1.0,
+                  1.06,
+                  1.12,
+                  1.18,
+                  1.25,
+                  1.32,
+                  1.4,
+                  1.5,
+                  1.6,
+                  1.7,
+                  1.8,
+                  1.9,
+                  2.0,
+                  2.12,
+                  2.24,
+                  2.36,
+                  2.5,
+                  2.65,
+                  2.8,
+                  3.0,
+                  3.15,
+                  3.35,
+                  3.55,
+                  3.75,
+                  4.0
+                ],
+                "insulation_type": "полиэфирный лак (2 слоя)",
+                "thermal_class": "155°C (класс F)",
+                "voltage_test_v": 2000,
+                "elongation_percent_min": 25,
+                "adherence_test": "без трещин",
+                "density_kg_m3": 8900,
+                "resistance_ohm_km_20C": "по ГОСТ"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "requires_batch_tracking": true,
+              "storage_condition": "сухое помещение t=+5...+35°C, влажность ≤60%, защита от механических повреждений",
+              "warehouse_quantity": 213.85,
+              "min_quantity": 42.77
+            },
+            {
+              "id": 2102,
+              "code_internal": "CU-WIRE-PET155-050",
+              "name_full": "Провод обмоточный ПЭТ-155 медный 0.50 мм",
+              "name_short": "ПЭТ-155 0.50 мм",
+              "category_id": 21,
+              "base_unit": "кг",
+              "alt_unit": "м",
+              "conversion_factor": 0.00222,
+              "specifications": {
+                "product_type": "эмальпровод",
+                "mark": "ПЭТ-155",
+                "standard_doc": "ГОСТ 21947-2019",
+                "conductor_material": "медь М0к",
+                "conductor_diameter_mm": [
+                  0.5,
+                  0.56,
+                  0.63,
+                  0.71,
+                  0.8,
+                  0.9,
+                  1.0,
+                  1.12,
+                  1.25,
+                  1.4,
+                  1.6,
+                  1.8,
+                  2.0,
+                  2.24,
+                  2.5,
+                  2.8,
+                  3.15,
+                  3.55,
+                  4.0
+                ],
+                "insulation_type": "полиэфиримидный лак",
+                "thermal_class": "155°C (класс F)",
+                "voltage_test_v": 2500,
+                "elongation_percent_min": 30,
+                "heat_shock_resistance": "200°C без трещин",
+                "density_kg_m3": 8900
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "requires_batch_tracking": true,
+              "storage_condition": "сухое помещение t=+5...+35°C, влажность ≤60%",
+              "warehouse_quantity": 19.75,
+              "min_quantity": 3.95
+            },
+            {
+              "id": 2103,
+              "code_internal": "CU-WIRE-PETK180-050",
+              "name_full": "Провод обмоточный ПЭТК-180 медный 0.50 мм",
+              "name_short": "ПЭТК-180 0.50 мм",
+              "category_id": 21,
+              "base_unit": "кг",
+              "alt_unit": "м",
+              "conversion_factor": 0.00222,
+              "specifications": {
+                "product_type": "эмальпровод",
+                "mark": "ПЭТК-180",
+                "standard_doc": "ГОСТ 21947-2019",
+                "conductor_material": "медь М0к",
+                "conductor_diameter_mm": [
+                  0.5,
+                  0.56,
+                  0.63,
+                  0.71,
+                  0.8,
+                  0.9,
+                  1.0,
+                  1.12,
+                  1.25,
+                  1.4,
+                  1.6,
+                  1.8,
+                  2.0,
+                  2.24,
+                  2.5,
+                  2.8,
+                  3.15,
+                  3.55,
+                  4.0
+                ],
+                "insulation_type": "полиэфиримидный с полиамидимидным покрытием",
+                "thermal_class": "180°C (класс H)",
+                "voltage_test_v": 3000,
+                "elongation_percent_min": 35,
+                "heat_shock_resistance": "220°C без трещин",
+                "chemical_resistance": "повышенная",
+                "density_kg_m3": 8900
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "requires_batch_tracking": true,
+              "storage_condition": "сухое помещение t=+5...+35°C, влажность ≤60%",
+              "warehouse_quantity": 113.23,
+              "min_quantity": 22.65
+            },
+            {
+              "id": 2104,
+              "code_internal": "CU-BAR-M0K-10X2",
+              "name_full": "Шина медная прямоугольная М0к 10x2 мм ГОСТ 434",
+              "name_short": "Шина медная 10x2",
+              "category_id": 21,
+              "base_unit": "кг",
+              "alt_unit": "м",
+              "conversion_factor": 0.178,
+              "specifications": {
+                "product_type": "медная шина",
+                "mark": "М0к",
+                "standard_doc": "ГОСТ 434-2020",
+                "conductor_material": "медь М0к (чистота ≥99.97%)",
+                "width_mm": [
+                  10,
+                  12,
+                  15,
+                  16,
+                  20,
+                  25,
+                  30,
+                  32,
+                  40,
+                  50,
+                  60,
+                  63,
+                  80,
+                  100
+                ],
+                "thickness_mm": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  8,
+                  10,
+                  12
+                ],
+                "length_m": [
+                  2,
+                  3,
+                  4,
+                  6
+                ],
+                "density_kg_m3": 8900,
+                "electrical_resistivity_ohm_mm2_m": 0.01724,
+                "tensile_strength_mpa": 220,
+                "elongation_percent_min": 6
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение, защита от окисления",
+              "warehouse_quantity": 255.15,
+              "min_quantity": 51.03
+            }
+          ],
+          "code_format": "CU-{type}-{mark}-{diameter}",
+          "code_format_ru": "МЕД-{тип}-{марка}-{диаметр}, где: CU - медь, тип - тип продукта (WIRE - провод, BAR - шина), марка - марка провода (ПЭТВ-2, ПЭТ-155, ПЭТК-180), диаметр - диаметр проводника в мм",
+          "available_combinations": {
+            "_code_format": "CU-{type}-{mark}-{diameter}",
+            "_code_format_ru": "МЕД-{тип}-{марка}-{диаметр}",
+            "examples": [
+              "CU-WIRE-PETV2-1.2"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "CU",
+                "desc": "Медь электротехническая"
+              },
+              {
+                "code": "WIRE",
+                "desc": "Тип продукта (WIRE - провод)"
+              },
+              {
+                "code": "PETV2",
+                "desc": "Марка провода (ПЭТВ-2, ПЭТВ)"
+              },
+              {
+                "code": "1.2",
+                "desc": "Диаметр провода в мм (050 = 0.50мм)"
+              }
+            ]
+          }
+        },
+        {
+          "id": 22,
+          "code": "ELEC_STEEL_SHEET",
+          "name_ru": "Электротехническая сталь",
+          "parent_id": 2,
+          "level": 2,
+          "materials": [
+            {
+              "id": 2201,
+              "code_internal": "ES-2013-035",
+              "name_full": "Сталь электротехническая холоднокатаная 2013 толщина 0.35 мм",
+              "name_short": "Сталь 2013 0.35мм",
+              "category_id": 22,
+              "base_unit": "кг",
+              "alt_unit": "м²",
+              "conversion_factor": 2.75,
+              "specifications": {
+                "mark": "2013",
+                "standard_doc": "ГОСТ 21427.0-2019",
+                "product_form": "лист/рулон",
+                "thickness_mm": [
+                  0.35,
+                  0.5
+                ],
+                "width_mm": [
+                  1000,
+                  1250,
+                  1500
+                ],
+                "length_mm": [
+                  2000,
+                  2500,
+                  3000
+                ],
+                "coil_weight_kg": [
+                  3000,
+                  5000,
+                  10000
+                ],
+                "specific_loss_w_kg_1_5T_50Hz": 2.9,
+                "magnetic_induction_t_1_5T": 1.68,
+                "lamination_factor": 0.95,
+                "insulation_coating": "С3 (двустороннее)",
+                "density_kg_m3": 7650,
+                "application": "сердечники статора и ротора электродвигателей"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "requires_batch_tracking": true,
+              "storage_condition": "сухое помещение t=+10...+30°C, влажность ≤50%, защита от коррозии",
+              "warehouse_quantity": 18.14,
+              "min_quantity": 3.63
+            },
+            {
+              "id": 2202,
+              "code_internal": "ES-2212-035",
+              "name_full": "Сталь электротехническая холоднокатаная 2212 толщина 0.35 мм",
+              "name_short": "Сталь 2212 0.35мм",
+              "category_id": 22,
+              "base_unit": "кг",
+              "alt_unit": "м²",
+              "conversion_factor": 2.75,
+              "specifications": {
+                "mark": "2212",
+                "standard_doc": "ГОСТ 21427.0-2019",
+                "product_form": "лист/рулон",
+                "thickness_mm": [
+                  0.35,
+                  0.5
+                ],
+                "width_mm": [
+                  1000,
+                  1250,
+                  1500
+                ],
+                "length_mm": [
+                  2000,
+                  2500,
+                  3000
+                ],
+                "coil_weight_kg": [
+                  3000,
+                  5000,
+                  10000
+                ],
+                "specific_loss_w_kg_1_5T_50Hz": 3.1,
+                "magnetic_induction_t_1_5T": 1.65,
+                "lamination_factor": 0.95,
+                "insulation_coating": "С3 (двустороннее)",
+                "density_kg_m3": 7650,
+                "application": "сердечники статора и ротора электродвигателей малой мощности"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "requires_batch_tracking": true,
+              "storage_condition": "сухое помещение t=+10...+30°C, влажность ≤50%, защита от коррозии",
+              "warehouse_quantity": 103.42,
+              "min_quantity": 20.68
+            },
+            {
+              "id": 2203,
+              "code_internal": "ES-2412-050",
+              "name_full": "Сталь электротехническая холоднокатаная 2412 толщина 0.50 мм",
+              "name_short": "Сталь 2412 0.50мм",
+              "category_id": 22,
+              "base_unit": "кг",
+              "alt_unit": "м²",
+              "conversion_factor": 3.83,
+              "specifications": {
+                "mark": "2412",
+                "standard_doc": "ГОСТ 21427.0-2019",
+                "product_form": "лист/рулон",
+                "thickness_mm": [
+                  0.5
+                ],
+                "width_mm": [
+                  1000,
+                  1250,
+                  1500
+                ],
+                "length_mm": [
+                  2000,
+                  2500,
+                  3000
+                ],
+                "coil_weight_kg": [
+                  3000,
+                  5000,
+                  10000
+                ],
+                "specific_loss_w_kg_1_5T_50Hz": 4.2,
+                "magnetic_induction_t_1_5T": 1.62,
+                "lamination_factor": 0.94,
+                "insulation_coating": "С3 (двустороннее)",
+                "density_kg_m3": 7650,
+                "application": "сердечники статора и ротора низкочастотных электродвигателей"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "requires_batch_tracking": true,
+              "storage_condition": "сухое помещение t=+10...+30°C, влажность ≤50%, защита от коррозии",
+              "warehouse_quantity": 326.69,
+              "min_quantity": 65.34
+            }
+          ],
+          "code_format": "ES-{grade}-{thickness}",
+          "code_format_ru": "ЭС-{марка}-{толщина}, где: ES - электротехническая сталь, марка - марка стали (2013, 2212, 2412), толщина - толщина листа в мм",
+          "available_combinations": {
+            "_code_format": "ES-{grade}-{thickness}",
+            "_code_format_ru": "ЭС-{марка}-{толщина}",
+            "examples": [
+              "ES-2013-0.5"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "ES",
+                "desc": "Электротехническая сталь"
+              },
+              {
+                "code": "2013",
+                "desc": "Марка стали (3406, 3405)"
+              },
+              {
+                "code": "0.5",
+                "desc": "Толщина листа в мм (035 = 0.35мм)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "code": "FAST",
+      "name_ru": "Крепёжные изделия",
+      "name_en": "Fasteners",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 31,
+          "code": "FAST_BOLT",
+          "name_ru": "Болты",
+          "parent_id": 3,
+          "level": 2,
+          "code_format": "BLT-M{diameter}x{length}-{strength}-{coating}",
+          "code_format_ru": "БЛТ-М{диаметр}x{длина}-{прочность}-{покрытие}, где: BLT - болт, M - метрическая резьба, диаметр - номинальный диаметр резьбы (мм), длина - длина болта (мм), прочность - класс прочности (например, 8.8), покрытие - тип защитного покрытия (ZN - цинк)",
+          "materials": [
+            {
+              "id": 3101,
+              "code_internal": "BLT-M06x20-88-ZN",
+              "name_full": "Болт М6х20 кл.8.8 оцинкованный ГОСТ 7798",
+              "name_short": "Болт М6х20 8.8 Zn",
+              "category_id": 31,
+              "base_unit": "шт",
+              "alt_unit": "кг",
+              "conversion_factor": 0.0089,
+              "specifications": {
+                "product_type": "болт с шестигранной головкой",
+                "standard_doc": "ГОСТ 7798-70",
+                "thread_diameter_mm": 6.0,
+                "thread_pitch_mm": 1.0,
+                "length_mm": 20,
+                "strength_class": "8.8",
+                "material_grade": "Сталь 35",
+                "coating": "Цинк (Zn)",
+                "coating_thickness_mkm": "6-12",
+                "head_type": "шестигранная",
+                "head_size_mm": 10,
+                "thread_length_mm": 18,
+                "is_full_thread": false,
+                "tensile_strength_mpa": 800,
+                "yield_strength_mpa": 640,
+                "hardness_hrc": "22-32",
+                "weight_per_piece_kg": 0.0089,
+                "packaging_standard": "коробка 200 шт"
+              },
+              "is_critical": false,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение, защита от коррозии",
+              "warehouse_quantity": 568,
+              "min_quantity": 113
+            },
+            {
+              "id": 3102,
+              "code_internal": "BLT-M08x25-88-ZN",
+              "name_full": "Болт М8х25 кл.8.8 оцинкованный ГОСТ 7798",
+              "name_short": "Болт М8х25 8.8 Zn",
+              "category_id": 31,
+              "base_unit": "шт",
+              "alt_unit": "кг",
+              "conversion_factor": 0.0201,
+              "specifications": {
+                "product_type": "болт с шестигранной головкой",
+                "standard_doc": "ГОСТ 7798-70",
+                "thread_diameter_mm": 8.0,
+                "thread_pitch_mm": 1.25,
+                "length_mm": 25,
+                "strength_class": "8.8",
+                "material_grade": "Сталь 35",
+                "coating": "Цинк (Zn)",
+                "coating_thickness_mkm": "6-12",
+                "head_type": "шестигранная",
+                "head_size_mm": 13,
+                "thread_length_mm": 22,
+                "is_full_thread": false,
+                "tensile_strength_mpa": 800,
+                "yield_strength_mpa": 640,
+                "hardness_hrc": "22-32",
+                "weight_per_piece_kg": 0.0201,
+                "packaging_standard": "коробка 100 шт"
+              },
+              "is_critical": false,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение, защита от коррозии",
+              "warehouse_quantity": 439,
+              "min_quantity": 87
+            }
+          ],
+          "available_combinations": {
+            "thread_diameter_mm": [
+              3,
+              4,
+              5,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              18,
+              20,
+              22,
+              24,
+              27,
+              30,
+              33,
+              36,
+              39,
+              42,
+              45,
+              48,
+              52,
+              56,
+              60,
+              64,
+              68
+            ],
+            "thread_pitch_mm": {
+              "3": 0.5,
+              "4": 0.7,
+              "5": 0.8,
+              "6": 1.0,
+              "8": 1.25,
+              "10": 1.5,
+              "12": 1.75,
+              "14": 2.0,
+              "16": 2.0,
+              "18": 2.5,
+              "20": 2.5,
+              "22": 2.5,
+              "24": 3.0,
+              "27": 3.0,
+              "30": 3.5,
+              "33": 3.5,
+              "36": 4.0,
+              "39": 4.0,
+              "42": 4.5,
+              "45": 4.5,
+              "48": 5.0,
+              "52": 5.0,
+              "56": 5.5,
+              "60": 5.5,
+              "64": 6.0,
+              "68": 6.0
+            },
+            "length_mm": {
+              "6": [
+                8,
+                10,
+                12,
+                16,
+                20
+              ],
+              "8": [
+                10,
+                12,
+                16,
+                20,
+                25,
+                30,
+                35,
+                40,
+                45,
+                50,
+                55,
+                60
+              ],
+              "10": [
+                12,
+                16,
+                20,
+                25,
+                30,
+                35,
+                40,
+                45,
+                50,
+                55,
+                60,
+                65,
+                70,
+                75,
+                80,
+                90,
+                100,
+                110,
+                120
+              ],
+              "12": [
+                16,
+                20,
+                25,
+                30,
+                35,
+                40,
+                45,
+                50,
+                55,
+                60,
+                65,
+                70,
+                75,
+                80,
+                90,
+                100,
+                110,
+                120,
+                130,
+                140,
+                150
+              ],
+              "16": [
+                20,
+                25,
+                30,
+                35,
+                40,
+                45,
+                50,
+                55,
+                60,
+                65,
+                70,
+                75,
+                80,
+                90,
+                100,
+                110,
+                120,
+                130,
+                140,
+                150,
+                160,
+                180,
+                200
+              ],
+              "20": [
+                30,
+                35,
+                40,
+                45,
+                50,
+                55,
+                60,
+                65,
+                70,
+                75,
+                80,
+                90,
+                100,
+                110,
+                120,
+                130,
+                140,
+                150,
+                160,
+                180,
+                200,
+                220,
+                240,
+                260,
+                280,
+                300
+              ]
+            },
+            "strength_class": [
+              "4.8",
+              "5.8",
+              "6.8",
+              "8.8",
+              "10.9",
+              "12.9"
+            ],
+            "coating": [
+              "Без покрытия",
+              "Цинк (Zn)",
+              "Цинк+хромат (Zn+Cr)",
+              "Оксид (чёрный)",
+              "Фосфат",
+              "Горячее цинкование",
+              "A2 (нерж.)",
+              "A4 (нерж.)"
+            ],
+            "head_type": [
+              "Шестигранная",
+              "Потайная",
+              "Полукруглая",
+              "Полукруглая с квадратным подголовком",
+              "Внутренний шестигранник",
+              "Фланец"
+            ],
+            "_code_format": "BLT-M{diameter}x{length}-{strength}-{coating}",
+            "_code_format_ru": "БЛТ-М{диаметр}x{длина}-{прочность}-{покрытие}",
+            "examples": [
+              "BLT-M06x20-8.8-ZN"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "BLT",
+                "desc": "Болт крепёжный"
+              },
+              {
+                "code": "M06x20",
+                "desc": "Резьба М6, длина 20 мм"
+              },
+              {
+                "code": "8.8",
+                "desc": "Класс прочности (8.8)"
+              },
+              {
+                "code": "ZN",
+                "desc": "Покрытие (ZN - цинк)"
+              }
+            ]
+          }
+        },
+        {
+          "id": 32,
+          "code": "FAST_NUT",
+          "name_ru": "Гайки",
+          "parent_id": 3,
+          "level": 2,
+          "code_format": "NUT-M{diameter}-{strength}-{coating}",
+          "code_format_ru": "ГАЙ-М{диаметр}-{прочность}-{покрытие}, где: NUT - гайка, M - метрическая резьба, диаметр - номинальный диаметр резьбы (мм), прочность - класс прочности, покрытие - тип защитного покрытия (ZN - цинк)",
+          "materials": [
+            {
+              "id": 3201,
+              "code_internal": "NUT-M06-8-ZN",
+              "name_full": "Гайка М6 кл.8 оцинкованная ГОСТ 5915",
+              "name_short": "Гайка М6 8 Zn",
+              "category_id": 32,
+              "base_unit": "шт",
+              "alt_unit": "кг",
+              "conversion_factor": 0.0039,
+              "specifications": {
+                "product_type": "гайка шестигранная",
+                "standard_doc": "ГОСТ 5915-70",
+                "thread_diameter_mm": 6.0,
+                "thread_pitch_mm": 1.0,
+                "strength_class": "8",
+                "material_grade": "Сталь 35",
+                "coating": "Цинк (Zn)",
+                "coating_thickness_mkm": "6-12",
+                "nut_type": "шестигранная",
+                "wrench_size_mm": 10,
+                "height_mm": 5.2,
+                "tensile_strength_mpa": 800,
+                "proof_load_mpa": 600,
+                "hardness_hrc": "22-32",
+                "weight_per_piece_kg": 0.0039,
+                "packaging_standard": "коробка 500 шт"
+              },
+              "is_critical": false,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение, защита от коррозии",
+              "warehouse_quantity": 235,
+              "min_quantity": 47
+            }
+          ],
+          "available_combinations": {
+            "thread_diameter_mm": [
+              3,
+              4,
+              5,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              18,
+              20,
+              22,
+              24,
+              27,
+              30,
+              33,
+              36,
+              39,
+              42,
+              45,
+              48,
+              52,
+              56,
+              60
+            ],
+            "strength_class": [
+              "4",
+              "5",
+              "6",
+              "8",
+              "10",
+              "12"
+            ],
+            "coating": [
+              "Без покрытия",
+              "Цинк (Zn)",
+              "Цинк+хромат (Zn+Cr)",
+              "Оксид (чёрный)",
+              "Фосфат",
+              "Горячее цинкование",
+              "A2 (нерж.)",
+              "A4 (нерж.)"
+            ],
+            "nut_type": [
+              "Шестигранная",
+              "Шестигранная низкая",
+              "Шестигранная высокая",
+              "Корончатая",
+              "Самоконтрящаяся (с фланцем)",
+              "Колпачковая"
+            ],
+            "_code_format": "NUT-M{diameter}-{strength}-{coating}",
+            "_code_format_ru": "ГАЙ-М{диаметр}-{прочность}-{покрытие}",
+            "examples": [
+              "NUT-M06-8-ZN"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "NUT",
+                "desc": "Гайка крепёжная"
+              },
+              {
+                "code": "M06",
+                "desc": "Метрическая резьба, диаметр 6мм"
+              },
+              {
+                "code": "8",
+                "desc": "Класс прочности (8)"
+              },
+              {
+                "code": "ZN",
+                "desc": "Покрытие (ZN - цинк)"
+              }
+            ]
+          }
+        },
+        {
+          "id": 33,
+          "code": "FAST_WASHER",
+          "name_ru": "Шайбы",
+          "parent_id": 3,
+          "level": 2,
+          "code_format": "WSH-{diameter}-{type}-{coating}",
+          "code_format_ru": "ШАЙ-{диаметр}-{тип}-{покрытие}, где: WSH - шайба, диаметр - номинальный диаметр отверстия (мм), тип - тип шайбы (PLAIN - плоская, SPRING - пружинная), покрытие - тип защитного покрытия (ZN - цинк, без обозначения - без покрытия)",
+          "materials": [
+            {
+              "id": 3301,
+              "code_internal": "WSH-06-PLAIN-ZN",
+              "name_full": "Шайба плоская 6 мм ГОСТ 11371 оцинкованная",
+              "name_short": "Шайба 6 Zn",
+              "category_id": 33,
+              "base_unit": "шт",
+              "alt_unit": "кг",
+              "conversion_factor": 0.0015,
+              "specifications": {
+                "product_type": "шайба плоская",
+                "standard_doc": "ГОСТ 11371-78",
+                "nominal_diameter_mm": 6.0,
+                "inner_diameter_mm": 6.4,
+                "outer_diameter_mm": 12.0,
+                "thickness_mm": 1.6,
+                "material_grade": "Сталь 08кп",
+                "coating": "Цинк (Zn)",
+                "coating_thickness_mkm": "6-12",
+                "hardness_hv": "140-250",
+                "weight_per_piece_kg": 0.0015,
+                "packaging_standard": "коробка 1000 шт"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "storage_condition": "сухое помещение, защита от коррозии",
+              "warehouse_quantity": 469,
+              "min_quantity": 93
+            },
+            {
+              "id": 3302,
+              "code_internal": "WSH-06-SPRING-65G",
+              "name_full": "Шайба пружинная (гровер) 6 мм ГОСТ 6402",
+              "name_short": "Шайба гровер 6",
+              "category_id": 33,
+              "base_unit": "шт",
+              "alt_unit": "кг",
+              "conversion_factor": 0.0012,
+              "specifications": {
+                "product_type": "шайба пружинная",
+                "standard_doc": "ГОСТ 6402-70",
+                "nominal_diameter_mm": 6.0,
+                "inner_diameter_mm": 6.2,
+                "outer_diameter_mm": 11.0,
+                "thickness_mm": 1.6,
+                "material_grade": "65Г",
+                "coating": "Без покрытия",
+                "hardness_hrc": "42-50",
+                "spring_force_n": 45,
+                "weight_per_piece_kg": 0.0012,
+                "packaging_standard": "коробка 1000 шт"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "storage_condition": "сухое помещение, защита от коррозии",
+              "warehouse_quantity": 613,
+              "min_quantity": 122
+            }
+          ],
+          "available_combinations": {
+            "nominal_diameter_mm": [
+              3,
+              4,
+              5,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              18,
+              20,
+              22,
+              24,
+              27,
+              30,
+              33,
+              36,
+              39,
+              42,
+              45,
+              48,
+              52,
+              56,
+              60
+            ],
+            "washer_type": [
+              "Плоская нормальная",
+              "Плоская увеличенная",
+              "Плоская уменьшенная",
+              "Пружинная (гровер)",
+              "Пружинная двухвитковая",
+              "Упорная",
+              "Стопорная с лапками",
+              "Фланцевая"
+            ],
+            "material": [
+              "Сталь 08кп",
+              "Сталь 65Г",
+              "Нерж. A2",
+              "Нерж. A4",
+              "Латунь",
+              "Бронза"
+            ],
+            "coating": [
+              "Без покрытия",
+              "Цинк (Zn)",
+              "Цинк+хромат (Zn+Cr)",
+              "Оксид (чёрный)",
+              "A2 (нерж.)",
+              "A4 (нерж.)"
+            ],
+            "_code_format": "WSH-{diameter}-{type}-{coating}",
+            "_code_format_ru": "ШАЙ-{диаметр}-{тип}-{покрытие}",
+            "examples": [
+              "WSH-6-PLAIN-ZN"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "WSH",
+                "desc": "Шайба крепёжная"
+              },
+              {
+                "code": "6",
+                "desc": "Номинальный диаметр под болт М6"
+              },
+              {
+                "code": "PLAIN",
+                "desc": "Тип шайбы (NORM - нормальная, WIDE - широкая)"
+              },
+              {
+                "code": "ZN",
+                "desc": "Покрытие (ZN - цинк)"
+              }
+            ]
+          }
+        },
+        {
+          "id": 34,
+          "code": "FAST_SCREW",
+          "name_ru": "Винты",
+          "parent_id": 3,
+          "level": 2,
+          "code_format": "SCR-M{diameter}x{length}-{strength}-{coating}",
+          "code_format_ru": "ВНТ-М{диаметр}x{длина}-{прочность}-{покрытие}, где: SCR - винт, M - метрическая резьба, диаметр - номинальный диаметр резьбы (мм), длина - длина винта (мм), прочность - класс прочности (например, 4.8), покрытие - тип защитного покрытия (ZN - цинк)",
+          "materials": [
+            {
+              "id": 3401,
+              "code_internal": "SCR-M04x10-48-ZN",
+              "name_full": "Винт М4х10 кл.4.8 оцинкованный с полукруглой головкой ГОСТ 17473",
+              "name_short": "Винт М4х10 4.8 Zn",
+              "category_id": 34,
+              "base_unit": "шт",
+              "alt_unit": "кг",
+              "conversion_factor": 0.0018,
+              "specifications": {
+                "product_type": "винт с полукруглой головкой",
+                "standard_doc": "ГОСТ 17473-80",
+                "thread_diameter_mm": 4.0,
+                "thread_pitch_mm": 0.7,
+                "length_mm": 10,
+                "strength_class": "4.8",
+                "material_grade": "Сталь 10кп",
+                "coating": "Цинк (Zn)",
+                "head_type": "полукруглая",
+                "drive_type": "шлиц прямой",
+                "head_diameter_mm": 7.6,
+                "head_height_mm": 2.6,
+                "tensile_strength_mpa": 400,
+                "yield_strength_mpa": 320,
+                "weight_per_piece_kg": 0.0018,
+                "packaging_standard": "коробка 500 шт"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "storage_condition": "сухое помещение, защита от коррозии",
+              "warehouse_quantity": 294,
+              "min_quantity": 58
+            }
+          ],
+          "available_combinations": {
+            "thread_diameter_mm": [
+              2,
+              2.5,
+              3,
+              4,
+              5,
+              6,
+              8,
+              10,
+              12
+            ],
+            "length_mm": [
+              4,
+              5,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              18,
+              20,
+              22,
+              25,
+              28,
+              30,
+              32,
+              35,
+              38,
+              40,
+              42,
+              45,
+              48,
+              50,
+              55,
+              60,
+              65,
+              70,
+              75,
+              80,
+              85,
+              90,
+              95,
+              100
+            ],
+            "head_type": [
+              "Полукруглая",
+              "Потайная",
+              "Полупотайная",
+              "Цилиндрическая",
+              "Сфера с буртиком"
+            ],
+            "drive_type": [
+              "Шлиц прямой",
+              "Крестообразный (PH)",
+              "Крестообразный (PZ)",
+              "Внутренний шестигранник",
+              "Torx (звёздочка)",
+              "Комбинированный"
+            ],
+            "strength_class": [
+              "4.8",
+              "5.8",
+              "8.8",
+              "10.9"
+            ],
+            "coating": [
+              "Без покрытия",
+              "Цинк (Zn)",
+              "Цинк+хромат (Zn+Cr)",
+              "Оксид (чёрный)",
+              "Никель",
+              "A2 (нерж.)",
+              "A4 (нерж.)"
+            ],
+            "_code_format": "SCR-M{diameter}x{length}-{strength}-{coating}",
+            "_code_format_ru": "ВНТ-М{диаметр}x{длина}-{прочность}-{покрытие}",
+            "examples": [
+              "SCR-M04x10-4.8-ZN"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "SCR",
+                "desc": "Винт крепёжный"
+              },
+              {
+                "code": "M04x10",
+                "desc": "Резьба М4, длина 10 мм"
+              },
+              {
+                "code": "4.8",
+                "desc": "Класс прочности (4.8)"
+              },
+              {
+                "code": "ZN",
+                "desc": "Покрытие (ZN - цинк)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "code": "BEAR",
+      "name_ru": "Подшипники",
+      "name_en": "Bearings",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 41,
+          "code": "BEAR_BALL_RADIAL",
+          "name_ru": "Подшипники шариковые радиальные",
+          "parent_id": 4,
+          "level": 2,
+          "materials": [
+            {
+              "id": 4101,
+              "code_internal": "BRG-6204-2RS1",
+              "name_full": "Подшипник шариковый радиальный 6204-2RS1 (закрытый)",
+              "name_short": "Подшипник 6204-2RS1",
+              "category_id": 41,
+              "base_unit": "шт",
+              "specifications": {
+                "product_type": "шариковый радиальный однорядный",
+                "standard_doc": "ГОСТ 8338-75 / ISO 15",
+                "bearing_number": "6204-2RS1",
+                "inner_diameter_mm": 20,
+                "outer_diameter_mm": 47,
+                "width_mm": 14,
+                "seal_type": "2RS1 (двустороннее резиновое уплотнение)",
+                "cage_material": "Стальной штампованный",
+                "grease_type": "Литол-24",
+                "dynamic_load_rating_kn": 12.8,
+                "static_load_rating_kn": 6.65,
+                "fatigue_load_limit_kn": 0.28,
+                "reference_speed_rpm": 19000,
+                "limiting_speed_rpm": 11000,
+                "weight_kg": 0.105,
+                "manufacturer": [
+                  "SKF",
+                  "NSK",
+                  "FAG",
+                  "KOYO",
+                  "GPZ (Россия)"
+                ],
+                "application": "электродвигатели АИР80, АИР90, АИР100"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "requires_batch_tracking": true,
+              "storage_condition": "сухое помещение t=+15...+25°C, влажность ≤60%, горизонтальное положение, защита от вибрации",
+              "warehouse_quantity": 838,
+              "min_quantity": 167
+            },
+            {
+              "id": 4102,
+              "code_internal": "BRG-6205-2RS1",
+              "name_full": "Подшипник шариковый радиальный 6205-2RS1 (закрытый)",
+              "name_short": "Подшипник 6205-2RS1",
+              "category_id": 41,
+              "base_unit": "шт",
+              "specifications": {
+                "product_type": "шариковый радиальный однорядный",
+                "standard_doc": "ГОСТ 8338-75 / ISO 15",
+                "bearing_number": "6205-2RS1",
+                "inner_diameter_mm": 25,
+                "outer_diameter_mm": 52,
+                "width_mm": 15,
+                "seal_type": "2RS1 (двустороннее резиновое уплотнение)",
+                "cage_material": "Стальной штампованный",
+                "grease_type": "Литол-24",
+                "dynamic_load_rating_kn": 14.0,
+                "static_load_rating_kn": 7.8,
+                "fatigue_load_limit_kn": 0.315,
+                "reference_speed_rpm": 17000,
+                "limiting_speed_rpm": 10000,
+                "weight_kg": 0.13,
+                "manufacturer": [
+                  "SKF",
+                  "NSK",
+                  "FAG",
+                  "KOYO",
+                  "GPZ (Россия)"
+                ],
+                "application": "электродвигатели АИР90, АИР100, АИР112"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "requires_batch_tracking": true,
+              "storage_condition": "сухое помещение t=+15...+25°C, влажность ≤60%, горизонтальное положение, защита от вибрации",
+              "warehouse_quantity": 900,
+              "min_quantity": 180
+            },
+            {
+              "id": 4103,
+              "code_internal": "BRG-6308-2RS1",
+              "name_full": "Подшипник шариковый радиальный 6308-2RS1 (закрытый)",
+              "name_short": "Подшипник 6308-2RS1",
+              "category_id": 41,
+              "base_unit": "шт",
+              "specifications": {
+                "product_type": "шариковый радиальный однорядный",
+                "standard_doc": "ГОСТ 8338-75 / ISO 15",
+                "bearing_number": "6308-2RS1",
+                "inner_diameter_mm": 40,
+                "outer_diameter_mm": 90,
+                "width_mm": 23,
+                "seal_type": "2RS1 (двустороннее резиновое уплотнение)",
+                "cage_material": "Стальной штампованный",
+                "grease_type": "Литол-24",
+                "dynamic_load_rating_kn": 41.0,
+                "static_load_rating_kn": 22.5,
+                "fatigue_load_limit_kn": 0.98,
+                "reference_speed_rpm": 11000,
+                "limiting_speed_rpm": 7000,
+                "weight_kg": 0.635,
+                "manufacturer": [
+                  "SKF",
+                  "NSK",
+                  "FAG",
+                  "KOYO",
+                  "GPZ (Россия)"
+                ],
+                "application": "электродвигатели АИР132, АИР160"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "requires_batch_tracking": true,
+              "storage_condition": "сухое помещение t=+15...+25°C, влажность ≤60%, горизонтальное положение, защита от вибрации",
+              "warehouse_quantity": 16,
+              "min_quantity": 3
+            }
+          ],
+          "available_combinations": {
+            "series": [
+              "60",
+              "62",
+              "63",
+              "64",
+              "160",
+              "161"
+            ],
+            "inner_diameter_mm": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              12,
+              15,
+              17,
+              20,
+              25,
+              30,
+              35,
+              40,
+              45,
+              50,
+              55,
+              60,
+              65,
+              70,
+              75,
+              80,
+              85,
+              90,
+              95,
+              100,
+              105,
+              110,
+              120,
+              130,
+              140,
+              150,
+              160,
+              170,
+              180,
+              190,
+              200
+            ],
+            "seal_type": [
+              "Открытый (без уплотнения)",
+              "ZZ (металлические экраны с двух сторон)",
+              "2RS1 (резиновые уплотнения с двух сторон)",
+              "RS1 (резиновое уплотнение с одной стороны)",
+              "Z (металлический экран с одной стороны)"
+            ],
+            "cage_material": [
+              "Стальной штампованный",
+              "Латунный точёный",
+              "Полиамидный (PA66)",
+              "Стальной клёпаный"
+            ],
+            "clearance": [
+              "C2 (меньше нормального)",
+              "CN (нормальный)",
+              "C3 (больше нормального)",
+              "C4 (значительно больше нормального)",
+              "C5 (очень большой)"
+            ],
+            "_code_format": "BRG-{series}{bore}-{seals}",
+            "_code_format_ru": "ПОД-{серия}{отверстие}-{уплотнения}",
+            "examples": [
+              "BRG-6205-2RS1"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "BRG",
+                "desc": "Подшипник качения"
+              },
+              {
+                "code": "6205",
+                "desc": "Типоразмер 6205 (25×52×15 мм)"
+              },
+              {
+                "code": "2RS1",
+                "desc": "Двустороннее резиновое уплотнение"
+              }
+            ]
+          },
+          "code_format": "BRG-{series}{bore}-{seals}",
+          "code_format_ru": "ПОД-{серия}{отверстие}-{уплотнения}, где: BRG - подшипник, серия - серия подшипника (60, 62, 63, 64), отверстие - код внутреннего диаметра, уплотнения - тип уплотнений (2RS1 - резиновые с двух сторон, ZZ - металлические экраны)"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "code": "INSUL",
+      "name_ru": "Изоляционные материалы",
+      "name_en": "Insulation Materials",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 51,
+          "code": "INSUL_VARNISH",
+          "name_ru": "Пропиточные лаки",
+          "parent_id": 5,
+          "level": 2,
+          "materials": [
+            {
+              "id": 5101,
+              "code_internal": "VAR-ML92-20L",
+              "name_full": "Лак пропиточный МЛ-92 глифталевый",
+              "name_short": "Лак МЛ-92",
+              "category_id": 51,
+              "base_unit": "кг",
+              "alt_unit": "л",
+              "conversion_factor": 0.92,
+              "specifications": {
+                "product_type": "глифталевый пропиточный лак",
+                "mark": "МЛ-92",
+                "standard_doc": "ГОСТ 9268-79",
+                "base": "глифталевая смола",
+                "solvent": "уайт-спирит, сольвент",
+                "solid_content_percent": "48±2",
+                "viscosity_sec_20C": "25-40 (по вискозиметру ВЗ-246)",
+                "drying_time_hours_105C": "2-3",
+                "thermal_class": "105°C (класс A)",
+                "electrical_strength_kv_mm": "65-70",
+                "volume_resistivity_ohm_m": "1e12",
+                "adhesion_grade": "не более 1",
+                "flexibility_mm": "не более 2",
+                "color": "тёмно-коричневый",
+                "application": "пропитка обмоток электродвигателей и трансформаторов",
+                "packaging": "бочка 20 л, 40 л, 200 л"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "is_hazardous": true,
+              "hazard_class": "3 (легковоспламеняющаяся жидкость)",
+              "storage_condition": "закрытое помещение t=+5...+30°C, защита от огня, влажность ≤70%, срок хранения 12 мес",
+              "warehouse_quantity": 380.61,
+              "min_quantity": 76.12
+            },
+            {
+              "id": 5102,
+              "code_internal": "VAR-KO916-20L",
+              "name_full": "Лак пропиточный КО-916 кремнийорганический",
+              "name_short": "Лак КО-916",
+              "category_id": 51,
+              "base_unit": "кг",
+              "alt_unit": "л",
+              "conversion_factor": 0.95,
+              "specifications": {
+                "product_type": "кремнийорганический пропиточный лак",
+                "mark": "КО-916",
+                "standard_doc": "ГОСТ 9268-79",
+                "base": "кремнийорганическая смола",
+                "solvent": "толуол, ксилол",
+                "solid_content_percent": "40±2",
+                "viscosity_sec_20C": "30-50 (по вискозиметру ВЗ-246)",
+                "drying_time_hours_180C": "2-3",
+                "thermal_class": "180°C (класс H)",
+                "electrical_strength_kv_mm": "70-80",
+                "volume_resistivity_ohm_m": "1e13",
+                "adhesion_grade": "не более 1",
+                "heat_resistance_hours_200C": "не менее 1000",
+                "color": "светло-коричневый",
+                "application": "пропитка обмоток электродвигателей повышенного нагрева, тяговых двигателей",
+                "packaging": "бочка 20 л, 40 л, 200 л"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "is_hazardous": true,
+              "hazard_class": "3 (легковоспламеняющаяся жидкость)",
+              "storage_condition": "закрытое помещение t=+5...+25°C, защита от огня, влажность ≤70%, срок хранения 6 мес",
+              "warehouse_quantity": 84.03,
+              "min_quantity": 16.81
+            },
+            {
+              "id": 5103,
+              "code_internal": "VAR-PE939-20L",
+              "name_full": "Лак пропиточный ПЭ-939 полиэфирный",
+              "name_short": "Лак ПЭ-939",
+              "category_id": 51,
+              "base_unit": "кг",
+              "alt_unit": "л",
+              "conversion_factor": 1.05,
+              "specifications": {
+                "product_type": "полиэфирный пропиточный лак (без растворителя)",
+                "mark": "ПЭ-939",
+                "standard_doc": "ГОСТ 9268-79",
+                "base": "ненасыщенная полиэфирная смола",
+                "solvent": "отсутствует (100% сухой остаток)",
+                "solid_content_percent": "100",
+                "viscosity_sec_20C": "40-70 (по вискозиметру ВЗ-246)",
+                "curing_time_min_130C": "40-60",
+                "thermal_class": "155°C (класс F)",
+                "electrical_strength_kv_mm": "75-85",
+                "volume_resistivity_ohm_m": "1e14",
+                "adhesion_grade": "не более 1",
+                "fill_factor_percent": "≥95",
+                "color": "прозрачный светло-жёлтый",
+                "application": "вакуумная пропитка обмоток электродвигателей (высокая степень заполнения)",
+                "packaging": "бочка 20 кг, 50 кг, 220 кг"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "is_hazardous": true,
+              "hazard_class": "3 (легковоспламеняющаяся жидкость)",
+              "storage_condition": "закрытое помещение t=+5...+25°C, защита от огня, влажность ≤70%, срок хранения 3 мес (при t≤15°C)",
+              "warehouse_quantity": 214.19,
+              "min_quantity": 42.84
+            }
+          ],
+          "code_format": "VAR-{mark}-{volume}",
+          "code_format_ru": "ЛАК-{марка}-{объём}, где: VAR - лак, марка - марка лака (МЛ-92, КО-916, ПЭ-939), объём - объём упаковки в литрах",
+          "available_combinations": {
+            "_code_format": "VAR-{mark}-{volume}",
+            "_code_format_ru": "ЛАК-{марка}-{объём}",
+            "examples": [
+              "VAR-ML92-1L"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "VAR",
+                "desc": "Лак электроизоляционный"
+              },
+              {
+                "code": "ML92",
+                "desc": "Марка лака (МЛ-92 глифталевый)"
+              },
+              {
+                "code": "1L",
+                "desc": "Объём упаковки (1 литр)"
+              }
+            ]
+          }
+        },
+        {
+          "id": 52,
+          "code": "INSUL_CLOTH",
+          "name_ru": "Изоляционные ткани и плёнки",
+          "parent_id": 5,
+          "level": 2,
+          "materials": [
+            {
+              "id": 5201,
+              "code_internal": "INS-LAK-CLOTH-LSH",
+              "name_full": "Лакоткань ЛШ х/б пропитанная",
+              "name_short": "Лакоткань ЛШ",
+              "category_id": 52,
+              "base_unit": "м²",
+              "alt_unit": "кг",
+              "conversion_factor": 0.25,
+              "specifications": {
+                "product_type": "лакоткань на хлопчатобумажной основе",
+                "mark": "ЛШ",
+                "standard_doc": "ГОСТ 10892-82",
+                "base_material": "хлопчатобумажная ткань",
+                "impregnation": "глифталевый лак",
+                "width_mm": [
+                  1000,
+                  1200,
+                  1500
+                ],
+                "length_m_roll": [
+                  20,
+                  25,
+                  50
+                ],
+                "thickness_mm": "0.20-0.25",
+                "weight_g_m2": "230-270",
+                "thermal_class": "105°C (класс A)",
+                "electrical_strength_kv_mm": "≥15",
+                "tensile_strength_n_cm": "≥120",
+                "application": "межвитковая и пазовая изоляция обмоток",
+                "packaging": "рулон 20-50 м²"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение t=+5...+30°C, влажность ≤70%, защита от механических повреждений",
+              "warehouse_quantity": 153.38,
+              "min_quantity": 30.68
+            },
+            {
+              "id": 5202,
+              "code_internal": "INS-GLASS-CLOTH-T11",
+              "name_full": "Стеклоткань Т-11 электроизоляционная",
+              "name_short": "Стеклоткань Т-11",
+              "category_id": 52,
+              "base_unit": "м²",
+              "alt_unit": "кг",
+              "conversion_factor": 0.2,
+              "specifications": {
+                "product_type": "стеклоткань бесщелочная",
+                "mark": "Т-11",
+                "standard_doc": "ГОСТ 10892-82",
+                "base_material": "стекловолокно (бесщелочное)",
+                "weave_type": "полотняное переплетение",
+                "width_mm": [
+                  900,
+                  1000,
+                  1200,
+                  1500
+                ],
+                "length_m_roll": [
+                  50,
+                  100
+                ],
+                "thickness_mm": "0.10-0.12",
+                "weight_g_m2": "180-220",
+                "thermal_class": "180°C (класс H)",
+                "electrical_strength_kv_mm": "≥20",
+                "tensile_strength_n_cm": "≥250",
+                "application": "изоляция обмоток повышенного нагрева, бандажировка",
+                "packaging": "рулон 50-100 м²"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение t=+5...+30°C, влажность ≤70%, защита от механических повреждений",
+              "warehouse_quantity": 123.35,
+              "min_quantity": 24.67
+            },
+            {
+              "id": 5203,
+              "code_internal": "INS-FILM-PET-010",
+              "name_full": "Плёнка полиэтилентерефталатная (ПЭТ) 0.10 мм",
+              "name_short": "Плёнка ПЭТ 0.10мм",
+              "category_id": 52,
+              "base_unit": "м²",
+              "alt_unit": "кг",
+              "conversion_factor": 0.14,
+              "specifications": {
+                "product_type": "полиэфирная плёнка",
+                "mark": "ПЭТ-Э",
+                "standard_doc": "ГОСТ 24234-80",
+                "material": "полиэтилентерефталат",
+                "width_mm": [
+                  500,
+                  1000,
+                  1200,
+                  1500
+                ],
+                "length_m_roll": [
+                  500,
+                  1000,
+                  2000
+                ],
+                "thickness_mm": [
+                  0.05,
+                  0.075,
+                  0.1,
+                  0.125,
+                  0.15,
+                  0.175,
+                  0.2,
+                  0.25,
+                  0.3,
+                  0.35,
+                  0.4
+                ],
+                "density_kg_m3": 1400,
+                "thermal_class": "130°C (класс B)",
+                "electrical_strength_kv_mm": "≥160",
+                "volume_resistivity_ohm_m": "1e15",
+                "tensile_strength_mpa": "≥150",
+                "elongation_percent": "≥80",
+                "application": "межслойная изоляция, прокладочный материал",
+                "packaging": "рулон 500-2000 м"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение t=+10...+30°C, влажность ≤70%, защита от механических повреждений",
+              "warehouse_quantity": 386.48,
+              "min_quantity": 77.3
+            }
+          ],
+          "code_format": "INS-{material}-{mark}",
+          "code_format_ru": "ИЗ-{материал}-{марка}, где: INS - изоляция, материал - тип материала (LAK-CLOTH - лакоткань, GLASS-CLOTH - стеклоткань, FILM - плёнка), марка - марка изделия",
+          "available_combinations": {
+            "_code_format": "INS-{material}-{mark}",
+            "_code_format_ru": "ИЗ-{материал}-{марка}",
+            "examples": [
+              "INS-LAK-CLOTH-LSM"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "INS",
+                "desc": "Изоляционный материал"
+              },
+              {
+                "code": "LAK",
+                "desc": "Лакоткань (лакированная ткань)"
+              },
+              {
+                "code": "CLOTH",
+                "desc": "Тканевая основа"
+              },
+              {
+                "code": "LSM",
+                "desc": "Марка лакоткани (ЛСМ - лаковая с микалентой)"
+              }
+            ]
+          }
+        },
+        {
+          "id": 53,
+          "code": "INSUL_SLOTS",
+          "name_ru": "Пазовая изоляция",
+          "parent_id": 5,
+          "level": 2,
+          "materials": [
+            {
+              "id": 5301,
+              "code_internal": "INS-SLOT-WEDGE-PS2",
+              "name_full": "Клин пазовый ПС-2 стеклотекстолитовый",
+              "name_short": "Клин пазовый ПС-2",
+              "category_id": 53,
+              "base_unit": "шт",
+              "specifications": {
+                "product_type": "пазовый клин",
+                "mark": "ПС-2",
+                "standard_doc": "ТУ 35.11-001-2015",
+                "material": "стеклотекстолит",
+                "thermal_class": "155°C (класс F)",
+                "dimensions_mm": {
+                  "width": [
+                    8,
+                    10,
+                    12,
+                    14,
+                    16,
+                    18,
+                    20
+                  ],
+                  "height": [
+                    6,
+                    8,
+                    10,
+                    12,
+                    14
+                  ],
+                  "length": [
+                    50,
+                    100,
+                    150,
+                    200,
+                    250,
+                    300
+                  ]
+                },
+                "tensile_strength_mpa": "≥300",
+                "flexural_strength_mpa": "≥350",
+                "electrical_strength_kv_mm": "≥15",
+                "water_absorption_percent": "≤1.5",
+                "color": "зелёный, коричневый",
+                "application": "фиксация обмотки в пазах статора",
+                "packaging": "коробка 100 шт"
+              },
+              "is_critical": true,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение t=+5...+35°C, влажность ≤70%",
+              "warehouse_quantity": 114,
+              "min_quantity": 22
+            }
+          ],
+          "code_format": "INS-SLOT-{type}-{mark}",
+          "code_format_ru": "ИЗ-ПАЗ-{тип}-{марка}, где: INS-SLOT - пазовая изоляция, тип - тип изделия (WEDGE - клин), марка - марка изделия (ПС-2)",
+          "available_combinations": {
+            "_code_format": "INS-SLOT-{type}-{mark}",
+            "_code_format_ru": "ИЗ-ПАЗ-{тип}-{марка}",
+            "examples": [
+              "INS-SLOT-WEDGE-PS2"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "INS",
+                "desc": "Изоляционный материал"
+              },
+              {
+                "code": "SLOT",
+                "desc": "Пазовая изоляция"
+              },
+              {
+                "code": "WEDGE",
+                "desc": "Клин пазовый"
+              },
+              {
+                "code": "PS2",
+                "desc": "Марка изделия (ПС-2 стеклотекстолит)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "code": "CHEM",
+      "name_ru": "Химикаты, ЛКМ, СОЖ",
+      "name_en": "Chemicals, Paints, Coolants",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 61,
+          "code": "CHEM_PAINT",
+          "name_ru": "Лакокрасочные материалы",
+          "parent_id": 6,
+          "level": 2,
+          "materials": [
+            {
+              "id": 6101,
+              "code_internal": "PAINT-GF021-25L",
+              "name_full": "Грунтовка ГФ-021 красно-коричневая",
+              "name_short": "Грунтовка ГФ-021",
+              "category_id": 61,
+              "base_unit": "кг",
+              "alt_unit": "л",
+              "conversion_factor": 1.35,
+              "specifications": {
+                "product_type": "глифталевая грунтовка",
+                "mark": "ГФ-021",
+                "standard_doc": "ГОСТ 25129-82",
+                "base": "глифталевый лак",
+                "pigment": "сурик железный, охра",
+                "color": "красно-коричневая, серая",
+                "solid_content_percent": "60±3",
+                "viscosity_sec_20C": "50-80 (по вискозиметру ВЗ-246)",
+                "drying_time_hours_20C": "24",
+                "drying_time_hours_105C": "1",
+                "adhesion_grade": "не более 1",
+                "elasticity_mm": "не более 1",
+                "impact_strength_cm": "не менее 50",
+                "salt_fog_resistance_hours": "не менее 48",
+                "application": "грунтование металлических поверхностей перед окраской",
+                "coverage_m2_l": "8-10 (в один слой)",
+                "packaging": "ведро 25 кг, 40 кг, 50 кг; бочка 200 л"
+              },
+              "is_critical": false,
+              "requires_cert": true,
+              "is_hazardous": true,
+              "hazard_class": "3 (легковоспламеняющаяся жидкость)",
+              "storage_condition": "закрытое помещение t=+5...+30°C, защита от огня, влажность ≤80%, срок хранения 6 мес",
+              "warehouse_quantity": 50.91,
+              "min_quantity": 10.18
+            },
+            {
+              "id": 6102,
+              "code_internal": "PAINT-PF115-25L",
+              "name_full": "Эмаль ПФ-115 белая (и др. цвета)",
+              "name_short": "Эмаль ПФ-115",
+              "category_id": 61,
+              "base_unit": "кг",
+              "alt_unit": "л",
+              "conversion_factor": 1.4,
+              "specifications": {
+                "product_type": "глифталевая эмаль",
+                "mark": "ПФ-115",
+                "standard_doc": "ГОСТ 6465-76",
+                "base": "глифталевый лак",
+                "colors": [
+                  "белая",
+                  "серая",
+                  "бежевая",
+                  "голубая",
+                  "зелёная",
+                  "коричневая",
+                  "красная",
+                  "синяя",
+                  "чёрная",
+                  "жёлтая"
+                ],
+                "solid_content_percent": "50-70",
+                "viscosity_sec_20C": "60-120 (по вискозиметру ВЗ-246)",
+                "drying_time_hours_20C": "24",
+                "drying_time_hours_105C": "1",
+                "gloss_percent": "≥50",
+                "adhesion_grade": "не более 1",
+                "elasticity_mm": "не более 1",
+                "impact_strength_cm": "не менее 40",
+                "water_resistance_hours": "не менее 24",
+                "application": "окраска металлических, деревянных и бетонных поверхностей",
+                "coverage_m2_l": "7-10 (в один слой)",
+                "packaging": "ведро 25 кг, 40 кг, 50 кг; бочка 200 л"
+              },
+              "is_critical": false,
+              "requires_cert": true,
+              "is_hazardous": true,
+              "hazard_class": "3 (легковоспламеняющаяся жидкость)",
+              "storage_condition": "закрытое помещение t=+5...+30°C, защита от огня, влажность ≤80%, срок хранения 12 мес",
+              "warehouse_quantity": 52.87,
+              "min_quantity": 10.57
+            },
+            {
+              "id": 6103,
+              "code_internal": "PAINT-KO815-20L",
+              "name_full": "Эмаль КО-815 термостойкая",
+              "name_short": "Эмаль КО-815",
+              "category_id": 61,
+              "base_unit": "кг",
+              "alt_unit": "л",
+              "conversion_factor": 1.3,
+              "specifications": {
+                "product_type": "кремнийорганическая термостойкая эмаль",
+                "mark": "КО-815",
+                "standard_doc": "ТУ 2312-023-52097623",
+                "base": "кремнийорганическая смола",
+                "colors": [
+                  "белая",
+                  "серая",
+                  "голубая",
+                  "зелёная",
+                  "коричневая",
+                  "красная",
+                  "синяя",
+                  "чёрная"
+                ],
+                "solid_content_percent": "45±3",
+                "viscosity_sec_20C": "40-70 (по вискозиметру ВЗ-246)",
+                "drying_time_hours_150C": "2",
+                "drying_time_hours_20C": "24",
+                "heat_resistance_c": "400",
+                "adhesion_grade": "не более 1",
+                "elasticity_mm": "не более 2",
+                "impact_strength_cm": "не менее 40",
+                "application": "окраска электродвигателей, печей, дымоходов, выхлопных систем",
+                "coverage_m2_l": "8-12 (в один слой)",
+                "packaging": "ведро 20 кг, 40 кг; бочка 200 л"
+              },
+              "is_critical": false,
+              "requires_cert": true,
+              "is_hazardous": true,
+              "hazard_class": "3 (легковоспламеняющаяся жидкость)",
+              "storage_condition": "закрытое помещение t=+5...+25°C, защита от огня, влажность ≤80%, срок хранения 6 мес",
+              "warehouse_quantity": 424.51,
+              "min_quantity": 84.9
+            }
+          ],
+          "code_format": "PNT-{mark}-{color}-{volume}",
+          "code_format_ru": "КР-{марка}-{цвет}-{объём}, где: PNT - краска/эмаль, марка - марка краски (ПФ-115, ЭП-1236), цвет - цвет эмали, объём - объём упаковки в литрах",
+          "available_combinations": {
+            "_code_format": "PNT-{mark}-{color}-{volume}",
+            "_code_format_ru": "КР-{марка}-{цвет}-{объём}",
+            "examples": [
+              "PNT-PF115-WHITE-1L"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "PNT",
+                "desc": "Лакокрасочное покрытие"
+              },
+              {
+                "code": "PF115",
+                "desc": "Тип основы (GF - глифталевая, PF - пентафталевая)"
+              },
+              {
+                "code": "WHITE",
+                "desc": "Цвет эмали"
+              },
+              {
+                "code": "1L",
+                "desc": "Объём тары в литрах"
+              }
+            ]
+          }
+        },
+        {
+          "id": 62,
+          "code": "CHEM_SOLVENT",
+          "name_ru": "Растворители и разбавители",
+          "parent_id": 6,
+          "level": 2,
+          "materials": [
+            {
+              "id": 6201,
+              "code_internal": "SOLV-NEFRAS-C2-10L",
+              "name_full": "Нефрас (уайт-спирит) С2 80/120",
+              "name_short": "Нефрас С2",
+              "category_id": 62,
+              "base_unit": "л",
+              "alt_unit": "кг",
+              "conversion_factor": 0.76,
+              "specifications": {
+                "product_type": "растворитель",
+                "mark": "Нефрас С2 80/120",
+                "standard_doc": "ГОСТ 3134-78",
+                "chemical_composition": "алифатические углеводороды",
+                "boiling_range_c": "80-120",
+                "density_kg_l_20C": "0.760-0.795",
+                "flash_point_c": "≥31",
+                "aromatics_content_percent": "≤16",
+                "sulfur_content_percent": "≤0.025",
+                "water_solubility": "нерастворим",
+                "application": "разбавление лаков, красок, эмалей; обезжиривание поверхностей",
+                "packaging": "канистра 10 л, 20 л; бочка 200 л"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "is_hazardous": true,
+              "hazard_class": "3 (легковоспламеняющаяся жидкость)",
+              "storage_condition": "закрытое помещение t=+5...+25°C, защита от огня, влажность ≤80%, срок хранения 12 мес",
+              "warehouse_quantity": 124.71,
+              "min_quantity": 24.94
+            },
+            {
+              "id": 6202,
+              "code_internal": "SOLV-ACETONE-10L",
+              "name_full": "Ацетон технический",
+              "name_short": "Ацетон",
+              "category_id": 62,
+              "base_unit": "л",
+              "alt_unit": "кг",
+              "conversion_factor": 0.79,
+              "specifications": {
+                "product_type": "растворитель",
+                "mark": "Ацетон",
+                "standard_doc": "ГОСТ 2768-84",
+                "chemical_formula": "C3H6O",
+                "purity_percent": "≥99.5",
+                "density_kg_l_20C": "0.790-0.795",
+                "boiling_point_c": "56.0-56.5",
+                "flash_point_c": "-18",
+                "water_content_percent": "≤0.15",
+                "application": "растворение лаков, красок, смол; обезжиривание; очистка инструмента",
+                "packaging": "канистра 10 л, 20 л; бочка 200 л"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "is_hazardous": true,
+              "hazard_class": "3 (легковоспламеняющаяся жидкость)",
+              "storage_condition": "закрытое помещение t=+5...+25°C, защита от огня, влажность ≤80%, срок хранения 12 мес",
+              "warehouse_quantity": 163.35,
+              "min_quantity": 32.67
+            }
+          ],
+          "code_format": "SLV-{mark}-{volume}",
+          "code_format_ru": "РСТ-{марка}-{объём}, где: SLV - растворитель, марка - марка растворителя (646, 647, Уайт-спирит), объём - объём упаковки в литрах",
+          "available_combinations": {
+            "_code_format": "SLV-{mark}-{volume}",
+            "_code_format_ru": "РСТ-{марка}-{объём}",
+            "examples": [
+              "SLV-646-1L"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "SLV",
+                "desc": "Растворитель"
+              },
+              {
+                "code": "646",
+                "desc": "Марка растворителя"
+              },
+              {
+                "code": "1L",
+                "desc": "Объём тары в литрах"
+              }
+            ]
+          }
+        },
+        {
+          "id": 63,
+          "code": "CHEM_COOLANT",
+          "name_ru": "Смазочно-охлаждающие жидкости (СОЖ)",
+          "parent_id": 6,
+          "level": 2,
+          "materials": [
+            {
+              "id": 6301,
+              "code_internal": "COOL-EMUSOL-20L",
+              "name_full": "Эмульсол для СОЖ",
+              "name_short": "Эмульсол",
+              "category_id": 63,
+              "base_unit": "кг",
+              "alt_unit": "л",
+              "conversion_factor": 0.9,
+              "specifications": {
+                "product_type": "концентрат СОЖ",
+                "mark": "Эмульсол",
+                "standard_doc": "ГОСТ 18821-73",
+                "base": "минеральное масло + эмульгаторы",
+                "appearance": "вязкая жидкость от жёлтого до коричневого цвета",
+                "density_kg_l_20C": "0.88-0.92",
+                "viscosity_cst_50C": "8-12",
+                "alkalinity_mg_koh_g": "≥6",
+                "stability_hours": "≥24",
+                "working_concentration_percent": "3-5",
+                "ph_working_solution": "8.5-9.5",
+                "application": "токарные, фрезерные, шлифовальные операции по чёрным и цветным металлам",
+                "packaging": "канистра 20 кг, 40 кг; бочка 200 л"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "is_hazardous": false,
+              "storage_condition": "закрытое помещение t=+5...+30°C, защита от замерзания, срок хранения 12 мес",
+              "warehouse_quantity": 366.22,
+              "min_quantity": 73.24
+            }
+          ],
+          "code_format": "CCL-{mark}-{volume}",
+          "code_format_ru": "СОЖ-{марка}-{объём}, где: CCL - СОЖ, марка - марка СОЖ, объём - объём упаковки в литрах",
+          "available_combinations": {
+            "_code_format": "CCL-{mark}-{volume}",
+            "_code_format_ru": "СОЖ-{марка}-{объём}",
+            "examples": [
+              "COOL-EMUSOL-20L"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "COOL",
+                "desc": "Охлаждающая жидкость"
+              },
+              {
+                "code": "EMUSOL",
+                "desc": "Марка жидкости"
+              },
+              {
+                "code": "20L",
+                "desc": "Объём тары в литрах"
+              }
+            ]
+          }
+        },
+        {
+          "id": 64,
+          "code": "CHEM_GREASE",
+          "name_ru": "Смазочные материалы",
+          "parent_id": 6,
+          "level": 2,
+          "materials": [
+            {
+              "id": 6401,
+              "code_internal": "GRS-TSiatim201-10kg",
+              "name_full": "Смазка ЦИАТИМ-201",
+              "name_short": "ЦИАТИМ-201",
+              "category_id": 64,
+              "base_unit": "кг",
+              "specifications": {
+                "product_type": "антифрикционная многоцелевая смазка",
+                "mark": "ЦИАТИМ-201",
+                "standard_doc": "ГОСТ 6267-74",
+                "base": "минеральное масло + литиевое мыло",
+                "appearance": "мазь от светло-жёлтого до коричневого цвета",
+                "penetration_0_1mm_25C": "265-295",
+                "dropping_point_c": "≥170",
+                "free_alkali_mg_koh_g": "≤0.08",
+                "free_acid_mg_koh_g": "≤0.05",
+                "water_content_percent": "отсутствует",
+                "evaporation_percent_100C_1h": "≤8",
+                "corrosion_protection": "выдерживает",
+                "temperature_range_c": "-60...+90",
+                "application": "подшипники скольжения и качения, зубчатые передачи, резьбовые соединения",
+                "packaging": "банка 0.8 кг, 2.5 кг; ведро 10 кг, 15 кг; бочка 50 кг, 170 кг"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "is_hazardous": false,
+              "storage_condition": "закрытое помещение t=-30...+30°C, защита от пыли и воды, срок хранения 5 лет",
+              "warehouse_quantity": 270.43,
+              "min_quantity": 54.09
+            },
+            {
+              "id": 6402,
+              "code_internal": "GRS-Litol24-10kg",
+              "name_full": "Смазка Литол-24",
+              "name_short": "Литол-24",
+              "category_id": 64,
+              "base_unit": "кг",
+              "specifications": {
+                "product_type": "антифрикционная многоцелевая водостойкая смазка",
+                "mark": "Литол-24",
+                "standard_doc": "ГОСТ 21150-87",
+                "base": "минеральное масло + литиевое мыло",
+                "appearance": "мазь от светло-жёлтого до тёмно-коричневого цвета",
+                "penetration_0_1mm_25C": "265-310",
+                "dropping_point_c": "≥170",
+                "free_alkali_mg_koh_g": "≤0.1",
+                "free_acid_mg_koh_g": "≤0.05",
+                "water_content_percent": "отсутствует",
+                "evaporation_percent_120C_1h": "≤15",
+                "corrosion_protection": "выдерживает",
+                "temperature_range_c": "-40...+120",
+                "water_resistance": "высокая",
+                "application": "подшипники электродвигателей, шарниры, зубчатые передачи",
+                "packaging": "банка 0.8 кг, 2.5 кг; ведро 10 кг, 15 кг; бочка 50 кг, 170 кг"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "is_hazardous": false,
+              "storage_condition": "закрытое помещение t=-30...+30°C, защита от пыли и воды, срок хранения 5 лет",
+              "warehouse_quantity": 486.69,
+              "min_quantity": 97.34
+            }
+          ],
+          "code_format": "GRS-{mark}-{volume}",
+          "code_format_ru": "СМЗ-{марка}-{объём}, где: GRS - смазка, марка - марка смазки (Литол-24, Циатим-201, Фиол-2У), объём - объём/вес упаковки",
+          "available_combinations": {
+            "_code_format": "GRS-{mark}-{volume}",
+            "_code_format_ru": "СМЗ-{марка}-{объём}",
+            "examples": [
+              "GRS-TSiatim201-10kg"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "GRS",
+                "desc": "Пластичная смазка"
+              },
+              {
+                "code": "TSiatim201",
+                "desc": "Марка смазки"
+              },
+              {
+                "code": "10kg",
+                "desc": "Объём тары в литрах/кг"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "code": "PACK",
+      "name_ru": "Упаковка и маркировка",
+      "name_en": "Packaging & Labeling",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 71,
+          "code": "PACK_BOX",
+          "name_ru": "Тара и упаковка",
+          "parent_id": 7,
+          "level": 2,
+          "materials": [
+            {
+              "id": 7101,
+              "code_internal": "BOX-CORR-T23-500x400x300",
+              "name_full": "Коробка из гофрокартона Т-23 500x400x300 мм",
+              "name_short": "Коробка 500x400x300",
+              "category_id": 71,
+              "base_unit": "шт",
+              "specifications": {
+                "product_type": "коробка из гофрированного картона",
+                "mark": "Т-23",
+                "standard_doc": "ГОСТ 12911-91",
+                "material": "гофрокартон трёхслойный",
+                "flute_type": "гофра B (3-3.5 мм)",
+                "dimensions_mm": {
+                  "length": 500,
+                  "width": 400,
+                  "height": 300
+                },
+                "available_dimensions": [
+                  {
+                    "l": 300,
+                    "w": 200,
+                    "h": 200
+                  },
+                  {
+                    "l": 400,
+                    "w": 300,
+                    "h": 250
+                  },
+                  {
+                    "l": 500,
+                    "w": 400,
+                    "h": 300
+                  },
+                  {
+                    "l": 600,
+                    "w": 400,
+                    "h": 350
+                  },
+                  {
+                    "l": 800,
+                    "w": 600,
+                    "h": 400
+                  },
+                  {
+                    "l": 1000,
+                    "w": 800,
+                    "h": 600
+                  }
+                ],
+                "bursting_strength_kpa": "≥650",
+                "edge_crush_strength_n_mm": "≥5.0",
+                "weight_kg": 0.35,
+                "max_load_kg": 20,
+                "color": "коричневый",
+                "application": "упаковка электродвигателей малой мощности, запчастей",
+                "packaging": "пачка 10 шт, 25 шт"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "storage_condition": "сухое помещение t=+5...+35°C, влажность ≤70%, защита от влаги",
+              "warehouse_quantity": 397,
+              "min_quantity": 79
+            },
+            {
+              "id": 7102,
+              "code_internal": "PALLET-EUR-1200x800",
+              "name_full": "Поддон евро EUR 1200x800x145 мм",
+              "name_short": "Поддон евро",
+              "category_id": 71,
+              "base_unit": "шт",
+              "specifications": {
+                "product_type": "деревянный поддон",
+                "mark": "EUR (европаллет)",
+                "standard_doc": "ГОСТ 9557-87 / UIC 435-2",
+                "material": "древесина хвойных пород",
+                "dimensions_mm": {
+                  "length": 1200,
+                  "width": 800,
+                  "height": 145
+                },
+                "deck_board_thickness_mm": 22,
+                "block_height_mm": 78,
+                "nail_type": "ершёные",
+                "treatment": "фитосанитарная обработка (ISPM 15)",
+                "marking": "IPPС штамп, EUR клеймо",
+                "max_load_kg": 1500,
+                "weight_kg": 25,
+                "fork_entry": "4-сторонний",
+                "application": "отгрузка готовой продукции, складское хранение",
+                "packaging": "штабель 10 шт, 20 шт"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "storage_condition": "сухое помещение или под навесом, защита от длительного увлажнения",
+              "warehouse_quantity": 90,
+              "min_quantity": 18
+            },
+            {
+              "id": 7103,
+              "code_internal": "FILM-STRETCH-500x20",
+              "name_full": "Плёнка стрейч 500 мкм x 20 мкм",
+              "name_short": "Плёнка стрейч 500м",
+              "category_id": 71,
+              "base_unit": "рул",
+              "alt_unit": "кг",
+              "conversion_factor": 2.5,
+              "specifications": {
+                "product_type": "стрейч-плёнка ПВХ/ПЭ",
+                "mark": "ПЭ стрейч",
+                "standard_doc": "ГОСТ 10354-82",
+                "material": "полиэтилен (LLDPE)",
+                "width_mm": 500,
+                "length_m": 200,
+                "thickness_mkm": 20,
+                "available_thickness_mkm": [
+                  12,
+                  15,
+                  17,
+                  20,
+                  23,
+                  25
+                ],
+                "available_width_mm": [
+                  250,
+                  300,
+                  400,
+                  450,
+                  500,
+                  600,
+                  750,
+                  1000
+                ],
+                "available_length_m": [
+                  100,
+                  150,
+                  200,
+                  300,
+                  400,
+                  500
+                ],
+                "stretch_percent": "≥200",
+                "tensile_strength_mpa": "≥20",
+                "puncture_resistance_n": "≥15",
+                "transparency_percent": "≥90",
+                "weight_per_roll_kg": 2.5,
+                "core_diameter_mm": 76,
+                "application": "фиксация грузов на поддонах, защита от пыли и влаги",
+                "packaging": "коробка 6 рул, 12 рул"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "storage_condition": "сухое помещение t=+5...+35°C, защита от прямых солнечных лучей",
+              "warehouse_quantity": 146,
+              "min_quantity": 29
+            }
+          ],
+          "code_format": "BOX-{type}-{dimensions}",
+          "code_format_ru": "КОР-{тип}-{размеры}, где: BOX - коробка/тара, тип - тип тары (картонная, деревянная, обрешётка), размеры - габаритные размеры в мм",
+          "available_combinations": {
+            "_code_format": "BOX-{type}-{dimensions}",
+            "_code_format_ru": "КОР-{тип}-{размеры}",
+            "examples": [
+              "BOX-CARD-300x200x150"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "BOX",
+                "desc": "Коробка"
+              },
+              {
+                "code": "CARD",
+                "desc": "Картонная"
+              },
+              {
+                "code": "300x200x150",
+                "desc": "Размеры 300×200×150 мм (Д×Ш×В)"
+              }
+            ]
+          }
+        },
+        {
+          "id": 72,
+          "code": "PACK_LABEL",
+          "name_ru": "Таблички и маркировка",
+          "parent_id": 7,
+          "level": 2,
+          "materials": [
+            {
+              "id": 7201,
+              "code_internal": "PLATE-ALU-AD1-100x60",
+              "name_full": "Табличка алюминиевая АД1 100x60x1 мм",
+              "name_short": "Табличка АД1 100x60",
+              "category_id": 72,
+              "base_unit": "шт",
+              "specifications": {
+                "product_type": "шильдик (паспортная табличка)",
+                "mark": "АД1",
+                "standard_doc": "ГОСТ 14180-80",
+                "material": "алюминий АД1 (чистота ≥99.3%)",
+                "dimensions_mm": {
+                  "length": [
+                    60,
+                    80,
+                    100,
+                    120,
+                    150,
+                    200
+                  ],
+                  "width": [
+                    40,
+                    50,
+                    60,
+                    80,
+                    100,
+                    120
+                  ],
+                  "thickness": [
+                    0.5,
+                    0.8,
+                    1.0,
+                    1.2,
+                    1.5,
+                    2.0
+                  ]
+                },
+                "surface_finish": "анодированный, матовый, полированный",
+                "marking_method": [
+                  "гравировка",
+                  "шелкография",
+                  "лазерная маркировка",
+                  "термоперенос"
+                ],
+                "corrosion_resistance": "высокая",
+                "temperature_range_c": "-60...+150",
+                "application": "паспортные таблички электродвигателей, информационные знаки",
+                "packaging": "пачка 50 шт, 100 шт"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "storage_condition": "сухое помещение, защита от механических повреждений",
+              "warehouse_quantity": 310,
+              "min_quantity": 62
+            },
+            {
+              "id": 7202,
+              "code_internal": "PLATE-SS-12X18H10T-100x60",
+              "name_full": "Табличка нержавеющая 12Х18Н10Т 100x60x1 мм",
+              "name_short": "Табличка нерж. 100x60",
+              "category_id": 72,
+              "base_unit": "шт",
+              "specifications": {
+                "product_type": "шильдик (паспортная табличка)",
+                "mark": "12Х18Н10Т",
+                "standard_doc": "ГОСТ 14180-80",
+                "material": "нержавеющая сталь 12Х18Н10Т (AISI 321)",
+                "dimensions_mm": {
+                  "length": [
+                    60,
+                    80,
+                    100,
+                    120,
+                    150,
+                    200
+                  ],
+                  "width": [
+                    40,
+                    50,
+                    60,
+                    80,
+                    100,
+                    120
+                  ],
+                  "thickness": [
+                    0.5,
+                    0.8,
+                    1.0,
+                    1.2,
+                    1.5,
+                    2.0
+                  ]
+                },
+                "surface_finish": "матовая, зеркальная, шлифованная",
+                "marking_method": [
+                  "гравировка",
+                  "лазерная маркировка",
+                  "электрохимическая маркировка"
+                ],
+                "corrosion_resistance": "очень высокая",
+                "temperature_range_c": "-200...+600",
+                "application": "паспортные таблички для агрессивных сред, взрывозащищённых двигателей",
+                "packaging": "пачка 50 шт, 100 шт"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "storage_condition": "сухое помещение, защита от механических повреждений",
+              "warehouse_quantity": 859,
+              "min_quantity": 171
+            }
+          ],
+          "code_format": "LBL-{type}-{material}",
+          "code_format_ru": "ТАБ-{тип}-{материал}, где: LBL - табличка/маркировка, тип - тип изделия (металлическая, самоклеящаяся, бирка), материал - материал основы",
+          "available_combinations": {
+            "_code_format": "LBL-{type}-{material}",
+            "_code_format_ru": "ТАБ-{тип}-{материал}",
+            "examples": [
+              "LABEL-METAL-100x50"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "LABEL",
+                "desc": "Табличка маркировочная"
+              },
+              {
+                "code": "METAL",
+                "desc": "Металлическая"
+              },
+              {
+                "code": "100x50",
+                "desc": "Размеры 100×50 мм (Д×Ш)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "code": "CONS",
+      "name_ru": "Расходные материалы и инструмент",
+      "name_en": "Consumables & Tools",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 81,
+          "code": "CONS_ABRASIVE",
+          "name_ru": "Абразивный инструмент",
+          "parent_id": 8,
+          "level": 2,
+          "materials": [
+            {
+              "id": 8101,
+              "code_internal": "ABR-GRIND-WHL-25A-250x20x32",
+              "name_full": "Круг шлифовальный 25А 250x20x32 мм",
+              "name_short": "Круг шлиф. 250x20x32",
+              "category_id": 81,
+              "base_unit": "шт",
+              "specifications": {
+                "product_type": "шлифовальный круг прямого профиля",
+                "mark": "25А (электрокорунд нормальный)",
+                "standard_doc": "ГОСТ 2424-83",
+                "abrasive_material": "электрокорунд нормальный (25А)",
+                "dimensions_mm": {
+                  "outer_diameter": [
+                    100,
+                    125,
+                    150,
+                    175,
+                    200,
+                    225,
+                    250,
+                    300,
+                    350,
+                    400,
+                    450,
+                    500
+                  ],
+                  "thickness": [
+                    10,
+                    12,
+                    16,
+                    20,
+                    25,
+                    32,
+                    40,
+                    50
+                  ],
+                  "bore_diameter": [
+                    20,
+                    25,
+                    32,
+                    40,
+                    50,
+                    75,
+                    100,
+                    127,
+                    150,
+                    200,
+                    305
+                  ]
+                },
+                "grain_size": [
+                  "16",
+                  "25",
+                  "32",
+                  "40",
+                  "50",
+                  "63",
+                  "80",
+                  "100",
+                  "125",
+                  "160"
+                ],
+                "hardness_grade": [
+                  "СМ1",
+                  "СМ2",
+                  "С1",
+                  "С2",
+                  "СТ1",
+                  "СТ2",
+                  "Т1",
+                  "Т2"
+                ],
+                "structure": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12"
+                ],
+                "bond_type": "керамическая (К)",
+                "max_speed_m_s": "35",
+                "application": "шлифовка валов, торцов, плоских поверхностей",
+                "packaging": "индивидуальная картонная коробка"
+              },
+              "is_critical": false,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение t=+5...+35°C, защита от ударов и влаги, вертикальное хранение",
+              "warehouse_quantity": 653,
+              "min_quantity": 130
+            },
+            {
+              "id": 8102,
+              "code_internal": "ABR-FLAP-DISC-125-P80",
+              "name_full": "Диск лепестковый 125 мм P80",
+              "name_short": "Диск лепестковый 125 P80",
+              "category_id": 81,
+              "base_unit": "шт",
+              "specifications": {
+                "product_type": "лепестковый шлифовальный диск",
+                "standard_doc": "ГОСТ 2424-83",
+                "abrasive_material": "электрокорунд нормальный/циркониевый",
+                "dimensions_mm": {
+                  "outer_diameter": [
+                    100,
+                    115,
+                    125,
+                    150,
+                    180,
+                    230
+                  ],
+                  "bore_diameter": [
+                    16,
+                    20,
+                    22.23
+                  ]
+                },
+                "grain_size": [
+                  "P40",
+                  "P60",
+                  "P80",
+                  "P100",
+                  "P120",
+                  "P150",
+                  "P180",
+                  "P220",
+                  "P240",
+                  "P320",
+                  "P400"
+                ],
+                "max_speed_rpm": {
+                  "100": 12250,
+                  "115": 10000,
+                  "125": 12250,
+                  "150": 10000,
+                  "180": 8000,
+                  "230": 6650
+                },
+                "application": "зачистка сварных швов, удаление ржавчины, шлифовка металла",
+                "packaging": "индивидуальная упаковка, коробка 10 шт"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "storage_condition": "сухое помещение, защита от влаги",
+              "warehouse_quantity": 643,
+              "min_quantity": 128
+            }
+          ],
+          "code_format": "ABR-{type}-{dimensions}",
+          "code_format_ru": "АБР-{тип}-{размеры}, где: ABR - абразив, тип - тип инструмента (круг, лента, бумага), размеры - размеры абразива",
+          "available_combinations": {
+            "_code_format": "ABR-{type}-{dimensions}",
+            "_code_format_ru": "АБР-{тип}-{размеры}",
+            "examples": [
+              "ABR-DISC-125x22"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "ABR",
+                "desc": "Абразивный инструмент"
+              },
+              {
+                "code": "DISC",
+                "desc": "Диск отрезной/шлифовальный"
+              },
+              {
+                "code": "125x22",
+                "desc": "Размеры 125×22 мм (диаметр × посадка)"
+              }
+            ]
+          }
+        },
+        {
+          "id": 82,
+          "code": "CONS_CUTTING_TOOL",
+          "name_ru": "Режущий инструмент",
+          "parent_id": 8,
+          "level": 2,
+          "materials": [
+            {
+              "id": 8201,
+              "code_internal": "TOOL-DRILL-HSS-6mm",
+              "name_full": "Сверло спиральное HSS 6 мм ГОСТ 2034",
+              "name_short": "Сверло HSS 6мм",
+              "category_id": 82,
+              "base_unit": "шт",
+              "specifications": {
+                "product_type": "сверло спиральное",
+                "mark": "HSS (быстрорежущая сталь)",
+                "standard_doc": "ГОСТ 2034-80",
+                "material": "Р6М5 (HSS-E)",
+                "diameter_mm": [
+                  1.0,
+                  1.5,
+                  2.0,
+                  2.5,
+                  3.0,
+                  3.5,
+                  4.0,
+                  4.5,
+                  5.0,
+                  5.5,
+                  6.0,
+                  6.5,
+                  7.0,
+                  7.5,
+                  8.0,
+                  8.5,
+                  9.0,
+                  9.5,
+                  10.0,
+                  10.5,
+                  11.0,
+                  11.5,
+                  12.0,
+                  13.0,
+                  14.0,
+                  15.0,
+                  16.0,
+                  17.0,
+                  18.0,
+                  19.0,
+                  20.0
+                ],
+                "length_mm": {
+                  "1-3mm": [
+                    20,
+                    30,
+                    40
+                  ],
+                  "4-6mm": [
+                    40,
+                    50,
+                    60,
+                    70
+                  ],
+                  "7-10mm": [
+                    70,
+                    80,
+                    90,
+                    100
+                  ],
+                  "11-15mm": [
+                    100,
+                    120,
+                    130,
+                    150
+                  ],
+                  "16-20mm": [
+                    130,
+                    150,
+                    180,
+                    200
+                  ]
+                },
+                "point_angle_deg": 118,
+                "shank_type": "цилиндрический",
+                "coating": [
+                  "без покрытия",
+                  "TiN (нитрид титана)",
+                  "TiAlN (нитрид титана-алюминия)"
+                ],
+                "hardness_hrc": "62-65",
+                "application": "сверление отверстий в стали, чугуне, цветных металлах",
+                "packaging": "пластиковый футляр, картонная коробка 5-10 шт"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "storage_condition": "сухое помещение, защита от коррозии, индивидуальная упаковка",
+              "warehouse_quantity": 916,
+              "min_quantity": 183
+            },
+            {
+              "id": 8202,
+              "code_internal": "TOOL-TAP-M8-HSS",
+              "name_full": "Метчик машинный М8 HSS ГОСТ 3266",
+              "name_short": "Метчик М8",
+              "category_id": 82,
+              "base_unit": "шт",
+              "specifications": {
+                "product_type": "метчик машинный",
+                "mark": "HSS",
+                "standard_doc": "ГОСТ 3266-81",
+                "material": "Р6М5 (HSS)",
+                "thread_diameter_mm": [
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  14,
+                  16,
+                  18,
+                  20,
+                  22,
+                  24,
+                  27,
+                  30,
+                  33,
+                  36,
+                  39,
+                  42,
+                  45,
+                  48,
+                  52,
+                  56,
+                  60
+                ],
+                "thread_pitch_mm": {
+                  "M3": 0.5,
+                  "M4": 0.7,
+                  "M5": 0.8,
+                  "M6": 1.0,
+                  "M8": 1.25,
+                  "M10": 1.5,
+                  "M12": 1.75,
+                  "M14": 2.0,
+                  "M16": 2.0,
+                  "M18": 2.5,
+                  "M20": 2.5
+                },
+                "tolerance_class": [
+                  "6H",
+                  "7H"
+                ],
+                "flute_type": "канавки прямые/винтовые",
+                "coating": [
+                  "без покрытия",
+                  "TiN (нитрид титана)"
+                ],
+                "hardness_hrc": "62-65",
+                "application": "нарезание внутренней резьбы",
+                "packaging": "пластиковый футляр, картонная коробка 1-5 шт"
+              },
+              "is_critical": false,
+              "requires_cert": false,
+              "storage_condition": "сухое помещение, защита от коррозии, индивидуальная упаковка",
+              "warehouse_quantity": 892,
+              "min_quantity": 178
+            }
+          ],
+          "code_format": "CTL-{type}-{dimensions}",
+          "code_format_ru": "ИНСТ-{тип}-{размеры}, где: CTL - режущий инструмент, тип - тип инструмента (сверло, фреза, метчик), размеры - размеры инструмента",
+          "available_combinations": {
+            "_code_format": "CTL-{type}-{dimensions}",
+            "_code_format_ru": "ИНСТ-{тип}-{размеры}",
+            "examples": [
+              "TOOL-DRILL-D6.8-HSS"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "TOOL",
+                "desc": "Инструмент"
+              },
+              {
+                "code": "DRILL",
+                "desc": "Сверло"
+              },
+              {
+                "code": "D6.8",
+                "desc": "Диаметр 6.8 мм"
+              },
+              {
+                "code": "HSS",
+                "desc": "Быстрорежущая сталь (High Speed Steel)"
+              }
+            ]
+          }
+        },
+        {
+          "id": 83,
+          "code": "CONS_WELDING",
+          "name_ru": "Сварочные материалы",
+          "parent_id": 8,
+          "level": 2,
+          "materials": [
+            {
+              "id": 8301,
+              "code_internal": "WELD-ELECT-UONI1355-3mm",
+              "name_full": "Электроды сварочные УОНИ 13/55 Ø3 мм ГОСТ 9466",
+              "name_short": "Электрод УОНИ 13/55 3мм",
+              "category_id": 83,
+              "base_unit": "кг",
+              "alt_unit": "шт",
+              "conversion_factor": 0.045,
+              "specifications": {
+                "product_type": "электроды с основным покрытием",
+                "mark": "УОНИ 13/55",
+                "standard_doc": "ГОСТ 9466-75, ГОСТ 9467-75",
+                "coating_type": "основное (Б)",
+                "welding_position": [
+                  "нижнее",
+                  "горизонтальное",
+                  "вертикальное снизу-вверх",
+                  "потолочное"
+                ],
+                "current_type": "постоянный обратной полярности",
+                "diameter_mm": [
+                  2.0,
+                  2.5,
+                  3.0,
+                  4.0,
+                  5.0
+                ],
+                "length_mm": {
+                  "2.0mm": 250,
+                  "2.5mm": 300,
+                  "3.0mm": 350,
+                  "4.0mm": 450,
+                  "5.0mm": 450
+                },
+                "welded_material": "низколегированные стали (Ст3, 20, 25, 30, 35, 40, 45, 15К, 20К)",
+                "tensile_strength_mpa": "≥510",
+                "yield_strength_mpa": "≥410",
+                "elongation_percent": "≥20",
+                "impact_strength_j_cm2_-40C": "≥34",
+                "application": "сварка ответственных конструкций, работающих при пониженных температурах",
+                "packaging": "коробка 1 кг, 3 кг, 5 кг; пачка 20 кг"
+              },
+              "is_critical": false,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение t=+10...+30°C, влажность ≤50%, прокалка перед использованием при 300-350°C в течение 1 часа",
+              "warehouse_quantity": 184.01,
+              "min_quantity": 36.8
+            },
+            {
+              "id": 8302,
+              "code_internal": "WELD-ELECT-OZS12-3mm",
+              "name_full": "Электроды сварочные ОЗС-12 Ø3 мм ГОСТ 9466",
+              "name_short": "Электрод ОЗС-12 3мм",
+              "category_id": 83,
+              "base_unit": "кг",
+              "alt_unit": "шт",
+              "conversion_factor": 0.045,
+              "specifications": {
+                "product_type": "электроды с рутиловым покрытием",
+                "mark": "ОЗС-12",
+                "standard_doc": "ГОСТ 9466-75, ГОСТ 9467-75",
+                "coating_type": "рутиловое (Р)",
+                "welding_position": [
+                  "нижнее",
+                  "горизонтальное",
+                  "вертикальное",
+                  "потолочное"
+                ],
+                "current_type": "переменный/постоянный любой полярности",
+                "diameter_mm": [
+                  2.0,
+                  2.5,
+                  3.0,
+                  4.0,
+                  5.0
+                ],
+                "length_mm": {
+                  "2.0mm": 250,
+                  "2.5mm": 300,
+                  "3.0mm": 350,
+                  "4.0mm": 450,
+                  "5.0mm": 450
+                },
+                "welded_material": "углеродистые стали (Ст3, Ст5, 20, 25)",
+                "tensile_strength_mpa": "≥420",
+                "yield_strength_mpa": "≥330",
+                "elongation_percent": "≥22",
+                "application": "сварка конструкций из углеродистых сталей (общестроительные работы)",
+                "packaging": "коробка 1 кг, 3 кг, 5 кг; пачка 20 кг"
+              },
+              "is_critical": false,
+              "requires_cert": true,
+              "storage_condition": "сухое помещение t=+10...+30°C, влажность ≤50%",
+              "warehouse_quantity": 100.18,
+              "min_quantity": 20.04
+            }
+          ],
+          "code_format": "WLD-{type}-{diameter}",
+          "code_format_ru": "СВР-{тип}-{диаметр}, где: WLD - сварочные материалы, тип - тип материалов (электрод, проволока), диаметр - диаметр электрода/проволоки в мм",
+          "available_combinations": {
+            "_code_format": "WLD-{type}-{diameter}",
+            "_code_format_ru": "СВР-{тип}-{диаметр}",
+            "examples": [
+              "WELD-ELECTRODE-D3-UONI"
+            ],
+            "example_detailed_decoding": [
+              {
+                "code": "WELD",
+                "desc": "Сварочные материалы"
+              },
+              {
+                "code": "ELECTRODE",
+                "desc": "Электрод сварочный"
+              },
+              {
+                "code": "D3",
+                "desc": "Диаметр 3 мм"
+              },
+              {
+                "code": "UONI",
+                "desc": "Марка электрода (УОНИ)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "all_abbreviations": {
+    "BLT": {
+      "full_name": "Болт",
+      "desc": "Крепёжное изделие с шестигранной головкой"
+    },
+    "NUT": {
+      "full_name": "Гайка",
+      "desc": "Крепёжное изделие с внутренней резьбой"
+    },
+    "WSH": {
+      "full_name": "Шайба",
+      "desc": "Плоская пластина с отверстием"
+    },
+    "SCR": {
+      "full_name": "Винт",
+      "desc": "Крепёжное изделие с наружной резьбой"
+    },
+    "BRG": {
+      "full_name": "Подшипник",
+      "desc": "Машиностроительный узел поддержки вала"
+    },
+    "ST": {
+      "full_name": "Сталь",
+      "desc": "Сплав железа с углеродом"
+    },
+    "CAST": {
+      "full_name": "Чугун",
+      "desc": "Сплав железа с углеродом (>2.14%)"
+    },
+    "AL": {
+      "full_name": "Алюминий",
+      "desc": "Лёгкий металл серебристо-белого цвета"
+    },
+    "CU": {
+      "full_name": "Медь",
+      "desc": "Пластичный металл розовато-красного цвета"
+    },
+    "ES": {
+      "full_name": "Электротехническая сталь",
+      "desc": "Сталь с улучшенными магнитными свойствами"
+    },
+    "BAR": {
+      "full_name": "Пруток",
+      "desc": "Металлопрокат круглого/квадратного сечения"
+    },
+    "SHEET": {
+      "full_name": "Лист",
+      "desc": "Металлопрокат в виде плоской заготовки"
+    },
+    "WIRE": {
+      "full_name": "Проволока/Провод",
+      "desc": "Металлическая нить или кабель"
+    },
+    "CHU": {
+      "full_name": "Чушка",
+      "desc": "Литейная заготовка в виде слитка"
+    },
+    "BUS": {
+      "full_name": "Шина",
+      "desc": "Медная шина прямоугольного сечения"
+    },
+    "45": {
+      "full_name": "Сталь 45",
+      "desc": "Сталь конструкционная качественная"
+    },
+    "40X": {
+      "full_name": "Сталь 40Х",
+      "desc": "Сталь легированная хромистая"
+    },
+    "ST3SP5": {
+      "full_name": "Сталь Ст3сп5",
+      "desc": "Сталь обыкновенного качества спокойная"
+    },
+    "SC15": {
+      "full_name": "Чугун СЧ15",
+      "desc": "Чугун серый с пластинчатым графитом"
+    },
+    "VC40": {
+      "full_name": "Чугун ВЧ40",
+      "desc": "Чугун высокопрочный с шаровидным графитом"
+    },
+    "AK7": {
+      "full_name": "Сплав АК7",
+      "desc": "Алюминиевый литейный сплав с кремнием"
+    },
+    "AK9": {
+      "full_name": "Сплав АК9",
+      "desc": "Алюминиевый литейный сплав с кремнием"
+    },
+    "AV87": {
+      "full_name": "Сплав АВ-87",
+      "desc": "Алюминиевый литейный сплав авиационный"
+    },
+    "PETV": {
+      "full_name": "ПЭТВ",
+      "desc": "Полиэфирная эмаль термовлагостойкая"
+    },
+    "PET": {
+      "full_name": "ПЭТ",
+      "desc": "Полиэфиримидная эмаль"
+    },
+    "PETK": {
+      "full_name": "ПЭТК",
+      "desc": "Полиэфиримидкомпозитная эмаль"
+    },
+    "8.8": {
+      "full_name": "Класс 8.8",
+      "desc": "Средняя прочность (предел прочности 800 МПа)"
+    },
+    "10.9": {
+      "full_name": "Класс 10.9",
+      "desc": "Высокая прочность (предел прочности 1000 МПа)"
+    },
+    "12.9": {
+      "full_name": "Класс 12.9",
+      "desc": "Очень высокая прочность (предел прочности 1200 МПа)"
+    },
+    "ZN": {
+      "full_name": "Цинк",
+      "desc": "Гальваническое цинковое покрытие"
+    },
+    "HDZ": {
+      "full_name": "Горячее цинкование",
+      "desc": "Покрытие горячим цинкованием"
+    },
+    "BLK": {
+      "full_name": "Черный",
+      "desc": "Оксидированное покрытие"
+    },
+    "YEL": {
+      "full_name": "Желтый",
+      "desc": "Хроматированное желтое покрытие"
+    },
+    "8": {
+      "full_name": "Нормальная",
+      "desc": "Гайка нормальной высоты (0.8d)"
+    },
+    "H": {
+      "full_name": "Высокая",
+      "desc": "Гайка высокой конструкции"
+    },
+    "L": {
+      "full_name": "Низкая",
+      "desc": "Гайка низкой конструкции"
+    },
+    "PLAIN": {
+      "full_name": "Плоская",
+      "desc": "Шайба плоская обычная"
+    },
+    "SPRING": {
+      "full_name": "Пружинная",
+      "desc": "Шайба пружинная (гровер)"
+    },
+    "LOCK": {
+      "full_name": "Стопорная",
+      "desc": "Шайба стопорная"
+    },
+    "60": {
+      "full_name": "Серия 60",
+      "desc": "Подшипники сверхлёгкие"
+    },
+    "62": {
+      "full_name": "Серия 62",
+      "desc": "Подшипники лёгкие"
+    },
+    "63": {
+      "full_name": "Серия 63",
+      "desc": "Подшипники средние"
+    },
+    "64": {
+      "full_name": "Серия 64",
+      "desc": "Подшипники тяжёлые"
+    },
+    "2RS1": {
+      "full_name": "2RS1",
+      "desc": "Двустороннее резиновое уплотнение"
+    },
+    "ZZ": {
+      "full_name": "ZZ",
+      "desc": "Двустороннее металлическое экранирование"
+    },
+    "RS": {
+      "full_name": "RS",
+      "desc": "Одностороннее резиновое уплотнение"
+    },
+    "Z": {
+      "full_name": "Z",
+      "desc": "Одностороннее металлическое экранирование"
+    },
+    "OPEN": {
+      "full_name": "OPEN",
+      "desc": "Открытый подшипник без уплотнений"
+    },
+    "ML92": {
+      "full_name": "МЛ-92",
+      "desc": "Лак масляно-битумный"
+    },
+    "KO916": {
+      "full_name": "КО-916",
+      "desc": "Лак кремнийорганический"
+    },
+    "PE939": {
+      "full_name": "ПЭ-939",
+      "desc": "Лак полиэфирный"
+    },
+    "LAK-CLOTH": {
+      "full_name": "Лакоткань",
+      "desc": "Ткань пропитанная лаком"
+    },
+    "GLASS-CLOTH": {
+      "full_name": "Стеклоткань",
+      "desc": "Ткань из стеклянных волокон"
+    },
+    "FILM": {
+      "full_name": "Плёнка",
+      "desc": "Электроизоляционная плёнка"
+    },
+    "WEDGE": {
+      "full_name": "Клин пазовый",
+      "desc": "Клин для крепления обмотки в пазу"
+    },
+    "BOX": {
+      "full_name": "Коробка",
+      "desc": "Картонная или деревянная коробка"
+    },
+    "CRATE": {
+      "full_name": "Обрешётка",
+      "desc": "Деревянная обрешётка"
+    },
+    "PALLET": {
+      "full_name": "Поддон",
+      "desc": "Транспортный поддон"
+    },
+    "METAL": {
+      "full_name": "Металлическая",
+      "desc": "Табличка из металла"
+    },
+    "SELF-ADH": {
+      "full_name": "Самоклеящаяся",
+      "desc": "Самоклеящаяся этикетка"
+    },
+    "TAG": {
+      "full_name": "Бирка",
+      "desc": "Подвесная бирка"
+    },
+    "GRIND-WHL": {
+      "full_name": "Круг шлифовальный",
+      "desc": "Абразивный круг"
+    },
+    "BELT": {
+      "full_name": "Лента шлифовальная",
+      "desc": "Абразивная лента"
+    },
+    "PAPER": {
+      "full_name": "Бумага наждачная",
+      "desc": "Абразивная бумага"
+    },
+    "DRILL": {
+      "full_name": "Сверло",
+      "desc": "Инструмент для сверления отверстий"
+    },
+    "MILL": {
+      "full_name": "Фреза",
+      "desc": "Инструмент для фрезерования"
+    },
+    "TAP": {
+      "full_name": "Метчик",
+      "desc": "Инструмент для нарезания резьбы"
+    },
+    "ELECTRODE": {
+      "full_name": "Электрод",
+      "desc": "Сварочный электрод"
+    },
+    "WELD-WIRE": {
+      "full_name": "Проволока сварочная",
+      "desc": "Сварочная проволока"
+    }
+  }
+}

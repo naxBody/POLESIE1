@@ -1,0 +1,5523 @@
+{
+  "version": "1.0",
+  "generated_at": "2025-01-XX",
+  "company": {
+    "name": "ОАО «Полесьеэлектромаш»",
+    "city": "Лунинец",
+    "country": "Республика Беларусь",
+    "founded": "1975",
+    "unp": "200106183",
+    "address": "225644, Брестская область, г. Лунинец, ул. Красная, 179",
+    "phone": "+375 1647 2-78-09",
+    "fax": "+375 1647 2-78-44",
+    "email": "polesie@polesieelectromash.by",
+    "website": "https://polesieelectromash.by"
+  },
+  "total_products": 72,
+  "passports": [
+    {
+      "sku": "AIR-071-2",
+      "basic_info": {
+        "name_full": "Электродвигатель асинхронный трехфазный АИР71, 0.37-0.75 кВт, 3000 об/мин",
+        "name_short": "АИР71 0.37-0.75кВт 3000об/мин",
+        "code_gost": "АИР71",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw_min": 0.37,
+        "power_kw_max": 0.75,
+        "rpm": 3000,
+        "shaft_height_mm": 71,
+        "voltage_v": "380/220",
+        "frequency_hz": 50,
+        "climate_versions": [
+          "У2",
+          "У3",
+          "У5",
+          "УХЛ2",
+          "УХЛ4",
+          "Т2"
+        ],
+        "mounting_versions": [
+          "IM1081",
+          "IM1082",
+          "IM2081",
+          "IM2082",
+          "IM2181",
+          "IM2182",
+          "IM3081",
+          "IM3082",
+          "IM3681",
+          "IM3682"
+        ],
+        "protection_class": [
+          "IP54",
+          "IP55"
+        ]
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.44,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.09,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 0.69,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.64,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.34,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.22,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.06,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 4.14,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIR-080-2",
+      "basic_info": {
+        "name_full": "Электродвигатель асинхронный трехфазный АИР80, 0.75-2.2 кВт, 3000 об/мин",
+        "name_short": "АИР80 0.75-2.2кВт 3000об/мин",
+        "code_gost": "АИР80",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw_min": 0.75,
+        "power_kw_max": 2.2,
+        "rpm": 3000,
+        "shaft_height_mm": 80,
+        "voltage_v": "380/220",
+        "frequency_hz": 50,
+        "climate_versions": [
+          "У2",
+          "У3",
+          "У5",
+          "УХЛ2",
+          "УХЛ4",
+          "Т2"
+        ],
+        "mounting_versions": [
+          "IM1081",
+          "IM1082",
+          "IM2081",
+          "IM2082",
+          "IM2181",
+          "IM2182",
+          "IM3081",
+          "IM3082",
+          "IM3681",
+          "IM3682"
+        ],
+        "protection_class": [
+          "IP54",
+          "IP55"
+        ]
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.27,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.9,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.42,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.24,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.93,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIR-090-2",
+      "basic_info": {
+        "name_full": "Электродвигатель асинхронный трехфазный АИР90, 1.5-3.0 кВт, 3000 об/мин",
+        "name_short": "АИР90 1.5-3.0кВт 3000об/мин",
+        "code_gost": "АИР90",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw_min": 1.5,
+        "power_kw_max": 3.0,
+        "rpm": 3000,
+        "shaft_height_mm": 90,
+        "voltage_v": "380/220",
+        "frequency_hz": 50,
+        "climate_versions": [
+          "У2",
+          "У3",
+          "У5",
+          "УХЛ2",
+          "УХЛ4",
+          "Т2"
+        ],
+        "mounting_versions": [
+          "IM1081",
+          "IM1082",
+          "IM2081",
+          "IM2082",
+          "IM2181",
+          "IM2182",
+          "IM3081",
+          "IM3082",
+          "IM3681",
+          "IM3682"
+        ],
+        "protection_class": [
+          "IP54",
+          "IP55"
+        ]
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.46,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 3.0,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.48,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.27,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 7.69,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIR-100-2",
+      "basic_info": {
+        "name_full": "Электродвигатель асинхронный трехфазный АИР100, 3.0-5.5 кВт, 3000 об/мин",
+        "name_short": "АИР100 3.0-5.5кВт 3000об/мин",
+        "code_gost": "АИР100",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw_min": 3.0,
+        "power_kw_max": 5.5,
+        "rpm": 3000,
+        "shaft_height_mm": 100,
+        "voltage_v": "380/220",
+        "frequency_hz": 50,
+        "climate_versions": [
+          "У2",
+          "У3",
+          "У5",
+          "УХЛ2",
+          "УХЛ4",
+          "Т2"
+        ],
+        "mounting_versions": [
+          "IM1081",
+          "IM1082",
+          "IM2081",
+          "IM2082",
+          "IM2181",
+          "IM2182",
+          "IM3081",
+          "IM3082",
+          "IM3681",
+          "IM3682"
+        ],
+        "protection_class": [
+          "IP54",
+          "IP55"
+        ]
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 2.2,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 1.07,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 6.18,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.7,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.64,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.33,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.5,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 11.98,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIR-112-2",
+      "basic_info": {
+        "name_full": "Электродвигатель асинхронный трехфазный АИР112, 4.0-7.5 кВт, 3000 об/мин",
+        "name_short": "АИР112 4.0-7.5кВт 3000об/мин",
+        "code_gost": "АИР112",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw_min": 4.0,
+        "power_kw_max": 7.5,
+        "rpm": 3000,
+        "shaft_height_mm": 112,
+        "voltage_v": "380/220",
+        "frequency_hz": 50,
+        "climate_versions": [
+          "У2",
+          "У3",
+          "У5",
+          "УХЛ2",
+          "УХЛ4",
+          "Т2"
+        ],
+        "mounting_versions": [
+          "IM1081",
+          "IM1082",
+          "IM2081",
+          "IM2082",
+          "IM2181",
+          "IM2182",
+          "IM3081",
+          "IM3082",
+          "IM3681",
+          "IM3682"
+        ],
+        "protection_class": [
+          "IP54",
+          "IP55"
+        ]
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 2.54,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 8.88,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.72,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.76,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.37,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.68,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 15.85,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "2AIR-080A2-1.5",
+      "basic_info": {
+        "name_full": "Энергоэффективный электродвигатель 2АИР80А2, 1.5 кВт, 3000 об/мин, IE2",
+        "name_short": "2АИР80А2 1.5кВт 3000об/мин",
+        "code_gost": "2АИР80А2",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.5,
+        "rpm": 3000,
+        "shaft_height_mm": 80,
+        "efficiency_class": "IE2",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.28,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.94,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.42,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.24,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.98,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "2AIR-080A4-1.1",
+      "basic_info": {
+        "name_full": "Энергоэффективный электродвигатель 2АИР80А4, 1.1 кВт, 1500 об/мин, IE2",
+        "name_short": "2АИР80А4 1.1кВт 1500об/мин",
+        "code_gost": "2АИР80А4",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.1,
+        "rpm": 1500,
+        "shaft_height_mm": 80,
+        "efficiency_class": "IE2",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.19,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.39,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.39,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.33,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "2AIR-080A6-0.75",
+      "basic_info": {
+        "name_full": "Энергоэффективный электродвигатель 2АИР80А6, 0.75 кВт, 1000 об/мин, IE2",
+        "name_short": "2АИР80А6 0.75кВт 1000об/мин",
+        "code_gost": "2АИР80А6",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 0.75,
+        "rpm": 1000,
+        "shaft_height_mm": 80,
+        "efficiency_class": "IE2",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.13,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 0.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.36,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.22,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 4.8,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "2AIR-080B2-2.2",
+      "basic_info": {
+        "name_full": "Энергоэффективный электродвигатель 2АИР80В2, 2.2 кВт, 3000 об/мин, IE2",
+        "name_short": "2АИР80В2 2.2кВт 3000об/мин",
+        "code_gost": "2АИР80В2",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 2.2,
+        "rpm": 3000,
+        "shaft_height_mm": 80,
+        "efficiency_class": "IE2",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.45,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 2.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.48,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.27,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 7.17,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "2AIR-080B4-1.5",
+      "basic_info": {
+        "name_full": "Энергоэффективный электродвигатель 2АИР80В4, 1.5 кВт, 1500 об/мин, IE2",
+        "name_short": "2АИР80В4 1.5кВт 1500об/мин",
+        "code_gost": "2АИР80В4",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.5,
+        "rpm": 1500,
+        "shaft_height_mm": 80,
+        "efficiency_class": "IE2",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.28,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.94,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.42,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.24,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.98,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "2AIR-080B6-1.1",
+      "basic_info": {
+        "name_full": "Энергоэффективный электродвигатель 2АИР80В6, 1.1 кВт, 1000 об/мин, IE2",
+        "name_short": "2АИР80В6 1.1кВт 1000об/мин",
+        "code_gost": "2АИР80В6",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.1,
+        "rpm": 1000,
+        "shaft_height_mm": 80,
+        "efficiency_class": "IE2",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.19,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.39,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.39,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.33,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "2AIR-090L2-3.0",
+      "basic_info": {
+        "name_full": "Энергоэффективный электродвигатель 2АИР90L2, 3.0 кВт, 3000 об/мин, IE2",
+        "name_short": "2АИР90L2 3.0кВт 3000об/мин",
+        "code_gost": "2АИР90L2",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 3.0,
+        "rpm": 3000,
+        "shaft_height_mm": 90,
+        "efficiency_class": "IE2",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.67,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 4.14,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.54,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.29,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 9.06,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "2AIR-090L4-2.2",
+      "basic_info": {
+        "name_full": "Энергоэффективный электродвигатель 2АИР90L4, 2.2 кВт, 1500 об/мин, IE2",
+        "name_short": "2АИР90L4 2.2кВт 1500об/мин",
+        "code_gost": "2АИР90L4",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 2.2,
+        "rpm": 1500,
+        "shaft_height_mm": 90,
+        "efficiency_class": "IE2",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.45,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 2.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.48,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.27,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 7.61,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "2AIR-090L6-1.5",
+      "basic_info": {
+        "name_full": "Энергоэффективный электродвигатель 2АИР90L6, 1.5 кВт, 1000 об/мин, IE2",
+        "name_short": "2АИР90L6 1.5кВт 1000об/мин",
+        "code_gost": "2АИР90L6",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.5,
+        "rpm": 1000,
+        "shaft_height_mm": 90,
+        "efficiency_class": "IE2",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.28,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.94,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.42,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.24,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 6.42,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "2AIR-100L2-5.5",
+      "basic_info": {
+        "name_full": "Энергоэффективный электродвигатель 2АИР100L2, 5.5 кВт, 3000 об/мин, IE2",
+        "name_short": "2АИР100L2 5.5кВт 3000об/мин",
+        "code_gost": "2АИР100L2",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 5.5,
+        "rpm": 3000,
+        "shaft_height_mm": 100,
+        "efficiency_class": "IE2",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 2.2,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 1.55,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 8.42,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.7,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.74,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.36,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.5,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 14.73,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "2AIR-100L4-4.0",
+      "basic_info": {
+        "name_full": "Энергоэффективный электродвигатель 2АИР100L4, 4.0 кВт, 1500 об/мин, IE2",
+        "name_short": "2АИР100L4 4.0кВт 1500об/мин",
+        "code_gost": "2АИР100L4",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 4.0,
+        "rpm": 1500,
+        "shaft_height_mm": 100,
+        "efficiency_class": "IE2",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 2.2,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.98,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 5.76,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.7,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.62,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.32,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.5,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 11.46,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "2AIR-100L6-2.2",
+      "basic_info": {
+        "name_full": "Энергоэффективный электродвигатель 2АИР100L6, 2.2 кВт, 1000 об/мин, IE2",
+        "name_short": "2АИР100L6 2.2кВт 1000об/мин",
+        "code_gost": "2АИР100L6",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 2.2,
+        "rpm": 1000,
+        "shaft_height_mm": 100,
+        "efficiency_class": "IE2",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 2.2,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.45,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 2.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.7,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.48,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.27,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.5,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 8.05,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRS-080",
+      "basic_info": {
+        "name_full": "Электродвигатель с повышенным скольжением АИРС80",
+        "name_short": "АИРС80 (повышенное скольжение)",
+        "code_gost": "АИРС80",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "shaft_height_mm": 80,
+        "slip_percent": 10,
+        "application": "Приводы с переменной нагрузкой"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.17,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.26,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.38,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.18,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRS-090",
+      "basic_info": {
+        "name_full": "Электродвигатель с повышенным скольжением АИРС90",
+        "name_short": "АИРС90 (повышенное скольжение)",
+        "code_gost": "АИРС90",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "shaft_height_mm": 90,
+        "slip_percent": 10,
+        "application": "Приводы с переменной нагрузкой"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.17,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.26,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.38,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.62,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRS-100",
+      "basic_info": {
+        "name_full": "Электродвигатель с повышенным скольжением АИРС100",
+        "name_short": "АИРС100 (повышенное скольжение)",
+        "code_gost": "АИРС100",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "shaft_height_mm": 100,
+        "slip_percent": 10,
+        "application": "Приводы с переменной нагрузкой"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 2.2,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.17,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.26,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.7,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.38,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.5,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 6.06,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIR-PUMP-080",
+      "basic_info": {
+        "name_full": "Электродвигатель для привода моноблочных насосов АИР80",
+        "name_short": "АИР80 (насосы)",
+        "code_gost": "АИР80 (насосы)",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "shaft_height_mm": 80,
+        "application": "Моноблочные насосы"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.17,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.26,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.38,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.18,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIR-PUMP-090",
+      "basic_info": {
+        "name_full": "Электродвигатель для привода моноблочных насосов АИР90",
+        "name_short": "АИР90 (насосы)",
+        "code_gost": "АИР90 (насосы)",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "shaft_height_mm": 90,
+        "application": "Моноблочные насосы"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.17,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.26,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.38,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.62,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIR-GEAR-090",
+      "basic_info": {
+        "name_full": "Электродвигатель для привода редукторов АИР90",
+        "name_short": "АИР90 (редукторы)",
+        "code_gost": "АИР90 (редукторы)",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "shaft_height_mm": 90,
+        "application": "Привод редукторов"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.17,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.26,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.38,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.62,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIR-MULTI-080",
+      "basic_info": {
+        "name_full": "Электродвигатель многоскоростной АИР80",
+        "name_short": "АИР80 (многоскоростной)",
+        "code_gost": "АИР80 (многоскоростной)",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "shaft_height_mm": 80,
+        "speeds": "2/4/6/8 полюсов",
+        "application": "Переменная скорость"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.17,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.26,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.38,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.18,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIR-MULTI-090",
+      "basic_info": {
+        "name_full": "Электродвигатель многоскоростной АИР90",
+        "name_short": "АИР90 (многоскоростной)",
+        "code_gost": "АИР90 (многоскоростной)",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "shaft_height_mm": 90,
+        "speeds": "2/4/6/8 полюсов",
+        "application": "Переменная скорость"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.17,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.26,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.38,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.62,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIR-MULTI-100",
+      "basic_info": {
+        "name_full": "Электродвигатель многоскоростной АИР100",
+        "name_short": "АИР100 (многоскоростной)",
+        "code_gost": "АИР100 (многоскоростной)",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "shaft_height_mm": 100,
+        "speeds": "2/4/6/8 полюсов",
+        "application": "Переменная скорость"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 2.2,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.17,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.26,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.7,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.38,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.5,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 6.06,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIVR-080B2-2.2",
+      "basic_info": {
+        "name_full": "Взрывозащищенный электродвигатель АИВР80В2, 2.2 кВт, 3000 об/мин, чугунный корпус",
+        "name_short": "АИВР80В2 2.2кВт 3000об/мин Ex",
+        "code_gost": "АИВР80В2",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 2.2,
+        "rpm": 3000,
+        "shaft_height_mm": 80,
+        "explosion_protection": "1Ex d IIB T4 Gb",
+        "housing_material": "Чугун",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.45,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 2.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.48,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.27,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 7.17,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIVR-080B4-1.5",
+      "basic_info": {
+        "name_full": "Взрывозащищенный электродвигатель АИВР80В4, 1.5 кВт, 1500 об/мин, чугунный корпус",
+        "name_short": "АИВР80В4 1.5кВт 1500об/мин Ex",
+        "code_gost": "АИВР80В4",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.5,
+        "rpm": 1500,
+        "shaft_height_mm": 80,
+        "explosion_protection": "1Ex d IIB T4 Gb",
+        "housing_material": "Чугун",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.28,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.94,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.42,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.24,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.98,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIVR-080B6-1.1",
+      "basic_info": {
+        "name_full": "Взрывозащищенный электродвигатель АИВР80В6, 1.1 кВт, 1000 об/мин, чугунный корпус",
+        "name_short": "АИВР80В6 1.1кВт 1000об/мин Ex",
+        "code_gost": "АИВР80В6",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.1,
+        "rpm": 1000,
+        "shaft_height_mm": 80,
+        "explosion_protection": "1Ex d IIB T4 Gb",
+        "housing_material": "Чугун",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.19,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.39,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.39,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.33,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIVR-090L2-3.0",
+      "basic_info": {
+        "name_full": "Взрывозащищенный электродвигатель АИВР90L2, 3.0 кВт, 3000 об/мин, чугунный корпус",
+        "name_short": "АИВР90L2 3.0кВт 3000об/мин Ex",
+        "code_gost": "АИВР90L2",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 3.0,
+        "rpm": 3000,
+        "shaft_height_mm": 90,
+        "explosion_protection": "1Ex d IIB T4 Gb",
+        "housing_material": "Чугун",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.67,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 4.14,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.54,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.29,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 9.06,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIVR-090L4-2.2",
+      "basic_info": {
+        "name_full": "Взрывозащищенный электродвигатель АИВР90L4, 2.2 кВт, 1500 об/мин, чугунный корпус",
+        "name_short": "АИВР90L4 2.2кВт 1500об/мин Ex",
+        "code_gost": "АИВР90L4",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 2.2,
+        "rpm": 1500,
+        "shaft_height_mm": 90,
+        "explosion_protection": "1Ex d IIB T4 Gb",
+        "housing_material": "Чугун",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.45,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 2.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.48,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.27,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 7.61,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIVR-090L6-1.5",
+      "basic_info": {
+        "name_full": "Взрывозащищенный электродвигатель АИВР90L6, 1.5 кВт, 1000 об/мин, чугунный корпус",
+        "name_short": "АИВР90L6 1.5кВт 1000об/мин Ex",
+        "code_gost": "АИВР90L6",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.5,
+        "rpm": 1000,
+        "shaft_height_mm": 90,
+        "explosion_protection": "1Ex d IIB T4 Gb",
+        "housing_material": "Чугун",
+        "voltage_v": "380/220",
+        "frequency_hz": 50
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.28,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.94,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.42,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.24,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 6.42,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRP-080C6-0.75",
+      "basic_info": {
+        "name_full": "Электродвигатель для привода осевых вентиляторов АИРП80С6, 0.75 кВт, 1000 об/мин",
+        "name_short": "АИРП80С6 0.75кВт (птичники)",
+        "code_gost": "АИРП80С6",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 0.75,
+        "rpm": 1000,
+        "shaft_height_mm": 80,
+        "application": "Осевые вентиляторы в животноводческих и птицеводческих помещениях"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.13,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 0.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.36,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.22,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 4.8,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRP-080A6-0.37",
+      "basic_info": {
+        "name_full": "Электродвигатель для привода осевых вентиляторов АИРП80А6, 0.37 кВт, 1000 об/мин",
+        "name_short": "АИРП80А6 0.37кВт (птичники)",
+        "code_gost": "АИРП80А6",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 0.37,
+        "rpm": 1000,
+        "shaft_height_mm": 80,
+        "application": "Осевые вентиляторы в животноводческих и птицеводческих помещениях"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.06,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 0.45,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.33,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.21,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 4.24,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRC-080B4-0.55",
+      "basic_info": {
+        "name_full": "Электродвигатель для стрелочных электроприводов АИРЧ80В4, 0.55 кВт, 1500 об/мин",
+        "name_short": "АИРЧ80В4 0.55кВт (ЖД)",
+        "code_gost": "АИРЧ80В4",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 0.55,
+        "rpm": 1500,
+        "shaft_height_mm": 80,
+        "application": "Стрелочные электроприводы железнодорожной автоматики",
+        "climate_versions": [
+          "УХЛ",
+          "Т"
+        ]
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.09,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.34,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.22,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 4.51,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRC-080B6-0.3",
+      "basic_info": {
+        "name_full": "Электродвигатель для стрелочных электроприводов АИРЧ80В6, 0.3 кВт, 1000 об/мин",
+        "name_short": "АИРЧ80В6 0.3кВт (ЖД)",
+        "code_gost": "АИРЧ80В6",
+        "category": "Электродвигатели асинхронные трехфазные",
+        "category_code": "MOTORS_3PHASE"
+      },
+      "specifications": {
+        "power_kw": 0.3,
+        "rpm": 1000,
+        "shaft_height_mm": 80,
+        "application": "Стрелочные электроприводы железнодорожной автоматики",
+        "climate_versions": [
+          "УХЛ",
+          "Т"
+        ]
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.05,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 0.37,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.32,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.21,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 4.15,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRE-071C2-1.1",
+      "basic_info": {
+        "name_full": "Электродвигатель однофазный АИРЕ71С2, 1.1 кВт, 3000 об/мин, 220В",
+        "name_short": "АИРЕ71С2 1.1кВт 3000об/мин 220В",
+        "code_gost": "АИРЕ71С2",
+        "category": "Электродвигатели асинхронные однофазные",
+        "category_code": "MOTORS_1PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.1,
+        "rpm": 3000,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "shaft_height_mm": 71,
+        "capacitor_included": true,
+        "application": "Бытовое и промышленное назначение"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.44,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.19,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.39,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.64,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.39,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.06,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 4.95,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRE-080A2-1.1",
+      "basic_info": {
+        "name_full": "Электродвигатель однофазный АИРЕ80А2, 1.1 кВт, 3000 об/мин, 220В",
+        "name_short": "АИРЕ80А2 1.1кВт 3000об/мин 220В",
+        "code_gost": "АИРЕ80А2",
+        "category": "Электродвигатели асинхронные однофазные",
+        "category_code": "MOTORS_1PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.1,
+        "rpm": 3000,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "shaft_height_mm": 80,
+        "capacitor_included": true,
+        "application": "Бытовое и промышленное назначение"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.19,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.39,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.39,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.33,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRE-080A4-0.75",
+      "basic_info": {
+        "name_full": "Электродвигатель однофазный АИРЕ80А4, 0.75 кВт, 1500 об/мин, 220В",
+        "name_short": "АИРЕ80А4 0.75кВт 1500об/мин 220В",
+        "code_gost": "АИРЕ80А4",
+        "category": "Электродвигатели асинхронные однофазные",
+        "category_code": "MOTORS_1PHASE"
+      },
+      "specifications": {
+        "power_kw": 0.75,
+        "rpm": 1500,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "shaft_height_mm": 80,
+        "capacitor_included": true,
+        "application": "Бытовое и промышленное назначение"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.13,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 0.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.36,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.22,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 4.8,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRE-080B2-1.5",
+      "basic_info": {
+        "name_full": "Электродвигатель однофазный АИРЕ80В2, 1.5 кВт, 3000 об/мин, 220В",
+        "name_short": "АИРЕ80В2 1.5кВт 3000об/мин 220В",
+        "code_gost": "АИРЕ80В2",
+        "category": "Электродвигатели асинхронные однофазные",
+        "category_code": "MOTORS_1PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.5,
+        "rpm": 3000,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "shaft_height_mm": 80,
+        "capacitor_included": true,
+        "application": "Бытовое и промышленное назначение"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.28,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.94,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.42,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.24,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.98,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRE-080B4-1.1",
+      "basic_info": {
+        "name_full": "Электродвигатель однофазный АИРЕ80В4, 1.1 кВт, 1500 об/мин, 220В",
+        "name_short": "АИРЕ80В4 1.1кВт 1500об/мин 220В",
+        "code_gost": "АИРЕ80В4",
+        "category": "Электродвигатели асинхронные однофазные",
+        "category_code": "MOTORS_1PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.1,
+        "rpm": 1500,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "shaft_height_mm": 80,
+        "capacitor_included": true,
+        "application": "Бытовое и промышленное назначение"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.19,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.39,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.39,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.33,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRE-080C2-2.0",
+      "basic_info": {
+        "name_full": "Электродвигатель однофазный АИРЕ80С2, 2.0 кВт, 3000 об/мин, 220В",
+        "name_short": "АИРЕ80С2 2.0кВт 3000об/мин 220В",
+        "code_gost": "АИРЕ80С2",
+        "category": "Электродвигатели асинхронные однофазные",
+        "category_code": "MOTORS_1PHASE"
+      },
+      "specifications": {
+        "power_kw": 2.0,
+        "rpm": 3000,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "shaft_height_mm": 80,
+        "capacitor_included": true,
+        "application": "Бытовое и промышленное назначение"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.4,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 2.64,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.46,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.26,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 6.82,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRE-080C4-1.5",
+      "basic_info": {
+        "name_full": "Электродвигатель однофазный АИРЕ80С4, 1.5 кВт, 1500 об/мин, 220В",
+        "name_short": "АИРЕ80С4 1.5кВт 1500об/мин 220В",
+        "code_gost": "АИРЕ80С4",
+        "category": "Электродвигатели асинхронные однофазные",
+        "category_code": "MOTORS_1PHASE"
+      },
+      "specifications": {
+        "power_kw": 1.5,
+        "rpm": 1500,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "shaft_height_mm": 80,
+        "capacitor_included": true,
+        "application": "Бытовое и промышленное назначение"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.28,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.94,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.42,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.24,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.98,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRE-080D2-2.2",
+      "basic_info": {
+        "name_full": "Электродвигатель однофазный АМРЕ80D2, 2.2 кВт, 3000 об/мин, 220В",
+        "name_short": "АМРЕ80D2 2.2кВт 3000об/мин 220В",
+        "code_gost": "АМРЕ80D2",
+        "category": "Электродвигатели асинхронные однофазные",
+        "category_code": "MOTORS_1PHASE"
+      },
+      "specifications": {
+        "power_kw": 2.2,
+        "rpm": 3000,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "shaft_height_mm": 80,
+        "capacitor_included": true,
+        "application": "Бытовое и промышленное назначение"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.45,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 2.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.48,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.27,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 7.17,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AIRE-090L2-2.2",
+      "basic_info": {
+        "name_full": "Электродвигатель однофазный АИРЕ90L2, 2.2 кВт, 3000 об/мин, 220В",
+        "name_short": "АИРЕ90L2 2.2кВт 3000об/мин 220В",
+        "code_gost": "АИРЕ90L2",
+        "category": "Электродвигатели асинхронные однофазные",
+        "category_code": "MOTORS_1PHASE"
+      },
+      "specifications": {
+        "power_kw": 2.2,
+        "rpm": 3000,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "shaft_height_mm": 90,
+        "capacitor_included": true,
+        "application": "Бытовое и промышленное назначение"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.45,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 2.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.48,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.27,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 7.61,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AISE-080",
+      "basic_info": {
+        "name_full": "Электродвигатель однофазный промышленный АИСЕ80",
+        "name_short": "АИСЕ80",
+        "code_gost": "АИСЕ80",
+        "category": "Электродвигатели асинхронные однофазные",
+        "category_code": "MOTORS_1PHASE"
+      },
+      "specifications": {
+        "shaft_height_mm": 80,
+        "voltage_v": "220",
+        "application": "Промышленное назначение"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.66,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.17,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.26,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.66,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.38,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.2,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.18,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AISE-090",
+      "basic_info": {
+        "name_full": "Электродвигатель однофазный промышленный АИСЕ90",
+        "name_short": "АИСЕ90",
+        "code_gost": "АИСЕ90",
+        "category": "Электродвигатели асинхронные однофазные",
+        "category_code": "MOTORS_1PHASE"
+      },
+      "specifications": {
+        "shaft_height_mm": 90,
+        "voltage_v": "220",
+        "application": "Промышленное назначение"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 1.93,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.17,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.26,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.68,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.38,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.35,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.62,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AISE-100",
+      "basic_info": {
+        "name_full": "Электродвигатель однофазный промышленный АИСЕ100",
+        "name_short": "АИСЕ100",
+        "code_gost": "АИСЕ100",
+        "category": "Электродвигатели асинхронные однофазные",
+        "category_code": "MOTORS_1PHASE"
+      },
+      "specifications": {
+        "shaft_height_mm": 100,
+        "voltage_v": "220",
+        "application": "Промышленное назначение"
+      },
+      "materials": {
+        "cast_iron_housing": {
+          "material_code": "CAST-SC-15",
+          "name": "Чугун серый СЧ15 для корпуса",
+          "quantity": 2.2,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "copper_wire": {
+          "material_code": "WIRE-CU-PETV-2.0",
+          "name": "Провод медный обмоточный ПЭТВ",
+          "quantity": 0.17,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "steel_electrical": {
+          "material_code": "STEEL-ELECTR-2212",
+          "name": "Сталь электротехническая 2212",
+          "quantity": 1.26,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "bearings": {
+          "material_code": "BRG-6200-series",
+          "name": "Подшипники качения 6200 серии",
+          "quantity": 2,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "fasteners": {
+          "material_code": "FASTENER-MIX",
+          "name": "Крепеж (болты, гайки, шайбы)",
+          "quantity": 0.7,
+          "unit": "кг",
+          "category": "Крепеж"
+        },
+        "varnish": {
+          "material_code": "VAR-PES-55",
+          "name": "Лак электроизоляционный ПЭС-55",
+          "quantity": 0.38,
+          "unit": "л",
+          "category": "Лаки и краски"
+        },
+        "insulation": {
+          "material_code": "INS-COMBO",
+          "name": "Изоляционные материалы (комбинированные)",
+          "quantity": 0.23,
+          "unit": "кг",
+          "category": "Изоляция"
+        },
+        "steel_shaft": {
+          "material_code": "ST-BAR-45-STD",
+          "name": "Сталь конструкционная 45 для вала",
+          "quantity": 1.5,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 6.06,
+      "production_notes": [
+        "Контроль балансировки ротора",
+        "Пропитка обмоток лаком с сушкой",
+        "Проверка сопротивления изоляции"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 51689-2000",
+        "Класс нагревостойкости изоляции F (155°C)",
+        "Степень защиты IP54/IP55"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 24
+    },
+    {
+      "sku": "GNOM-10-10",
+      "basic_info": {
+        "name_full": "Электронасос центробежный погружной ГНОМ 10x10 для загрязненных вод",
+        "name_short": "ГНОМ 10x10",
+        "code_gost": "ГНОМ 10x10",
+        "category": "Электронасосы",
+        "category_code": "PUMPS"
+      },
+      "specifications": {
+        "flow_rate_m3_h": 10,
+        "head_m": 10,
+        "power_kw": 0.9,
+        "voltage_v": "220/380",
+        "frequency_hz": 50,
+        "housing_material": "Чугун",
+        "impeller_material": "Чугун",
+        "max_solid_size_mm": 5,
+        "max_immersion_depth_m": 7,
+        "application": "Перекачка загрязненной воды, осушение котлованов и траншей"
+      },
+      "materials": {
+        "housing": {
+          "material_code": "MAT-HOUSE-PUMP",
+          "name": "Корпус насоса композитный",
+          "quantity": 2.0,
+          "unit": "кг",
+          "category": "Материалы"
+        }
+      },
+      "total_weight_kg": 2.0,
+      "production_notes": [
+        "Гидравлические испытания",
+        "Проверка вибрации",
+        "Контроль герметичности"
+      ],
+      "quality_requirements": [
+        "ГОСТ 10168-2014",
+        "Рабочая температура до 85°C"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 12
+    },
+    {
+      "sku": "GNOM-25-20",
+      "basic_info": {
+        "name_full": "Электронасос центробежный погружной ГНОМ 25x20 для загрязненных вод",
+        "name_short": "ГНОМ 25x20",
+        "code_gost": "ГНОМ 25x20",
+        "category": "Электронасосы",
+        "category_code": "PUMPS"
+      },
+      "specifications": {
+        "flow_rate_m3_h": 25,
+        "head_m": 20,
+        "power_kw": 3.0,
+        "voltage_v": "220/380",
+        "frequency_hz": 50,
+        "housing_material": "Чугун",
+        "impeller_material": "Чугун",
+        "max_solid_size_mm": 5,
+        "max_immersion_depth_m": 7,
+        "application": "Перекачка загрязненной воды, осушение котлованов и траншей"
+      },
+      "materials": {
+        "housing": {
+          "material_code": "MAT-HOUSE-PUMP",
+          "name": "Корпус насоса композитный",
+          "quantity": 2.0,
+          "unit": "кг",
+          "category": "Материалы"
+        }
+      },
+      "total_weight_kg": 2.0,
+      "production_notes": [
+        "Гидравлические испытания",
+        "Проверка вибрации",
+        "Контроль герметичности"
+      ],
+      "quality_requirements": [
+        "ГОСТ 10168-2014",
+        "Рабочая температура до 85°C"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 12
+    },
+    {
+      "sku": "GNOM-50-50",
+      "basic_info": {
+        "name_full": "Электронасос центробежный погружной ГНОМ 50x50 для загрязненных вод",
+        "name_short": "ГНОМ 50x50",
+        "code_gost": "ГНОМ 50x50",
+        "category": "Электронасосы",
+        "category_code": "PUMPS"
+      },
+      "specifications": {
+        "flow_rate_m3_h": 50,
+        "head_m": 50,
+        "power_kw": 11.0,
+        "voltage_v": "380",
+        "frequency_hz": 50,
+        "housing_material": "Чугун",
+        "impeller_material": "Чугун",
+        "max_solid_size_mm": 5,
+        "max_immersion_depth_m": 7,
+        "application": "Перекачка загрязненной воды, осушение котлованов и траншей"
+      },
+      "materials": {
+        "housing": {
+          "material_code": "MAT-HOUSE-PUMP",
+          "name": "Корпус насоса композитный",
+          "quantity": 2.0,
+          "unit": "кг",
+          "category": "Материалы"
+        }
+      },
+      "total_weight_kg": 2.0,
+      "production_notes": [
+        "Гидравлические испытания",
+        "Проверка вибрации",
+        "Контроль герметичности"
+      ],
+      "quality_requirements": [
+        "ГОСТ 10168-2014",
+        "Рабочая температура до 85°C"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 12
+    },
+    {
+      "sku": "GNOM-100-25",
+      "basic_info": {
+        "name_full": "Электронасос центробежный погружной ГНОМ 100x25 для загрязненных вод",
+        "name_short": "ГНОМ 100x25",
+        "code_gost": "ГНОМ 100x25",
+        "category": "Электронасосы",
+        "category_code": "PUMPS"
+      },
+      "specifications": {
+        "flow_rate_m3_h": 100,
+        "head_m": 25,
+        "power_kw": 11.0,
+        "voltage_v": "380",
+        "frequency_hz": 50,
+        "housing_material": "Чугун",
+        "impeller_material": "Чугун",
+        "max_solid_size_mm": 5,
+        "max_immersion_depth_m": 7,
+        "application": "Перекачка загрязненной воды, осушение котлованов и траншей"
+      },
+      "materials": {
+        "housing": {
+          "material_code": "MAT-HOUSE-PUMP",
+          "name": "Корпус насоса композитный",
+          "quantity": 2.0,
+          "unit": "кг",
+          "category": "Материалы"
+        }
+      },
+      "total_weight_kg": 2.0,
+      "production_notes": [
+        "Гидравлические испытания",
+        "Проверка вибрации",
+        "Контроль герметичности"
+      ],
+      "quality_requirements": [
+        "ГОСТ 10168-2014",
+        "Рабочая температура до 85°C"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 12
+    },
+    {
+      "sku": "PUMP-K",
+      "basic_info": {
+        "name_full": "Насосы консольные типа К, КМ",
+        "name_short": "Насосы К, КМ",
+        "code_gost": "К, КМ",
+        "category": "Электронасосы",
+        "category_code": "PUMPS"
+      },
+      "specifications": {
+        "application": "Перекачка воды и подобных жидкостей",
+        "type": "Консольные центробежные"
+      },
+      "materials": {
+        "cast_iron_body": {
+          "material_code": "CAST-SC-20",
+          "name": "Чугун серый СЧ20 для корпуса насоса",
+          "quantity": 15.0,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "impeller_bronze": {
+          "material_code": "BRONZE-BRZH",
+          "name": "Бронза для рабочего колеса",
+          "quantity": 3.5,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "mechanical_seal": {
+          "material_code": "SEAL-MECH-K",
+          "name": "Уплотнение торцевое",
+          "quantity": 1,
+          "unit": "шт",
+          "category": "Комплектующие"
+        }
+      },
+      "total_weight_kg": 18.5,
+      "production_notes": [
+        "Гидравлические испытания",
+        "Проверка вибрации",
+        "Контроль герметичности"
+      ],
+      "quality_requirements": [
+        "ГОСТ 10168-2014",
+        "Рабочая температура до 85°C"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 12
+    },
+    {
+      "sku": "PUMP-TSNL",
+      "basic_info": {
+        "name_full": "Насосы консольные линейные типа ЦНЛ",
+        "name_short": "Насосы ЦНЛ",
+        "code_gost": "ЦНЛ",
+        "category": "Электронасосы",
+        "category_code": "PUMPS"
+      },
+      "specifications": {
+        "application": "Перекачка воды и подобных жидкостей",
+        "type": "Консольные линейные"
+      },
+      "materials": {
+        "cast_iron_body": {
+          "material_code": "CAST-SC-20",
+          "name": "Чугун серый СЧ20 для корпуса",
+          "quantity": 45.0,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "stages": {
+          "material_code": "STAGE-TSNL",
+          "name": "Ступени насоса",
+          "quantity": 5,
+          "unit": "шт",
+          "category": "Комплектующие"
+        }
+      },
+      "total_weight_kg": 45.0,
+      "production_notes": [
+        "Гидравлические испытания",
+        "Проверка вибрации",
+        "Контроль герметичности"
+      ],
+      "quality_requirements": [
+        "ГОСТ 10168-2014",
+        "Рабочая температура до 85°C"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 12
+    },
+    {
+      "sku": "PUMP-HOUSEHOLD",
+      "basic_info": {
+        "name_full": "Насосы центробежные бытовые",
+        "name_short": "Насосы бытовые",
+        "code_gost": "Насосы бытовые",
+        "category": "Электронасосы",
+        "category_code": "PUMPS"
+      },
+      "specifications": {
+        "application": "Бытовое водоснабжение",
+        "type": "Центробежные"
+      },
+      "materials": {
+        "housing": {
+          "material_code": "MAT-HOUSE-PUMP",
+          "name": "Корпус насоса композитный",
+          "quantity": 2.0,
+          "unit": "кг",
+          "category": "Материалы"
+        }
+      },
+      "total_weight_kg": 2.0,
+      "production_notes": [
+        "Гидравлические испытания",
+        "Проверка вибрации",
+        "Контроль герметичности"
+      ],
+      "quality_requirements": [
+        "ГОСТ 10168-2014",
+        "Рабочая температура до 85°C"
+      ],
+      "is_serial_tracked": true,
+      "warranty_months": 12
+    },
+    {
+      "sku": "EKCH-145-1.0",
+      "basic_info": {
+        "name_full": "Электроконфорка чугунная ЭКЧ-145, 1.0 кВт, 220В, d145мм",
+        "name_short": "ЭКЧ-145 1.0кВт d145мм",
+        "code_gost": "ЭКЧ-145-1,0/220",
+        "category": "Электроконфорки чугунные",
+        "category_code": "ELECTRIC_HOB"
+      },
+      "specifications": {
+        "power_kw": 1.0,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "diameter_mm": 145,
+        "material": "Чугун",
+        "application": "Бытовые электроплиты"
+      },
+      "materials": {
+        "heating_element": {
+          "material_code": "TEN-INDUSTRIAL",
+          "name": "ТЭН промышленный",
+          "quantity": 3,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "control_panel": {
+          "material_code": "PANEL-CONTROL",
+          "name": "Шкаф управления",
+          "quantity": 1,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "steel_sheet": {
+          "material_code": "ST-SHEET-3",
+          "name": "Лист стальной 3мм",
+          "quantity": 8.0,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 8.0,
+      "production_notes": [
+        "Электрические испытания ТЭНов",
+        "Проверка автоматики безопасности"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 50033-2000",
+        "Напряжение 380В"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 12
+    },
+    {
+      "sku": "EKCH-180-1.2",
+      "basic_info": {
+        "name_full": "Электроконфорка чугунная ЭКЧ-180, 1.2 кВт, 220В, d180мм",
+        "name_short": "ЭКЧ-180 1.2кВт d180мм",
+        "code_gost": "ЭКЧ-180-1,2/220",
+        "category": "Электроконфорки чугунные",
+        "category_code": "ELECTRIC_HOB"
+      },
+      "specifications": {
+        "power_kw": 1.2,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "diameter_mm": 180,
+        "material": "Чугун",
+        "application": "Бытовые электроплиты"
+      },
+      "materials": {
+        "heating_element": {
+          "material_code": "TEN-INDUSTRIAL",
+          "name": "ТЭН промышленный",
+          "quantity": 3,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "control_panel": {
+          "material_code": "PANEL-CONTROL",
+          "name": "Шкаф управления",
+          "quantity": 1,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "steel_sheet": {
+          "material_code": "ST-SHEET-3",
+          "name": "Лист стальной 3мм",
+          "quantity": 8.0,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 8.0,
+      "production_notes": [
+        "Электрические испытания ТЭНов",
+        "Проверка автоматики безопасности"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 50033-2000",
+        "Напряжение 380В"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 12
+    },
+    {
+      "sku": "EKCH-180-1.5",
+      "basic_info": {
+        "name_full": "Электроконфорка чугунная ЭКЧ-180, 1.5 кВт, 220В, d180мм",
+        "name_short": "ЭКЧ-180 1.5кВт d180мм",
+        "code_gost": "ЭКЧ-180-1,5/220",
+        "category": "Электроконфорки чугунные",
+        "category_code": "ELECTRIC_HOB"
+      },
+      "specifications": {
+        "power_kw": 1.5,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "diameter_mm": 180,
+        "material": "Чугун",
+        "application": "Бытовые электроплиты"
+      },
+      "materials": {
+        "heating_element": {
+          "material_code": "TEN-INDUSTRIAL",
+          "name": "ТЭН промышленный",
+          "quantity": 3,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "control_panel": {
+          "material_code": "PANEL-CONTROL",
+          "name": "Шкаф управления",
+          "quantity": 1,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "steel_sheet": {
+          "material_code": "ST-SHEET-3",
+          "name": "Лист стальной 3мм",
+          "quantity": 8.0,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 8.0,
+      "production_notes": [
+        "Электрические испытания ТЭНов",
+        "Проверка автоматики безопасности"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 50033-2000",
+        "Напряжение 380В"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 12
+    },
+    {
+      "sku": "EKCH-220-2.0",
+      "basic_info": {
+        "name_full": "Электроконфорка чугунная ЭКЧ-220, 2.0 кВт, 220В, d220мм",
+        "name_short": "ЭКЧ-220 2.0кВт d220мм",
+        "code_gost": "ЭКЧ-220-2/220",
+        "category": "Электроконфорки чугунные",
+        "category_code": "ELECTRIC_HOB"
+      },
+      "specifications": {
+        "power_kw": 2.0,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "diameter_mm": 220,
+        "material": "Чугун",
+        "application": "Бытовые электроплиты"
+      },
+      "materials": {
+        "heating_element": {
+          "material_code": "TEN-INDUSTRIAL",
+          "name": "ТЭН промышленный",
+          "quantity": 3,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "control_panel": {
+          "material_code": "PANEL-CONTROL",
+          "name": "Шкаф управления",
+          "quantity": 1,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "steel_sheet": {
+          "material_code": "ST-SHEET-3",
+          "name": "Лист стальной 3мм",
+          "quantity": 8.0,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 8.0,
+      "production_notes": [
+        "Электрические испытания ТЭНов",
+        "Проверка автоматики безопасности"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 50033-2000",
+        "Напряжение 380В"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 12
+    },
+    {
+      "sku": "EKCHE-180-1.2",
+      "basic_info": {
+        "name_full": "Электроконфорка чугунная экспресс ЭКЧЭ-180, 1.2 кВт, 220В, d180мм",
+        "name_short": "ЭКЧЭ-180 1.2кВт (экспресс)",
+        "code_gost": "ЭКЧЭ-180-1,2/220",
+        "category": "Электроконфорки чугунные",
+        "category_code": "ELECTRIC_HOB"
+      },
+      "specifications": {
+        "power_kw": 1.2,
+        "voltage_v": "220",
+        "frequency_hz": 50,
+        "diameter_mm": 180,
+        "material": "Чугун",
+        "type": "Экспресс (быстрого нагрева)",
+        "application": "Бытовые электроплиты"
+      },
+      "materials": {
+        "heating_element": {
+          "material_code": "TEN-INDUSTRIAL",
+          "name": "ТЭН промышленный",
+          "quantity": 3,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "control_panel": {
+          "material_code": "PANEL-CONTROL",
+          "name": "Шкаф управления",
+          "quantity": 1,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "steel_sheet": {
+          "material_code": "ST-SHEET-3",
+          "name": "Лист стальной 3мм",
+          "quantity": 8.0,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 8.0,
+      "production_notes": [
+        "Электрические испытания ТЭНов",
+        "Проверка автоматики безопасности"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 50033-2000",
+        "Напряжение 380В"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 12
+    },
+    {
+      "sku": "EOST-14163-88",
+      "basic_info": {
+        "name_full": "Электроконфорка чугунная по стандарту ЕОСТ14163-88",
+        "name_short": "ЕОСТ14163-88",
+        "code_gost": "ЕОСТ14163-88",
+        "category": "Электроконфорки чугунные",
+        "category_code": "ELECTRIC_HOB"
+      },
+      "specifications": {
+        "material": "Чугун",
+        "standard": "ЕОСТ14163-88",
+        "application": "Бытовые электроплиты"
+      },
+      "materials": {
+        "heating_element": {
+          "material_code": "TEN-INDUSTRIAL",
+          "name": "ТЭН промышленный",
+          "quantity": 3,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "control_panel": {
+          "material_code": "PANEL-CONTROL",
+          "name": "Шкаф управления",
+          "quantity": 1,
+          "unit": "шт",
+          "category": "Комплектующие"
+        },
+        "steel_sheet": {
+          "material_code": "ST-SHEET-3",
+          "name": "Лист стальной 3мм",
+          "quantity": 8.0,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 8.0,
+      "production_notes": [
+        "Электрические испытания ТЭНов",
+        "Проверка автоматики безопасности"
+      ],
+      "quality_requirements": [
+        "ГОСТ Р 50033-2000",
+        "Напряжение 380В"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 12
+    },
+    {
+      "sku": "GRATE-BOILER",
+      "basic_info": {
+        "name_full": "Колосниковые решетки различных размеров для отопительных котлов",
+        "name_short": "Колосниковые решетки (котлы)",
+        "code_gost": "Колосниковые решетки",
+        "category": "Чугунное литье",
+        "category_code": "CAST_IRON"
+      },
+      "specifications": {
+        "material": "СЧ15, СЧ20",
+        "standard": "ГОСТ 1412-85",
+        "production_method": "Ручная формовка",
+        "weight_range_kg": "20-1500",
+        "application": "Отопительные котлы, печи"
+      },
+      "materials": {
+        "pig_iron": {
+          "material_code": "IRON-PIG",
+          "name": "Чугун передельный",
+          "quantity": 10.0,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "ferroalloy": {
+          "material_code": "FERRO-SI-MN",
+          "name": "Ферросплавы (Si, Mn)",
+          "quantity": 0.5,
+          "unit": "кг",
+          "category": "Добавки"
+        },
+        "sand_mold": {
+          "material_code": "SAND-MOLD",
+          "name": "Песок формовочный",
+          "quantity": 5.0,
+          "unit": "кг",
+          "category": "Формовочные материалы"
+        }
+      },
+      "total_weight_kg": 15.5,
+      "production_notes": [
+        "Контроль химического состава",
+        "Дефектоскопия отливок",
+        "Термообработка"
+      ],
+      "quality_requirements": [
+        "ГОСТ 1412-2016",
+        "Класс точности CT8-CT10"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 24
+    },
+    {
+      "sku": "GRATE-BAR",
+      "basic_info": {
+        "name_full": "Колосниковые балки чугунные",
+        "name_short": "Колосниковые балки",
+        "code_gost": "Колосниковые балки",
+        "category": "Чугунное литье",
+        "category_code": "CAST_IRON"
+      },
+      "specifications": {
+        "material": "СЧ15, СЧ20",
+        "standard": "ГОСТ 1412-85",
+        "production_method": "Ручная формовка",
+        "weight_range_kg": "20-1500",
+        "application": "Отопительные котлы, печи"
+      },
+      "materials": {
+        "pig_iron": {
+          "material_code": "IRON-PIG",
+          "name": "Чугун передельный",
+          "quantity": 10.0,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "ferroalloy": {
+          "material_code": "FERRO-SI-MN",
+          "name": "Ферросплавы (Si, Mn)",
+          "quantity": 0.5,
+          "unit": "кг",
+          "category": "Добавки"
+        },
+        "sand_mold": {
+          "material_code": "SAND-MOLD",
+          "name": "Песок формовочный",
+          "quantity": 5.0,
+          "unit": "кг",
+          "category": "Формовочные материалы"
+        }
+      },
+      "total_weight_kg": 15.5,
+      "production_notes": [
+        "Контроль химического состава",
+        "Дефектоскопия отливок",
+        "Термообработка"
+      ],
+      "quality_requirements": [
+        "ГОСТ 1412-2016",
+        "Класс точности CT8-CT10"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 24
+    },
+    {
+      "sku": "CAST-BBQ",
+      "basic_info": {
+        "name_full": "Мангалы чугунные",
+        "name_short": "Мангалы",
+        "code_gost": "Мангалы",
+        "category": "Чугунное литье",
+        "category_code": "CAST_IRON"
+      },
+      "specifications": {
+        "material": "СЧ15, СЧ20",
+        "standard": "ГОСТ 1412-85",
+        "production_method": "Ручная формовка",
+        "weight_range_kg": "20-1500"
+      },
+      "materials": {
+        "pig_iron": {
+          "material_code": "IRON-PIG",
+          "name": "Чугун передельный",
+          "quantity": 10.0,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "ferroalloy": {
+          "material_code": "FERRO-SI-MN",
+          "name": "Ферросплавы (Si, Mn)",
+          "quantity": 0.5,
+          "unit": "кг",
+          "category": "Добавки"
+        },
+        "sand_mold": {
+          "material_code": "SAND-MOLD",
+          "name": "Песок формовочный",
+          "quantity": 5.0,
+          "unit": "кг",
+          "category": "Формовочные материалы"
+        }
+      },
+      "total_weight_kg": 15.5,
+      "production_notes": [
+        "Контроль химического состава",
+        "Дефектоскопия отливок",
+        "Термообработка"
+      ],
+      "quality_requirements": [
+        "ГОСТ 1412-2016",
+        "Класс точности CT8-CT10"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 24
+    },
+    {
+      "sku": "CAST-MOLD",
+      "basic_info": {
+        "name_full": "Изложницы чугунные",
+        "name_short": "Изложницы",
+        "code_gost": "Изложницы",
+        "category": "Чугунное литье",
+        "category_code": "CAST_IRON"
+      },
+      "specifications": {
+        "material": "СЧ15, СЧ20",
+        "standard": "ГОСТ 1412-85",
+        "production_method": "Ручная формовка",
+        "weight_range_kg": "20-1500",
+        "application": "Металлургическое производство"
+      },
+      "materials": {
+        "pig_iron": {
+          "material_code": "IRON-PIG",
+          "name": "Чугун передельный",
+          "quantity": 10.0,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "ferroalloy": {
+          "material_code": "FERRO-SI-MN",
+          "name": "Ферросплавы (Si, Mn)",
+          "quantity": 0.5,
+          "unit": "кг",
+          "category": "Добавки"
+        },
+        "sand_mold": {
+          "material_code": "SAND-MOLD",
+          "name": "Песок формовочный",
+          "quantity": 5.0,
+          "unit": "кг",
+          "category": "Формовочные материалы"
+        }
+      },
+      "total_weight_kg": 15.5,
+      "production_notes": [
+        "Контроль химического состава",
+        "Дефектоскопия отливок",
+        "Термообработка"
+      ],
+      "quality_requirements": [
+        "ГОСТ 1412-2016",
+        "Класс точности CT8-CT10"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 24
+    },
+    {
+      "sku": "CAST-CRUCIBLE",
+      "basic_info": {
+        "name_full": "Тигли чугунные",
+        "name_short": "Тигли",
+        "code_gost": "Тигли",
+        "category": "Чугунное литье",
+        "category_code": "CAST_IRON"
+      },
+      "specifications": {
+        "material": "СЧ15, СЧ20",
+        "standard": "ГОСТ 1412-85",
+        "production_method": "Ручная формовка",
+        "weight_range_kg": "20-1500",
+        "application": "Плавка металлов"
+      },
+      "materials": {
+        "pig_iron": {
+          "material_code": "IRON-PIG",
+          "name": "Чугун передельный",
+          "quantity": 10.0,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "ferroalloy": {
+          "material_code": "FERRO-SI-MN",
+          "name": "Ферросплавы (Si, Mn)",
+          "quantity": 0.5,
+          "unit": "кг",
+          "category": "Добавки"
+        },
+        "sand_mold": {
+          "material_code": "SAND-MOLD",
+          "name": "Песок формовочный",
+          "quantity": 5.0,
+          "unit": "кг",
+          "category": "Формовочные материалы"
+        }
+      },
+      "total_weight_kg": 15.5,
+      "production_notes": [
+        "Контроль химического состава",
+        "Дефектоскопия отливок",
+        "Термообработка"
+      ],
+      "quality_requirements": [
+        "ГОСТ 1412-2016",
+        "Класс точности CT8-CT10"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 24
+    },
+    {
+      "sku": "CAST-HS-CUSTOM",
+      "basic_info": {
+        "name_full": "Отливки из высокопрочного чугуна по чертежам заказчика",
+        "name_short": "Высокопрочный чугун (ВЧ)",
+        "code_gost": "ВЧ35, ВЧ40, ВЧ50",
+        "category": "Чугунное литье",
+        "category_code": "CAST_IRON"
+      },
+      "specifications": {
+        "material": "ВЧ35, ВЧ40, ВЧ50",
+        "production_method": "Ручная/машинная формовка",
+        "weight_range_kg": "20-1500",
+        "custom_made": true
+      },
+      "materials": {
+        "pig_iron": {
+          "material_code": "IRON-PIG",
+          "name": "Чугун передельный",
+          "quantity": 10.0,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "ferroalloy": {
+          "material_code": "FERRO-SI-MN",
+          "name": "Ферросплавы (Si, Mn)",
+          "quantity": 0.5,
+          "unit": "кг",
+          "category": "Добавки"
+        },
+        "sand_mold": {
+          "material_code": "SAND-MOLD",
+          "name": "Песок формовочный",
+          "quantity": 5.0,
+          "unit": "кг",
+          "category": "Формовочные материалы"
+        }
+      },
+      "total_weight_kg": 15.5,
+      "production_notes": [
+        "Контроль химического состава",
+        "Дефектоскопия отливок",
+        "Термообработка"
+      ],
+      "quality_requirements": [
+        "ГОСТ 1412-2016",
+        "Класс точности CT8-CT10"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 24
+    },
+    {
+      "sku": "IRON-PIG",
+      "basic_info": {
+        "name_full": "Чугун чушковой для переплавки",
+        "name_short": "Чугун чушковой",
+        "code_gost": "Чугун чушковой",
+        "category": "Чугунное литье",
+        "category_code": "CAST_IRON"
+      },
+      "specifications": {
+        "material": "СЧ15, СЧ20",
+        "application": "Переплавка, литейное производство"
+      },
+      "materials": {
+        "base_material": {
+          "material_code": "MAT-BASE-GEN",
+          "name": "Материал базовый",
+          "quantity": 5.0,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.0,
+      "production_notes": [
+        "Стандартный контроль качества"
+      ],
+      "quality_requirements": [
+        "ГОСТ/ТУ согласно документации"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AL-CAST-CUSTOM",
+      "basic_info": {
+        "name_full": "Отливки готовых изделий и полуфабрикатов из алюминия и сплавов на его основе",
+        "name_short": "Алюминиевые отливки",
+        "code_gost": "АК7, АК9, АК12, АВ-87",
+        "category": "Алюминиевое литье",
+        "category_code": "CAST_ALUMINUM"
+      },
+      "specifications": {
+        "material": "АК7, АК9, АК12, АВ-87",
+        "production_method": "Литье под давлением",
+        "custom_made": true,
+        "application": "Корпуса электродвигателей, детали по чертежам заказчика"
+      },
+      "materials": {
+        "pig_iron": {
+          "material_code": "IRON-PIG",
+          "name": "Чугун передельный",
+          "quantity": 10.0,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "ferroalloy": {
+          "material_code": "FERRO-SI-MN",
+          "name": "Ферросплавы (Si, Mn)",
+          "quantity": 0.5,
+          "unit": "кг",
+          "category": "Добавки"
+        },
+        "sand_mold": {
+          "material_code": "SAND-MOLD",
+          "name": "Песок формовочный",
+          "quantity": 5.0,
+          "unit": "кг",
+          "category": "Формовочные материалы"
+        }
+      },
+      "total_weight_kg": 15.5,
+      "production_notes": [
+        "Контроль химического состава",
+        "Дефектоскопия отливок",
+        "Термообработка"
+      ],
+      "quality_requirements": [
+        "ГОСТ 1412-2016",
+        "Класс точности CT8-CT10"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 24
+    },
+    {
+      "sku": "AL-PIG-AV87",
+      "basic_info": {
+        "name_full": "Алюминий чушковой марки АВ-87",
+        "name_short": "Алюминий АВ-87 чушковой",
+        "code_gost": "Алюминий АВ-87",
+        "category": "Алюминиевое литье",
+        "category_code": "CAST_ALUMINUM"
+      },
+      "specifications": {
+        "material": "АВ-87",
+        "application": "Переплавка, литейное производство"
+      },
+      "materials": {
+        "base_material": {
+          "material_code": "MAT-BASE-GEN",
+          "name": "Материал базовый",
+          "quantity": 5.0,
+          "unit": "кг",
+          "category": "Металлы"
+        }
+      },
+      "total_weight_kg": 5.0,
+      "production_notes": [
+        "Стандартный контроль качества"
+      ],
+      "quality_requirements": [
+        "ГОСТ/ТУ согласно документации"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 24
+    },
+    {
+      "sku": "CUSTOM-CAST-IRON",
+      "basic_info": {
+        "name_full": "Изготовление отливок из чугуна по чертежам, эскизам, моделям заказчика",
+        "name_short": "Чугунное литье на заказ",
+        "code_gost": "Чугунное литье на заказ",
+        "category": "Отливки по чертежам заказчика",
+        "category_code": "CUSTOM_CASTING"
+      },
+      "specifications": {
+        "material": "СЧ15, СЧ20, ВЧ35-ВЧ50",
+        "production_method": "Ручная формовка (20-1500 кг), машинная формовка (до 30 кг, 650x480 мм)",
+        "weight_range_kg": "20-1500",
+        "custom_made": true,
+        "order_requirements": "Чертежи, эскизы или модели заказчика"
+      },
+      "materials": {
+        "pig_iron": {
+          "material_code": "IRON-PIG",
+          "name": "Чугун передельный",
+          "quantity": 10.0,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "ferroalloy": {
+          "material_code": "FERRO-SI-MN",
+          "name": "Ферросплавы (Si, Mn)",
+          "quantity": 0.5,
+          "unit": "кг",
+          "category": "Добавки"
+        },
+        "sand_mold": {
+          "material_code": "SAND-MOLD",
+          "name": "Песок формовочный",
+          "quantity": 5.0,
+          "unit": "кг",
+          "category": "Формовочные материалы"
+        }
+      },
+      "total_weight_kg": 15.5,
+      "production_notes": [
+        "Контроль химического состава",
+        "Дефектоскопия отливок",
+        "Термообработка"
+      ],
+      "quality_requirements": [
+        "ГОСТ 1412-2016",
+        "Класс точности CT8-CT10"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 24
+    },
+    {
+      "sku": "CUSTOM-CAST-ALUMINUM",
+      "basic_info": {
+        "name_full": "Изготовление отливок из алюминия по чертежам, эскизам, моделям заказчика",
+        "name_short": "Алюминиевое литье на заказ",
+        "code_gost": "Алюминиевое литье на заказ",
+        "category": "Отливки по чертежам заказчика",
+        "category_code": "CUSTOM_CASTING"
+      },
+      "specifications": {
+        "material": "АК7, АК9, АК12, АВ-87",
+        "production_method": "Литье под давлением",
+        "custom_made": true,
+        "order_requirements": "Чертежи, эскизы или модели заказчика"
+      },
+      "materials": {
+        "pig_iron": {
+          "material_code": "IRON-PIG",
+          "name": "Чугун передельный",
+          "quantity": 10.0,
+          "unit": "кг",
+          "category": "Металлы"
+        },
+        "ferroalloy": {
+          "material_code": "FERRO-SI-MN",
+          "name": "Ферросплавы (Si, Mn)",
+          "quantity": 0.5,
+          "unit": "кг",
+          "category": "Добавки"
+        },
+        "sand_mold": {
+          "material_code": "SAND-MOLD",
+          "name": "Песок формовочный",
+          "quantity": 5.0,
+          "unit": "кг",
+          "category": "Формовочные материалы"
+        }
+      },
+      "total_weight_kg": 15.5,
+      "production_notes": [
+        "Контроль химического состава",
+        "Дефектоскопия отливок",
+        "Термообработка"
+      ],
+      "quality_requirements": [
+        "ГОСТ 1412-2016",
+        "Класс точности CT8-CT10"
+      ],
+      "is_serial_tracked": false,
+      "warranty_months": 24
+    }
+  ]
+}

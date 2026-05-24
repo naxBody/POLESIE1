@@ -1,0 +1,1601 @@
+{
+  "company": {
+    "name": "ОАО «Полесьеэлектромаш»",
+    "city": "Лунинец",
+    "country": "Республика Беларусь",
+    "founded": "1975",
+    "unp": "200106183",
+    "address": "225644, Брестская область, г. Лунинец, ул. Красная, 179",
+    "phone": "+375 1647 2-78-09",
+    "fax": "+375 1647 2-78-44",
+    "email": "polesie@polesieelectromash.by",
+    "website": "https://polesieelectromash.by"
+  },
+  "categories": [
+    {
+      "id": 1,
+      "code": "MOTORS_3PHASE",
+      "name_ru": "Электродвигатели асинхронные трехфазные",
+      "name_en": "Three-phase asynchronous motors",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 11,
+          "code": "MOTOR_AIR_GENERAL",
+          "name_ru": "Общепромышленного назначения (АИР)",
+          "parent_id": 1,
+          "level": 2,
+          "products": [
+            {
+              "sku": "AIR-071-2",
+              "code_gost": "АИР71",
+              "name_full": "Электродвигатель асинхронный трехфазный АИР71, 0.37-0.75 кВт, 3000 об/мин",
+              "name_short": "АИР71 0.37-0.75кВт 3000об/мин",
+              "specs": {
+                "power_kw_min": 0.37,
+                "power_kw_max": 0.75,
+                "rpm": 3000,
+                "shaft_height_mm": 71,
+                "voltage_v": "380/220",
+                "frequency_hz": 50,
+                "climate_versions": [
+                  "У2",
+                  "У3",
+                  "У5",
+                  "УХЛ2",
+                  "УХЛ4",
+                  "Т2"
+                ],
+                "mounting_versions": [
+                  "IM1081",
+                  "IM1082",
+                  "IM2081",
+                  "IM2082",
+                  "IM2181",
+                  "IM2182",
+                  "IM3081",
+                  "IM3082",
+                  "IM3681",
+                  "IM3682"
+                ],
+                "protection_class": [
+                  "IP54",
+                  "IP55"
+                ]
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 1,
+              "serial_number": "SN-24-002-9964"
+            },
+            {
+              "sku": "AIR-080-2",
+              "code_gost": "АИР80",
+              "name_full": "Электродвигатель асинхронный трехфазный АИР80, 0.75-2.2 кВт, 3000 об/мин",
+              "name_short": "АИР80 0.75-2.2кВт 3000об/мин",
+              "specs": {
+                "power_kw_min": 0.75,
+                "power_kw_max": 2.2,
+                "rpm": 3000,
+                "shaft_height_mm": 80,
+                "voltage_v": "380/220",
+                "frequency_hz": 50,
+                "climate_versions": [
+                  "У2",
+                  "У3",
+                  "У5",
+                  "УХЛ2",
+                  "УХЛ4",
+                  "Т2"
+                ],
+                "mounting_versions": [
+                  "IM1081",
+                  "IM1082",
+                  "IM2081",
+                  "IM2082",
+                  "IM2181",
+                  "IM2182",
+                  "IM3081",
+                  "IM3082",
+                  "IM3681",
+                  "IM3682"
+                ],
+                "protection_class": [
+                  "IP54",
+                  "IP55"
+                ]
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 2,
+              "serial_number": "SN-24-002-9364"
+            },
+            {
+              "sku": "AIR-090-2",
+              "code_gost": "АИР90",
+              "name_full": "Электродвигатель асинхронный трехфазный АИР90, 1.5-3.0 кВт, 3000 об/мин",
+              "name_short": "АИР90 1.5-3.0кВт 3000об/мин",
+              "specs": {
+                "power_kw_min": 1.5,
+                "power_kw_max": 3.0,
+                "rpm": 3000,
+                "shaft_height_mm": 90,
+                "voltage_v": "380/220",
+                "frequency_hz": 50,
+                "climate_versions": [
+                  "У2",
+                  "У3",
+                  "У5",
+                  "УХЛ2",
+                  "УХЛ4",
+                  "Т2"
+                ],
+                "mounting_versions": [
+                  "IM1081",
+                  "IM1082",
+                  "IM2081",
+                  "IM2082",
+                  "IM2181",
+                  "IM2182",
+                  "IM3081",
+                  "IM3082",
+                  "IM3681",
+                  "IM3682"
+                ],
+                "protection_class": [
+                  "IP54",
+                  "IP55"
+                ]
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 3,
+              "serial_number": "SN-24-002-1420"
+            },
+            {
+              "sku": "AIR-100-2",
+              "code_gost": "АИР100",
+              "name_full": "Электродвигатель асинхронный трехфазный АИР100, 3.0-5.5 кВт, 3000 об/мин",
+              "name_short": "АИР100 3.0-5.5кВт 3000об/мин",
+              "specs": {
+                "power_kw_min": 3.0,
+                "power_kw_max": 5.5,
+                "rpm": 3000,
+                "shaft_height_mm": 100,
+                "voltage_v": "380/220",
+                "frequency_hz": 50,
+                "climate_versions": [
+                  "У2",
+                  "У3",
+                  "У5",
+                  "УХЛ2",
+                  "УХЛ4",
+                  "Т2"
+                ],
+                "mounting_versions": [
+                  "IM1081",
+                  "IM1082",
+                  "IM2081",
+                  "IM2082",
+                  "IM2181",
+                  "IM2182",
+                  "IM3081",
+                  "IM3082",
+                  "IM3681",
+                  "IM3682"
+                ],
+                "protection_class": [
+                  "IP54",
+                  "IP55"
+                ]
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 4,
+              "serial_number": "SN-24-002-9518"
+            },
+            {
+              "sku": "AIR-112-2",
+              "code_gost": "АИР112",
+              "name_full": "Электродвигатель асинхронный трехфазный АИР112, 4.0-7.5 кВт, 3000 об/мин",
+              "name_short": "АИР112 4.0-7.5кВт 3000об/мин",
+              "specs": {
+                "power_kw_min": 4.0,
+                "power_kw_max": 7.5,
+                "rpm": 3000,
+                "shaft_height_mm": 112,
+                "voltage_v": "380/220",
+                "frequency_hz": 50,
+                "climate_versions": [
+                  "У2",
+                  "У3",
+                  "У5",
+                  "УХЛ2",
+                  "УХЛ4",
+                  "Т2"
+                ],
+                "mounting_versions": [
+                  "IM1081",
+                  "IM1082",
+                  "IM2081",
+                  "IM2082",
+                  "IM2181",
+                  "IM2182",
+                  "IM3081",
+                  "IM3082",
+                  "IM3681",
+                  "IM3682"
+                ],
+                "protection_class": [
+                  "IP54",
+                  "IP55"
+                ]
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 5,
+              "serial_number": "SN-24-002-5288"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "code": "MOTOR_AIR_ENERGY_EFFICIENT",
+          "name_ru": "Энергоэффективные (2AIR)",
+          "parent_id": 1,
+          "level": 2,
+          "products": [
+            {
+              "sku": "2AIR-080A2-1.5",
+              "code_gost": "2АИР80А2",
+              "name_full": "Энергоэффективный электродвигатель 2АИР80А2, 1.5 кВт, 3000 об/мин, IE2",
+              "name_short": "2АИР80А2 1.5кВт 3000об/мин",
+              "specs": {
+                "power_kw": 1.5,
+                "rpm": 3000,
+                "shaft_height_mm": 80,
+                "efficiency_class": "IE2",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "is_bestseller": true,
+              "id": 6,
+              "serial_number": "SN-24-005-1387"
+            },
+            {
+              "sku": "2AIR-080A4-1.1",
+              "code_gost": "2АИР80А4",
+              "name_full": "Энергоэффективный электродвигатель 2АИР80А4, 1.1 кВт, 1500 об/мин, IE2",
+              "name_short": "2АИР80А4 1.1кВт 1500об/мин",
+              "specs": {
+                "power_kw": 1.1,
+                "rpm": 1500,
+                "shaft_height_mm": 80,
+                "efficiency_class": "IE2",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "is_bestseller": true,
+              "id": 7,
+              "serial_number": "SN-24-001-4314"
+            },
+            {
+              "sku": "2AIR-080A6-0.75",
+              "code_gost": "2АИР80А6",
+              "name_full": "Энергоэффективный электродвигатель 2АИР80А6, 0.75 кВт, 1000 об/мин, IE2",
+              "name_short": "2АИР80А6 0.75кВт 1000об/мин",
+              "specs": {
+                "power_kw": 0.75,
+                "rpm": 1000,
+                "shaft_height_mm": 80,
+                "efficiency_class": "IE2",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 8,
+              "serial_number": "SN-24-075-5680"
+            },
+            {
+              "sku": "2AIR-080B2-2.2",
+              "code_gost": "2АИР80В2",
+              "name_full": "Энергоэффективный электродвигатель 2АИР80В2, 2.2 кВт, 3000 об/мин, IE2",
+              "name_short": "2АИР80В2 2.2кВт 3000об/мин",
+              "specs": {
+                "power_kw": 2.2,
+                "rpm": 3000,
+                "shaft_height_mm": 80,
+                "efficiency_class": "IE2",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 9,
+              "serial_number": "SN-24-002-5729"
+            },
+            {
+              "sku": "2AIR-080B4-1.5",
+              "code_gost": "2АИР80В4",
+              "name_full": "Энергоэффективный электродвигатель 2АИР80В4, 1.5 кВт, 1500 об/мин, IE2",
+              "name_short": "2АИР80В4 1.5кВт 1500об/мин",
+              "specs": {
+                "power_kw": 1.5,
+                "rpm": 1500,
+                "shaft_height_mm": 80,
+                "efficiency_class": "IE2",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 10,
+              "serial_number": "SN-24-005-9722"
+            },
+            {
+              "sku": "2AIR-080B6-1.1",
+              "code_gost": "2АИР80В6",
+              "name_full": "Энергоэффективный электродвигатель 2АИР80В6, 1.1 кВт, 1000 об/мин, IE2",
+              "name_short": "2АИР80В6 1.1кВт 1000об/мин",
+              "specs": {
+                "power_kw": 1.1,
+                "rpm": 1000,
+                "shaft_height_mm": 80,
+                "efficiency_class": "IE2",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 11,
+              "serial_number": "SN-24-001-2086"
+            },
+            {
+              "sku": "2AIR-090L2-3.0",
+              "code_gost": "2АИР90L2",
+              "name_full": "Энергоэффективный электродвигатель 2АИР90L2, 3.0 кВт, 3000 об/мин, IE2",
+              "name_short": "2АИР90L2 3.0кВт 3000об/мин",
+              "specs": {
+                "power_kw": 3.0,
+                "rpm": 3000,
+                "shaft_height_mm": 90,
+                "efficiency_class": "IE2",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 12,
+              "serial_number": "SN-24-000-4912"
+            },
+            {
+              "sku": "2AIR-090L4-2.2",
+              "code_gost": "2АИР90L4",
+              "name_full": "Энергоэффективный электродвигатель 2АИР90L4, 2.2 кВт, 1500 об/мин, IE2",
+              "name_short": "2АИР90L4 2.2кВт 1500об/мин",
+              "specs": {
+                "power_kw": 2.2,
+                "rpm": 1500,
+                "shaft_height_mm": 90,
+                "efficiency_class": "IE2",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 13,
+              "serial_number": "SN-24-002-6805"
+            },
+            {
+              "sku": "2AIR-090L6-1.5",
+              "code_gost": "2АИР90L6",
+              "name_full": "Энергоэффективный электродвигатель 2АИР90L6, 1.5 кВт, 1000 об/мин, IE2",
+              "name_short": "2АИР90L6 1.5кВт 1000об/мин",
+              "specs": {
+                "power_kw": 1.5,
+                "rpm": 1000,
+                "shaft_height_mm": 90,
+                "efficiency_class": "IE2",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 14,
+              "serial_number": "SN-24-005-5421"
+            },
+            {
+              "sku": "2AIR-100L2-5.5",
+              "code_gost": "2АИР100L2",
+              "name_full": "Энергоэффективный электродвигатель 2АИР100L2, 5.5 кВт, 3000 об/мин, IE2",
+              "name_short": "2АИР100L2 5.5кВт 3000об/мин",
+              "specs": {
+                "power_kw": 5.5,
+                "rpm": 3000,
+                "shaft_height_mm": 100,
+                "efficiency_class": "IE2",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 15,
+              "serial_number": "SN-24-005-7471"
+            },
+            {
+              "sku": "2AIR-100L4-4.0",
+              "code_gost": "2АИР100L4",
+              "name_full": "Энергоэффективный электродвигатель 2АИР100L4, 4.0 кВт, 1500 об/мин, IE2",
+              "name_short": "2АИР100L4 4.0кВт 1500об/мин",
+              "specs": {
+                "power_kw": 4.0,
+                "rpm": 1500,
+                "shaft_height_mm": 100,
+                "efficiency_class": "IE2",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 16,
+              "serial_number": "SN-24-000-7089"
+            },
+            {
+              "sku": "2AIR-100L6-2.2",
+              "code_gost": "2АИР100L6",
+              "name_full": "Энергоэффективный электродвигатель 2АИР100L6, 2.2 кВт, 1000 об/мин, IE2",
+              "name_short": "2АИР100L6 2.2кВт 1000об/мин",
+              "specs": {
+                "power_kw": 2.2,
+                "rpm": 1000,
+                "shaft_height_mm": 100,
+                "efficiency_class": "IE2",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 17,
+              "serial_number": "SN-24-002-5431"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "code": "MOTOR_AIR_SPECIAL",
+          "name_ru": "Специального назначения",
+          "parent_id": 1,
+          "level": 2,
+          "products": [
+            {
+              "sku": "AIRS-080",
+              "code_gost": "АИРС80",
+              "name_full": "Электродвигатель с повышенным скольжением АИРС80",
+              "name_short": "АИРС80 (повышенное скольжение)",
+              "specs": {
+                "shaft_height_mm": 80,
+                "slip_percent": 10,
+                "application": "Приводы с переменной нагрузкой"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 18,
+              "serial_number": "SN-24-080-8244"
+            },
+            {
+              "sku": "AIRS-090",
+              "code_gost": "АИРС90",
+              "name_full": "Электродвигатель с повышенным скольжением АИРС90",
+              "name_short": "АИРС90 (повышенное скольжение)",
+              "specs": {
+                "shaft_height_mm": 90,
+                "slip_percent": 10,
+                "application": "Приводы с переменной нагрузкой"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 19,
+              "serial_number": "SN-24-090-4346"
+            },
+            {
+              "sku": "AIRS-100",
+              "code_gost": "АИРС100",
+              "name_full": "Электродвигатель с повышенным скольжением АИРС100",
+              "name_short": "АИРС100 (повышенное скольжение)",
+              "specs": {
+                "shaft_height_mm": 100,
+                "slip_percent": 10,
+                "application": "Приводы с переменной нагрузкой"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 20,
+              "serial_number": "SN-24-100-5366"
+            },
+            {
+              "sku": "AIR-PUMP-080",
+              "code_gost": "АИР80 (насосы)",
+              "name_full": "Электродвигатель для привода моноблочных насосов АИР80",
+              "name_short": "АИР80 (насосы)",
+              "specs": {
+                "shaft_height_mm": 80,
+                "application": "Моноблочные насосы"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 21,
+              "serial_number": "SN-24-080-6963"
+            },
+            {
+              "sku": "AIR-PUMP-090",
+              "code_gost": "АИР90 (насосы)",
+              "name_full": "Электродвигатель для привода моноблочных насосов АИР90",
+              "name_short": "АИР90 (насосы)",
+              "specs": {
+                "shaft_height_mm": 90,
+                "application": "Моноблочные насосы"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 22,
+              "serial_number": "SN-24-090-9969"
+            },
+            {
+              "sku": "AIR-GEAR-090",
+              "code_gost": "АИР90 (редукторы)",
+              "name_full": "Электродвигатель для привода редукторов АИР90",
+              "name_short": "АИР90 (редукторы)",
+              "specs": {
+                "shaft_height_mm": 90,
+                "application": "Привод редукторов"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 23,
+              "serial_number": "SN-24-090-9096"
+            },
+            {
+              "sku": "AIR-MULTI-080",
+              "code_gost": "АИР80 (многоскоростной)",
+              "name_full": "Электродвигатель многоскоростной АИР80",
+              "name_short": "АИР80 (многоскоростной)",
+              "specs": {
+                "shaft_height_mm": 80,
+                "speeds": "2/4/6/8 полюсов",
+                "application": "Переменная скорость"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 24,
+              "serial_number": "SN-24-080-6437"
+            },
+            {
+              "sku": "AIR-MULTI-090",
+              "code_gost": "АИР90 (многоскоростной)",
+              "name_full": "Электродвигатель многоскоростной АИР90",
+              "name_short": "АИР90 (многоскоростной)",
+              "specs": {
+                "shaft_height_mm": 90,
+                "speeds": "2/4/6/8 полюсов",
+                "application": "Переменная скорость"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 25,
+              "serial_number": "SN-24-090-8817"
+            },
+            {
+              "sku": "AIR-MULTI-100",
+              "code_gost": "АИР100 (многоскоростной)",
+              "name_full": "Электродвигатель многоскоростной АИР100",
+              "name_short": "АИР100 (многоскоростной)",
+              "specs": {
+                "shaft_height_mm": 100,
+                "speeds": "2/4/6/8 полюсов",
+                "application": "Переменная скорость"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 26,
+              "serial_number": "SN-24-100-3751"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "code": "MOTOR_AIR_EXPLOSION",
+          "name_ru": "Взрывозащищенные (АИВР)",
+          "parent_id": 1,
+          "level": 2,
+          "products": [
+            {
+              "sku": "AIVR-080B2-2.2",
+              "code_gost": "АИВР80В2",
+              "name_full": "Взрывозащищенный электродвигатель АИВР80В2, 2.2 кВт, 3000 об/мин, чугунный корпус",
+              "name_short": "АИВР80В2 2.2кВт 3000об/мин Ex",
+              "specs": {
+                "power_kw": 2.2,
+                "rpm": 3000,
+                "shaft_height_mm": 80,
+                "explosion_protection": "1Ex d IIB T4 Gb",
+                "housing_material": "Чугун",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 27,
+              "serial_number": "SN-24-002-9075"
+            },
+            {
+              "sku": "AIVR-080B4-1.5",
+              "code_gost": "АИВР80В4",
+              "name_full": "Взрывозащищенный электродвигатель АИВР80В4, 1.5 кВт, 1500 об/мин, чугунный корпус",
+              "name_short": "АИВР80В4 1.5кВт 1500об/мин Ex",
+              "specs": {
+                "power_kw": 1.5,
+                "rpm": 1500,
+                "shaft_height_mm": 80,
+                "explosion_protection": "1Ex d IIB T4 Gb",
+                "housing_material": "Чугун",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 28,
+              "serial_number": "SN-24-005-8857"
+            },
+            {
+              "sku": "AIVR-080B6-1.1",
+              "code_gost": "АИВР80В6",
+              "name_full": "Взрывозащищенный электродвигатель АИВР80В6, 1.1 кВт, 1000 об/мин, чугунный корпус",
+              "name_short": "АИВР80В6 1.1кВт 1000об/мин Ex",
+              "specs": {
+                "power_kw": 1.1,
+                "rpm": 1000,
+                "shaft_height_mm": 80,
+                "explosion_protection": "1Ex d IIB T4 Gb",
+                "housing_material": "Чугун",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 29,
+              "serial_number": "SN-24-001-8431"
+            },
+            {
+              "sku": "AIVR-090L2-3.0",
+              "code_gost": "АИВР90L2",
+              "name_full": "Взрывозащищенный электродвигатель АИВР90L2, 3.0 кВт, 3000 об/мин, чугунный корпус",
+              "name_short": "АИВР90L2 3.0кВт 3000об/мин Ex",
+              "specs": {
+                "power_kw": 3.0,
+                "rpm": 3000,
+                "shaft_height_mm": 90,
+                "explosion_protection": "1Ex d IIB T4 Gb",
+                "housing_material": "Чугун",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 30,
+              "serial_number": "SN-24-000-1103"
+            },
+            {
+              "sku": "AIVR-090L4-2.2",
+              "code_gost": "АИВР90L4",
+              "name_full": "Взрывозащищенный электродвигатель АИВР90L4, 2.2 кВт, 1500 об/мин, чугунный корпус",
+              "name_short": "АИВР90L4 2.2кВт 1500об/мин Ex",
+              "specs": {
+                "power_kw": 2.2,
+                "rpm": 1500,
+                "shaft_height_mm": 90,
+                "explosion_protection": "1Ex d IIB T4 Gb",
+                "housing_material": "Чугун",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 31,
+              "serial_number": "SN-24-002-2075"
+            },
+            {
+              "sku": "AIVR-090L6-1.5",
+              "code_gost": "АИВР90L6",
+              "name_full": "Взрывозащищенный электродвигатель АИВР90L6, 1.5 кВт, 1000 об/мин, чугунный корпус",
+              "name_short": "АИВР90L6 1.5кВт 1000об/мин Ex",
+              "specs": {
+                "power_kw": 1.5,
+                "rpm": 1000,
+                "shaft_height_mm": 90,
+                "explosion_protection": "1Ex d IIB T4 Gb",
+                "housing_material": "Чугун",
+                "voltage_v": "380/220",
+                "frequency_hz": 50
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 32,
+              "serial_number": "SN-24-005-8327"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "code": "MOTOR_AIR_LIVESTOCK",
+          "name_ru": "Для животноводческих помещений (птичники)",
+          "parent_id": 1,
+          "level": 2,
+          "products": [
+            {
+              "sku": "AIRP-080C6-0.75",
+              "code_gost": "АИРП80С6",
+              "name_full": "Электродвигатель для привода осевых вентиляторов АИРП80С6, 0.75 кВт, 1000 об/мин",
+              "name_short": "АИРП80С6 0.75кВт (птичники)",
+              "specs": {
+                "power_kw": 0.75,
+                "rpm": 1000,
+                "shaft_height_mm": 80,
+                "application": "Осевые вентиляторы в животноводческих и птицеводческих помещениях"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 33,
+              "serial_number": "SN-24-075-4153"
+            },
+            {
+              "sku": "AIRP-080A6-0.37",
+              "code_gost": "АИРП80А6",
+              "name_full": "Электродвигатель для привода осевых вентиляторов АИРП80А6, 0.37 кВт, 1000 об/мин",
+              "name_short": "АИРП80А6 0.37кВт (птичники)",
+              "specs": {
+                "power_kw": 0.37,
+                "rpm": 1000,
+                "shaft_height_mm": 80,
+                "application": "Осевые вентиляторы в животноводческих и птицеводческих помещениях"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 34,
+              "serial_number": "SN-24-037-5520"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "code": "MOTOR_AIR_RAILWAY",
+          "name_ru": "Для стрелочных электроприводов (АИРЧ)",
+          "parent_id": 1,
+          "level": 2,
+          "products": [
+            {
+              "sku": "AIRC-080B4-0.55",
+              "code_gost": "АИРЧ80В4",
+              "name_full": "Электродвигатель для стрелочных электроприводов АИРЧ80В4, 0.55 кВт, 1500 об/мин",
+              "name_short": "АИРЧ80В4 0.55кВт (ЖД)",
+              "specs": {
+                "power_kw": 0.55,
+                "rpm": 1500,
+                "shaft_height_mm": 80,
+                "application": "Стрелочные электроприводы железнодорожной автоматики",
+                "climate_versions": [
+                  "УХЛ",
+                  "Т"
+                ]
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 35,
+              "serial_number": "SN-24-055-2115"
+            },
+            {
+              "sku": "AIRC-080B6-0.3",
+              "code_gost": "АИРЧ80В6",
+              "name_full": "Электродвигатель для стрелочных электроприводов АИРЧ80В6, 0.3 кВт, 1000 об/мин",
+              "name_short": "АИРЧ80В6 0.3кВт (ЖД)",
+              "specs": {
+                "power_kw": 0.3,
+                "rpm": 1000,
+                "shaft_height_mm": 80,
+                "application": "Стрелочные электроприводы железнодорожной автоматики",
+                "climate_versions": [
+                  "УХЛ",
+                  "Т"
+                ]
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 36,
+              "serial_number": "SN-24-003-9356"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "code": "MOTORS_1PHASE",
+      "name_ru": "Электродвигатели асинхронные однофазные",
+      "name_en": "Single-phase asynchronous motors",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 21,
+          "code": "MOTOR_AIRE",
+          "name_ru": "Бытовые и промышленные (АИРЕ)",
+          "parent_id": 2,
+          "level": 2,
+          "products": [
+            {
+              "sku": "AIRE-071C2-1.1",
+              "code_gost": "АИРЕ71С2",
+              "name_full": "Электродвигатель однофазный АИРЕ71С2, 1.1 кВт, 3000 об/мин, 220В",
+              "name_short": "АИРЕ71С2 1.1кВт 3000об/мин 220В",
+              "specs": {
+                "power_kw": 1.1,
+                "rpm": 3000,
+                "voltage_v": "220",
+                "frequency_hz": 50,
+                "shaft_height_mm": 71,
+                "capacitor_included": true,
+                "application": "Бытовое и промышленное назначение"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 37,
+              "serial_number": "SN-24-001-6104"
+            },
+            {
+              "sku": "AIRE-080A2-1.1",
+              "code_gost": "АИРЕ80А2",
+              "name_full": "Электродвигатель однофазный АИРЕ80А2, 1.1 кВт, 3000 об/мин, 220В",
+              "name_short": "АИРЕ80А2 1.1кВт 3000об/мин 220В",
+              "specs": {
+                "power_kw": 1.1,
+                "rpm": 3000,
+                "voltage_v": "220",
+                "frequency_hz": 50,
+                "shaft_height_mm": 80,
+                "capacitor_included": true,
+                "application": "Бытовое и промышленное назначение"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 38,
+              "serial_number": "SN-24-001-6070"
+            },
+            {
+              "sku": "AIRE-080A4-0.75",
+              "code_gost": "АИРЕ80А4",
+              "name_full": "Электродвигатель однофазный АИРЕ80А4, 0.75 кВт, 1500 об/мин, 220В",
+              "name_short": "АИРЕ80А4 0.75кВт 1500об/мин 220В",
+              "specs": {
+                "power_kw": 0.75,
+                "rpm": 1500,
+                "voltage_v": "220",
+                "frequency_hz": 50,
+                "shaft_height_mm": 80,
+                "capacitor_included": true,
+                "application": "Бытовое и промышленное назначение"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 39,
+              "serial_number": "SN-24-075-3475"
+            },
+            {
+              "sku": "AIRE-080B2-1.5",
+              "code_gost": "АИРЕ80В2",
+              "name_full": "Электродвигатель однофазный АИРЕ80В2, 1.5 кВт, 3000 об/мин, 220В",
+              "name_short": "АИРЕ80В2 1.5кВт 3000об/мин 220В",
+              "specs": {
+                "power_kw": 1.5,
+                "rpm": 3000,
+                "voltage_v": "220",
+                "frequency_hz": 50,
+                "shaft_height_mm": 80,
+                "capacitor_included": true,
+                "application": "Бытовое и промышленное назначение"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 40,
+              "serial_number": "SN-24-005-5159"
+            },
+            {
+              "sku": "AIRE-080B4-1.1",
+              "code_gost": "АИРЕ80В4",
+              "name_full": "Электродвигатель однофазный АИРЕ80В4, 1.1 кВт, 1500 об/мин, 220В",
+              "name_short": "АИРЕ80В4 1.1кВт 1500об/мин 220В",
+              "specs": {
+                "power_kw": 1.1,
+                "rpm": 1500,
+                "voltage_v": "220",
+                "frequency_hz": 50,
+                "shaft_height_mm": 80,
+                "capacitor_included": true,
+                "application": "Бытовое и промышленное назначение"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 41,
+              "serial_number": "SN-24-001-7032"
+            },
+            {
+              "sku": "AIRE-080C2-2.0",
+              "code_gost": "АИРЕ80С2",
+              "name_full": "Электродвигатель однофазный АИРЕ80С2, 2.0 кВт, 3000 об/мин, 220В",
+              "name_short": "АИРЕ80С2 2.0кВт 3000об/мин 220В",
+              "specs": {
+                "power_kw": 2.0,
+                "rpm": 3000,
+                "voltage_v": "220",
+                "frequency_hz": 50,
+                "shaft_height_mm": 80,
+                "capacitor_included": true,
+                "application": "Бытовое и промышленное назначение"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 42,
+              "serial_number": "SN-24-000-3758"
+            },
+            {
+              "sku": "AIRE-080C4-1.5",
+              "code_gost": "АИРЕ80С4",
+              "name_full": "Электродвигатель однофазный АИРЕ80С4, 1.5 кВт, 1500 об/мин, 220В",
+              "name_short": "АИРЕ80С4 1.5кВт 1500об/мин 220В",
+              "specs": {
+                "power_kw": 1.5,
+                "rpm": 1500,
+                "voltage_v": "220",
+                "frequency_hz": 50,
+                "shaft_height_mm": 80,
+                "capacitor_included": true,
+                "application": "Бытовое и промышленное назначение"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 43,
+              "serial_number": "SN-24-005-7615"
+            },
+            {
+              "sku": "AIRE-080D2-2.2",
+              "code_gost": "АМРЕ80D2",
+              "name_full": "Электродвигатель однофазный АМРЕ80D2, 2.2 кВт, 3000 об/мин, 220В",
+              "name_short": "АМРЕ80D2 2.2кВт 3000об/мин 220В",
+              "specs": {
+                "power_kw": 2.2,
+                "rpm": 3000,
+                "voltage_v": "220",
+                "frequency_hz": 50,
+                "shaft_height_mm": 80,
+                "capacitor_included": true,
+                "application": "Бытовое и промышленное назначение"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 44,
+              "serial_number": "SN-24-002-1564"
+            },
+            {
+              "sku": "AIRE-090L2-2.2",
+              "code_gost": "АИРЕ90L2",
+              "name_full": "Электродвигатель однофазный АИРЕ90L2, 2.2 кВт, 3000 об/мин, 220В",
+              "name_short": "АИРЕ90L2 2.2кВт 3000об/мин 220В",
+              "specs": {
+                "power_kw": 2.2,
+                "rpm": 3000,
+                "voltage_v": "220",
+                "frequency_hz": 50,
+                "shaft_height_mm": 90,
+                "capacitor_included": true,
+                "application": "Бытовое и промышленное назначение"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 45,
+              "serial_number": "SN-24-002-4048"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "code": "MOTOR_AIS",
+          "name_ru": "Промышленные (АИС/АИСЕ)",
+          "parent_id": 2,
+          "level": 2,
+          "products": [
+            {
+              "sku": "AISE-080",
+              "code_gost": "АИСЕ80",
+              "name_full": "Электродвигатель однофазный промышленный АИСЕ80",
+              "name_short": "АИСЕ80",
+              "specs": {
+                "shaft_height_mm": 80,
+                "voltage_v": "220",
+                "application": "Промышленное назначение"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 46,
+              "serial_number": "SN-24-080-5114"
+            },
+            {
+              "sku": "AISE-090",
+              "code_gost": "АИСЕ90",
+              "name_full": "Электродвигатель однофазный промышленный АИСЕ90",
+              "name_short": "АИСЕ90",
+              "specs": {
+                "shaft_height_mm": 90,
+                "voltage_v": "220",
+                "application": "Промышленное назначение"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 47,
+              "serial_number": "SN-24-090-9061"
+            },
+            {
+              "sku": "AISE-100",
+              "code_gost": "АИСЕ100",
+              "name_full": "Электродвигатель однофазный промышленный АИСЕ100",
+              "name_short": "АИСЕ100",
+              "specs": {
+                "shaft_height_mm": 100,
+                "voltage_v": "220",
+                "application": "Промышленное назначение"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 24,
+              "id": 48,
+              "serial_number": "SN-24-100-9723"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "code": "PUMPS",
+      "name_ru": "Электронасосы",
+      "name_en": "Electric pumps",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 31,
+          "code": "PUMP_GNOM",
+          "name_ru": "Погружные для загрязненных вод (ГНОМ)",
+          "parent_id": 3,
+          "level": 2,
+          "products": [
+            {
+              "sku": "GNOM-10-10",
+              "code_gost": "ГНОМ 10x10",
+              "name_full": "Электронасос центробежный погружной ГНОМ 10x10 для загрязненных вод",
+              "name_short": "ГНОМ 10x10",
+              "specs": {
+                "flow_rate_m3_h": 10,
+                "head_m": 10,
+                "power_kw": 0.9,
+                "voltage_v": "220/380",
+                "frequency_hz": 50,
+                "housing_material": "Чугун",
+                "impeller_material": "Чугун",
+                "max_solid_size_mm": 5,
+                "max_immersion_depth_m": 7,
+                "application": "Перекачка загрязненной воды, осушение котлованов и траншей"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 12,
+              "id": 49,
+              "serial_number": "SN-24-010-5397"
+            },
+            {
+              "sku": "GNOM-25-20",
+              "code_gost": "ГНОМ 25x20",
+              "name_full": "Электронасос центробежный погружной ГНОМ 25x20 для загрязненных вод",
+              "name_short": "ГНОМ 25x20",
+              "specs": {
+                "flow_rate_m3_h": 25,
+                "head_m": 20,
+                "power_kw": 3.0,
+                "voltage_v": "220/380",
+                "frequency_hz": 50,
+                "housing_material": "Чугун",
+                "impeller_material": "Чугун",
+                "max_solid_size_mm": 5,
+                "max_immersion_depth_m": 7,
+                "application": "Перекачка загрязненной воды, осушение котлованов и траншей"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 12,
+              "id": 50,
+              "serial_number": "SN-24-020-7686"
+            },
+            {
+              "sku": "GNOM-50-50",
+              "code_gost": "ГНОМ 50x50",
+              "name_full": "Электронасос центробежный погружной ГНОМ 50x50 для загрязненных вод",
+              "name_short": "ГНОМ 50x50",
+              "specs": {
+                "flow_rate_m3_h": 50,
+                "head_m": 50,
+                "power_kw": 11.0,
+                "voltage_v": "380",
+                "frequency_hz": 50,
+                "housing_material": "Чугун",
+                "impeller_material": "Чугун",
+                "max_solid_size_mm": 5,
+                "max_immersion_depth_m": 7,
+                "application": "Перекачка загрязненной воды, осушение котлованов и траншей"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 12,
+              "id": 51,
+              "serial_number": "SN-24-050-6890"
+            },
+            {
+              "sku": "GNOM-100-25",
+              "code_gost": "ГНОМ 100x25",
+              "name_full": "Электронасос центробежный погружной ГНОМ 100x25 для загрязненных вод",
+              "name_short": "ГНОМ 100x25",
+              "specs": {
+                "flow_rate_m3_h": 100,
+                "head_m": 25,
+                "power_kw": 11.0,
+                "voltage_v": "380",
+                "frequency_hz": 50,
+                "housing_material": "Чугун",
+                "impeller_material": "Чугун",
+                "max_solid_size_mm": 5,
+                "max_immersion_depth_m": 7,
+                "application": "Перекачка загрязненной воды, осушение котлованов и траншей"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 12,
+              "id": 52,
+              "serial_number": "SN-24-025-6439"
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "code": "PUMP_CONSOL",
+          "name_ru": "Консольные (К, КМ, ЦНЛ)",
+          "parent_id": 3,
+          "level": 2,
+          "products": [
+            {
+              "sku": "PUMP-K",
+              "code_gost": "К, КМ",
+              "name_full": "Насосы консольные типа К, КМ",
+              "name_short": "Насосы К, КМ",
+              "specs": {
+                "application": "Перекачка воды и подобных жидкостей",
+                "type": "Консольные центробежные"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 12,
+              "id": 53,
+              "serial_number": "SN-24-053-2080"
+            },
+            {
+              "sku": "PUMP-TSNL",
+              "code_gost": "ЦНЛ",
+              "name_full": "Насосы консольные линейные типа ЦНЛ",
+              "name_short": "Насосы ЦНЛ",
+              "specs": {
+                "application": "Перекачка воды и подобных жидкостей",
+                "type": "Консольные линейные"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 12,
+              "id": 54,
+              "serial_number": "SN-24-054-4998"
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "code": "PUMP_CENTRIFUGAL",
+          "name_ru": "Бытовые центробежные",
+          "parent_id": 3,
+          "level": 2,
+          "products": [
+            {
+              "sku": "PUMP-HOUSEHOLD",
+              "code_gost": "Насосы бытовые",
+              "name_full": "Насосы центробежные бытовые",
+              "name_short": "Насосы бытовые",
+              "specs": {
+                "application": "Бытовое водоснабжение",
+                "type": "Центробежные"
+              },
+              "is_serial_tracked": true,
+              "warranty_months": 12,
+              "id": 55,
+              "serial_number": "SN-24-055-9971"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "code": "ELECTRIC_HOB",
+      "name_ru": "Электроконфорки чугунные",
+      "name_en": "Cast iron electric hobs",
+      "parent_id": null,
+      "level": 1,
+      "products": [
+        {
+          "sku": "EKCH-145-1.0",
+          "code_gost": "ЭКЧ-145-1,0/220",
+          "name_full": "Электроконфорка чугунная ЭКЧ-145, 1.0 кВт, 220В, d145мм",
+          "name_short": "ЭКЧ-145 1.0кВт d145мм",
+          "specs": {
+            "power_kw": 1.0,
+            "voltage_v": "220",
+            "frequency_hz": 50,
+            "diameter_mm": 145,
+            "material": "Чугун",
+            "application": "Бытовые электроплиты"
+          },
+          "is_serial_tracked": false,
+          "warranty_months": 12
+        },
+        {
+          "sku": "EKCH-180-1.2",
+          "code_gost": "ЭКЧ-180-1,2/220",
+          "name_full": "Электроконфорка чугунная ЭКЧ-180, 1.2 кВт, 220В, d180мм",
+          "name_short": "ЭКЧ-180 1.2кВт d180мм",
+          "specs": {
+            "power_kw": 1.2,
+            "voltage_v": "220",
+            "frequency_hz": 50,
+            "diameter_mm": 180,
+            "material": "Чугун",
+            "application": "Бытовые электроплиты"
+          },
+          "is_serial_tracked": false,
+          "warranty_months": 12
+        },
+        {
+          "sku": "EKCH-180-1.5",
+          "code_gost": "ЭКЧ-180-1,5/220",
+          "name_full": "Электроконфорка чугунная ЭКЧ-180, 1.5 кВт, 220В, d180мм",
+          "name_short": "ЭКЧ-180 1.5кВт d180мм",
+          "specs": {
+            "power_kw": 1.5,
+            "voltage_v": "220",
+            "frequency_hz": 50,
+            "diameter_mm": 180,
+            "material": "Чугун",
+            "application": "Бытовые электроплиты"
+          },
+          "is_serial_tracked": false,
+          "warranty_months": 12
+        },
+        {
+          "sku": "EKCH-220-2.0",
+          "code_gost": "ЭКЧ-220-2/220",
+          "name_full": "Электроконфорка чугунная ЭКЧ-220, 2.0 кВт, 220В, d220мм",
+          "name_short": "ЭКЧ-220 2.0кВт d220мм",
+          "specs": {
+            "power_kw": 2.0,
+            "voltage_v": "220",
+            "frequency_hz": 50,
+            "diameter_mm": 220,
+            "material": "Чугун",
+            "application": "Бытовые электроплиты"
+          },
+          "is_serial_tracked": false,
+          "warranty_months": 12
+        },
+        {
+          "sku": "EKCHE-180-1.2",
+          "code_gost": "ЭКЧЭ-180-1,2/220",
+          "name_full": "Электроконфорка чугунная экспресс ЭКЧЭ-180, 1.2 кВт, 220В, d180мм",
+          "name_short": "ЭКЧЭ-180 1.2кВт (экспресс)",
+          "specs": {
+            "power_kw": 1.2,
+            "voltage_v": "220",
+            "frequency_hz": 50,
+            "diameter_mm": 180,
+            "material": "Чугун",
+            "type": "Экспресс (быстрого нагрева)",
+            "application": "Бытовые электроплиты"
+          },
+          "is_serial_tracked": false,
+          "warranty_months": 12
+        },
+        {
+          "sku": "EOST-14163-88",
+          "code_gost": "ЕОСТ14163-88",
+          "name_full": "Электроконфорка чугунная по стандарту ЕОСТ14163-88",
+          "name_short": "ЕОСТ14163-88",
+          "specs": {
+            "material": "Чугун",
+            "standard": "ЕОСТ14163-88",
+            "application": "Бытовые электроплиты"
+          },
+          "is_serial_tracked": false,
+          "warranty_months": 12
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "code": "CAST_IRON",
+      "name_ru": "Чугунное литье",
+      "name_en": "Cast iron casting",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 51,
+          "code": "CAST_IRON_GRATES",
+          "name_ru": "Колосниковые решетки",
+          "parent_id": 5,
+          "level": 2,
+          "products": [
+            {
+              "sku": "GRATE-BOILER",
+              "code_gost": "Колосниковые решетки",
+              "name_full": "Колосниковые решетки различных размеров для отопительных котлов",
+              "name_short": "Колосниковые решетки (котлы)",
+              "specs": {
+                "material": "СЧ15, СЧ20",
+                "standard": "ГОСТ 1412-85",
+                "production_method": "Ручная формовка",
+                "weight_range_kg": "20-1500",
+                "application": "Отопительные котлы, печи"
+              },
+              "is_serial_tracked": false,
+              "custom_made": true,
+              "id": 56
+            },
+            {
+              "sku": "GRATE-BAR",
+              "code_gost": "Колосниковые балки",
+              "name_full": "Колосниковые балки чугунные",
+              "name_short": "Колосниковые балки",
+              "specs": {
+                "material": "СЧ15, СЧ20",
+                "standard": "ГОСТ 1412-85",
+                "production_method": "Ручная формовка",
+                "weight_range_kg": "20-1500",
+                "application": "Отопительные котлы, печи"
+              },
+              "is_serial_tracked": false,
+              "custom_made": true,
+              "id": 57
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "code": "CAST_IRON_PRODUCTS",
+          "name_ru": "Изделия из чугуна",
+          "parent_id": 5,
+          "level": 2,
+          "products": [
+            {
+              "sku": "CAST-BBQ",
+              "code_gost": "Мангалы",
+              "name_full": "Мангалы чугунные",
+              "name_short": "Мангалы",
+              "specs": {
+                "material": "СЧ15, СЧ20",
+                "standard": "ГОСТ 1412-85",
+                "production_method": "Ручная формовка",
+                "weight_range_kg": "20-1500"
+              },
+              "is_serial_tracked": false,
+              "custom_made": true,
+              "id": 58
+            },
+            {
+              "sku": "CAST-MOLD",
+              "code_gost": "Изложницы",
+              "name_full": "Изложницы чугунные",
+              "name_short": "Изложницы",
+              "specs": {
+                "material": "СЧ15, СЧ20",
+                "standard": "ГОСТ 1412-85",
+                "production_method": "Ручная формовка",
+                "weight_range_kg": "20-1500",
+                "application": "Металлургическое производство"
+              },
+              "is_serial_tracked": false,
+              "custom_made": true,
+              "id": 59
+            },
+            {
+              "sku": "CAST-CRUCIBLE",
+              "code_gost": "Тигли",
+              "name_full": "Тигли чугунные",
+              "name_short": "Тигли",
+              "specs": {
+                "material": "СЧ15, СЧ20",
+                "standard": "ГОСТ 1412-85",
+                "production_method": "Ручная формовка",
+                "weight_range_kg": "20-1500",
+                "application": "Плавка металлов"
+              },
+              "is_serial_tracked": false,
+              "custom_made": true,
+              "id": 60
+            }
+          ]
+        },
+        {
+          "id": 53,
+          "code": "CAST_IRON_HIGH_STRENGTH",
+          "name_ru": "Изделия из высокопрочного чугуна",
+          "parent_id": 5,
+          "level": 2,
+          "products": [
+            {
+              "sku": "CAST-HS-CUSTOM",
+              "code_gost": "ВЧ35, ВЧ40, ВЧ50",
+              "name_full": "Отливки из высокопрочного чугуна по чертежам заказчика",
+              "name_short": "Высокопрочный чугун (ВЧ)",
+              "specs": {
+                "material": "ВЧ35, ВЧ40, ВЧ50",
+                "production_method": "Ручная/машинная формовка",
+                "weight_range_kg": "20-1500",
+                "custom_made": true
+              },
+              "is_serial_tracked": false,
+              "custom_made": true,
+              "id": 61
+            }
+          ]
+        },
+        {
+          "id": 54,
+          "code": "CAST_IRON_PIG",
+          "name_ru": "Чугун чушковой",
+          "parent_id": 5,
+          "level": 2,
+          "products": [
+            {
+              "sku": "IRON-PIG",
+              "code_gost": "Чугун чушковой",
+              "name_full": "Чугун чушковой для переплавки",
+              "name_short": "Чугун чушковой",
+              "specs": {
+                "material": "СЧ15, СЧ20",
+                "application": "Переплавка, литейное производство"
+              },
+              "is_serial_tracked": false,
+              "id": 62
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "code": "CAST_ALUMINUM",
+      "name_ru": "Алюминиевое литье",
+      "name_en": "Aluminum casting",
+      "parent_id": null,
+      "level": 1,
+      "subcategories": [
+        {
+          "id": 61,
+          "code": "CAST_ALUMINUM_PRODUCTS",
+          "name_ru": "Отливки из алюминия и сплавов",
+          "parent_id": 6,
+          "level": 2,
+          "products": [
+            {
+              "sku": "AL-CAST-CUSTOM",
+              "code_gost": "АК7, АК9, АК12, АВ-87",
+              "name_full": "Отливки готовых изделий и полуфабрикатов из алюминия и сплавов на его основе",
+              "name_short": "Алюминиевые отливки",
+              "specs": {
+                "material": "АК7, АК9, АК12, АВ-87",
+                "production_method": "Литье под давлением",
+                "custom_made": true,
+                "application": "Корпуса электродвигателей, детали по чертежам заказчика"
+              },
+              "is_serial_tracked": false,
+              "custom_made": true,
+              "id": 63
+            }
+          ]
+        },
+        {
+          "id": 62,
+          "code": "CAST_ALUMINUM_PIG",
+          "name_ru": "Алюминий чушковой",
+          "parent_id": 6,
+          "level": 2,
+          "products": [
+            {
+              "sku": "AL-PIG-AV87",
+              "code_gost": "Алюминий АВ-87",
+              "name_full": "Алюминий чушковой марки АВ-87",
+              "name_short": "Алюминий АВ-87 чушковой",
+              "specs": {
+                "material": "АВ-87",
+                "application": "Переплавка, литейное производство"
+              },
+              "is_serial_tracked": false,
+              "id": 64
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "code": "CUSTOM_CASTING",
+      "name_ru": "Отливки по чертежам заказчика",
+      "name_en": "Custom casting",
+      "parent_id": null,
+      "level": 1,
+      "products": [
+        {
+          "sku": "CUSTOM-CAST-IRON",
+          "code_gost": "Чугунное литье на заказ",
+          "name_full": "Изготовление отливок из чугуна по чертежам, эскизам, моделям заказчика",
+          "name_short": "Чугунное литье на заказ",
+          "specs": {
+            "material": "СЧ15, СЧ20, ВЧ35-ВЧ50",
+            "production_method": "Ручная формовка (20-1500 кг), машинная формовка (до 30 кг, 650x480 мм)",
+            "weight_range_kg": "20-1500",
+            "custom_made": true,
+            "order_requirements": "Чертежи, эскизы или модели заказчика"
+          },
+          "is_serial_tracked": false,
+          "custom_made": true
+        },
+        {
+          "sku": "CUSTOM-CAST-ALUMINUM",
+          "code_gost": "Алюминиевое литье на заказ",
+          "name_full": "Изготовление отливок из алюминия по чертежам, эскизам, моделям заказчика",
+          "name_short": "Алюминиевое литье на заказ",
+          "specs": {
+            "material": "АК7, АК9, АК12, АВ-87",
+            "production_method": "Литье под давлением",
+            "custom_made": true,
+            "order_requirements": "Чертежи, эскизы или модели заказчика"
+          },
+          "is_serial_tracked": false,
+          "custom_made": true
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "export_date": "2026-05-23",
+    "total_categories": 7,
+    "total_subcategories": 18,
+    "total_products": 80,
+    "currency": "BYN",
+    "notes": [
+      "Все электродвигатели изготавливаются в соответствии с требованиями заказчика",
+      "Возможно изготовление отливок по чертежам, эскизам или образцам заказчика",
+      "Стоимость продукции договорная",
+      "Модернизация литейного цеха завершена в 2023 году"
+    ]
+  }
+}

@@ -2,8 +2,7 @@
 -- БАЗА ДАННЫХ СИСТЕМЫ УПРАВЛЕНИЯ ПРОИЗВОДСТВОМ
 -- ОАО "Полесьеэлектромаш" (Беларусь)
 -- ОПТИМИЗИРОВАННАЯ ВЕРСИЯ (20 таблиц)
--- Удалены: production_stages, notifications, activity_log, warehouse_transactions, passport_templates
--- Добавлены: material_categories, materials (для миграции из JSON)
+-- Структура: справочники, основные таблицы, серийные номера, материалы
 -- ============================================
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -15,35 +14,24 @@ CREATE DATABASE IF NOT EXISTS `polesie_production` DEFAULT CHARACTER SET utf8mb4
 USE `polesie_production`;
 
 -- ============================================
--- ТАБЛИЦЫ СПРАВОЧНИКОВ (6 таблиц)
+-- ТАБЛИЦЫ СПРАВОЧНИКОВ (7 таблиц)
 -- ============================================
 
--- Статусы заказов
-CREATE TABLE `order_statuses` (
+-- Категории материалов
+CREATE TABLE `material_categories` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `name` VARCHAR(100) NOT NULL,
-  `color` VARCHAR(20) DEFAULT '#007bff',
-  `sort_order` INT DEFAULT 0,
+  `code` VARCHAR(50) UNIQUE,
+  `name` VARCHAR(200) NOT NULL,
+  `parent_id` INT DEFAULT NULL,
+  `level` INT DEFAULT 1,
+  `description` TEXT,
   `is_active` BOOLEAN DEFAULT TRUE,
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Статусы производства
-CREATE TABLE `production_statuses` (
-  `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `name` VARCHAR(100) NOT NULL,
-  `color` VARCHAR(20) DEFAULT '#28a745',
-  `sort_order` INT DEFAULT 0,
-  `is_active` BOOLEAN DEFAULT TRUE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Единицы измерения
-CREATE TABLE `units` (
-  `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `name` VARCHAR(50) NOT NULL,
-  `short_name` VARCHAR(20) NOT NULL,
-  `is_active` BOOLEAN DEFAULT TRUE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (`parent_id`) REFERENCES `material_categories`(`id`) ON DELETE SET NULL,
+  INDEX `idx_code` (`code`),
+  INDEX `idx_parent` (`parent_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Категории и подкатегории материалов';
 
 -- Категории продукции
 CREATE TABLE `product_categories` (
@@ -53,8 +41,40 @@ CREATE TABLE `product_categories` (
   `description` TEXT,
   `is_active` BOOLEAN DEFAULT TRUE,
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (`parent_id`) REFERENCES `product_categories`(`id`) ON DELETE SET NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  FOREIGN KEY (`parent_id`) REFERENCES `product_categories`(`id`) ON DELETE SET NULL,
+  INDEX `idx_parent` (`parent_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Категории и подкатегории продукции';
+
+-- Единицы измерения
+CREATE TABLE `units` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(50) NOT NULL,
+  `short_name` VARCHAR(20) NOT NULL,
+  `is_active` BOOLEAN DEFAULT TRUE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Единицы измерения';
+
+-- Статусы заказов
+CREATE TABLE `order_statuses` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(100) NOT NULL,
+  `color` VARCHAR(20) DEFAULT '#007bff',
+  `sort_order` INT DEFAULT 0,
+  `is_active` BOOLEAN DEFAULT TRUE,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Статусы заказов';
+
+-- Статусы производства
+CREATE TABLE `production_statuses` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(100) NOT NULL,
+  `color` VARCHAR(20) DEFAULT '#28a745',
+  `sort_order` INT DEFAULT 0,
+  `is_active` BOOLEAN DEFAULT TRUE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Статусы производственных заданий';
 
 -- Типы проверок качества
 CREATE TABLE `quality_check_types` (
@@ -63,7 +83,8 @@ CREATE TABLE `quality_check_types` (
   `description` TEXT,
   `is_mandatory` BOOLEAN DEFAULT TRUE,
   `sort_order` INT DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Типы проверок качества';
 
 -- Роли пользователей
 CREATE TABLE `user_roles` (
@@ -73,10 +94,11 @@ CREATE TABLE `user_roles` (
   `description` TEXT,
   `permissions` JSON,
   `is_active` BOOLEAN DEFAULT TRUE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Роли пользователей системы';
 
 -- ============================================
--- ОСНОВНЫЕ ТАБЛИЦЫ (11 таблиц)
+-- ОСНОВНЫЕ ТАБЛИЦЫ (10 таблиц)
 -- ============================================
 
 -- Пользователи системы
@@ -96,7 +118,8 @@ CREATE TABLE `users` (
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY (`role_id`) REFERENCES `user_roles`(`id`) ON DELETE RESTRICT
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Пользователи системы';
 
 -- Контрагенты (заказчики, поставщики)
 CREATE TABLE `contractors` (
@@ -118,7 +141,8 @@ CREATE TABLE `contractors` (
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   INDEX `idx_inn` (`inn`),
   INDEX `idx_type` (`type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Контрагенты (заказчики и поставщики)';
 
 -- Продукция (каталог изделий)
 CREATE TABLE `products` (
@@ -139,7 +163,8 @@ CREATE TABLE `products` (
   FOREIGN KEY (`unit_id`) REFERENCES `units`(`id`) ON DELETE SET NULL,
   INDEX `idx_article` (`article`),
   INDEX `idx_category` (`category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Каталог продукции';
 
 -- Заказы
 CREATE TABLE `orders` (
@@ -168,7 +193,8 @@ CREATE TABLE `orders` (
   INDEX `idx_contractor` (`contractor_id`),
   INDEX `idx_status` (`status_id`),
   INDEX `idx_order_date` (`order_date`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Заказы клиентов';
 
 -- Позиции заказа
 CREATE TABLE `order_items` (
@@ -185,9 +211,10 @@ CREATE TABLE `order_items` (
   FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE RESTRICT,
   INDEX `idx_order` (`order_id`),
   INDEX `idx_product` (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Позиции заказов';
 
--- Производственные задания (объединяет production_orders + production_tasks)
+-- Производственные задания
 CREATE TABLE `production_orders` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `production_number` VARCHAR(50) NOT NULL UNIQUE,
@@ -233,9 +260,10 @@ CREATE TABLE `production_orders` (
   INDEX `idx_order` (`order_id`),
   INDEX `idx_priority` (`priority`),
   INDEX `idx_due_date` (`due_date`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Производственные задания';
 
--- Контроль качества (упрощено: удален stage_id)
+-- Контроль качества
 CREATE TABLE `quality_checks` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `production_order_id` INT NOT NULL,
@@ -256,46 +284,8 @@ CREATE TABLE `quality_checks` (
   INDEX `idx_production_order` (`production_order_id`),
   INDEX `idx_check_date` (`check_date`),
   INDEX `idx_result` (`result`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Склад материалов и сырья
-CREATE TABLE `warehouse_materials` (
-  `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `material_name` VARCHAR(200) NOT NULL,
-  `article` VARCHAR(50),
-  `category` VARCHAR(100),
-  `unit_id` INT,
-  `current_quantity` DECIMAL(15,3) DEFAULT 0.00,
-  `min_quantity` DECIMAL(15,3) DEFAULT 0.00,
-  `max_quantity` DECIMAL(15,3),
-  `location` VARCHAR(100),
-  `supplier_id` INT,
-  `last_purchase_price` DECIMAL(15,2),
-  `currency` CHAR(3) DEFAULT 'BYN',
-  `is_active` BOOLEAN DEFAULT TRUE,
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  FOREIGN KEY (`unit_id`) REFERENCES `units`(`id`) ON DELETE SET NULL,
-  FOREIGN KEY (`supplier_id`) REFERENCES `contractors`(`id`) ON DELETE SET NULL,
-  INDEX `idx_article` (`article`),
-  INDEX `idx_category` (`category`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Готовая продукция на складе
-CREATE TABLE `warehouse_products` (
-  `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `product_id` INT NOT NULL,
-  `quantity` DECIMAL(15,3) DEFAULT 0.00,
-  `location` VARCHAR(100),
-  `batch_number` VARCHAR(50),
-  `production_date` DATE,
-  `warranty_until` DATE,
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE RESTRICT,
-  UNIQUE KEY `unique_product_batch` (`product_id`, `batch_number`),
-  INDEX `idx_product` (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Контроль качества';
 
 -- Настройки системы
 CREATE TABLE `system_settings` (
@@ -307,10 +297,11 @@ CREATE TABLE `system_settings` (
   `updated_by` INT,
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY (`updated_by`) REFERENCES `users`(`id`) ON DELETE SET NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Настройки системы';
 
 -- ============================================
--- ТАБЛИЦЫ СЕРИЙНЫХ НОМЕРОВ И ДОКУМЕНТОВ (3 таблицы)
+-- ТАБЛИЦЫ СЕРИЙНЫХ НОМЕРОВ И ДОКУМЕНТОВ (4 таблицы)
 -- ============================================
 
 -- Серийные номера готовой продукции
@@ -338,7 +329,8 @@ CREATE TABLE `product_serial_numbers` (
   INDEX `idx_product` (`product_id`),
   INDEX `idx_status` (`status`),
   INDEX `idx_manufacture_date` (`manufacture_date`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Серийные номера готовой продукции';
 
 -- Динамические данные паспорта изделия
 CREATE TABLE `passport_dynamic_data` (
@@ -365,7 +357,8 @@ CREATE TABLE `passport_dynamic_data` (
   FOREIGN KEY (`serial_number_id`) REFERENCES `product_serial_numbers`(`id`) ON DELETE CASCADE,
   FOREIGN KEY (`created_by`) REFERENCES `users`(`id`) ON DELETE SET NULL,
   INDEX `idx_serial` (`serial_number_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Динамические данные паспорта изделия';
 
 -- Версии паспортов (история изменений)
 CREATE TABLE `product_passport_versions` (
@@ -379,7 +372,8 @@ CREATE TABLE `product_passport_versions` (
   FOREIGN KEY (`generated_by`) REFERENCES `users`(`id`) ON DELETE SET NULL,
   INDEX `idx_serial` (`serial_number_id`),
   INDEX `idx_version` (`version_number`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Версии паспортов изделий';
 
 -- Прикрепленные документы (руководства, сертификаты)
 CREATE TABLE `product_documents` (
@@ -397,28 +391,12 @@ CREATE TABLE `product_documents` (
   FOREIGN KEY (`uploaded_by`) REFERENCES `users`(`id`) ON DELETE SET NULL,
   INDEX `idx_serial` (`serial_number_id`),
   INDEX `idx_type` (`document_type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Прикрепленные документы к изделиям';
 
 -- ============================================
 -- ТАБЛИЦЫ ДЛЯ МАТЕРИАЛОВ (2 таблицы)
--- Добавлены для миграции данных из JSON
 -- ============================================
-
--- Категории материалов
-CREATE TABLE `material_categories` (
-  `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `code` VARCHAR(50) UNIQUE,
-  `name` VARCHAR(200) NOT NULL,
-  `parent_id` INT DEFAULT NULL,
-  `level` INT DEFAULT 1,
-  `description` TEXT,
-  `is_active` BOOLEAN DEFAULT TRUE,
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (`parent_id`) REFERENCES `material_categories`(`id`) ON DELETE SET NULL,
-  INDEX `idx_code` (`code`),
-  INDEX `idx_parent` (`parent_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
-COMMENT='Категории и подкатегории материалов';
 
 -- Материалы и сырьё (расширенный справочник)
 CREATE TABLE `materials` (

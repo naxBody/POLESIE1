@@ -1,1 +1,5 @@
-Nothing should be ignored based on the provided file changes. The only modified file is 'polesie/index.php', which is a source code file and should not be added to .gitignore.
+```
+# SQL migration and schema files are typically not ignored since they're part of the source code
+# No build artifacts, dependencies, or temp files detected in changes
+# Current .gitignore is empty and no new ignores needed
+```

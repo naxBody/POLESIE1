@@ -132,11 +132,13 @@ CREATE TABLE `orders` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `order_number` VARCHAR(50) NOT NULL UNIQUE,
   `customer_id` INT,
+  `responsible_user_id` INT,
   `status` ENUM('new', 'processing', 'ready', 'shipped', 'cancelled') DEFAULT 'new',
   `order_date` DATE NOT NULL,
   `total_amount` DECIMAL(15,2),
   `notes` TEXT,
-  CONSTRAINT `fk_order_customer` FOREIGN KEY (`customer_id`) REFERENCES `contractors`(`id`) ON DELETE SET NULL
+  CONSTRAINT `fk_order_customer` FOREIGN KEY (`customer_id`) REFERENCES `contractors`(`id`) ON DELETE SET NULL,
+  CONSTRAINT `fk_order_responsible` FOREIGN KEY (`responsible_user_id`) REFERENCES `users`(`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- 10. ПОЗИЦИИ ЗАКАЗОВ

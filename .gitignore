@@ -1,1 +1,1 @@
-Nothing should be ignored based on the provided file changes. The only modified file is `polesie/sql/test_data.sql`, which is a SQL source file and should not be ignored.
+Nothing should be ignored based on the provided file changes. The only modified file is a PHP source file (`polesie/includes/auth.php`), which is a legitimate source code file that should not be ignored.

@@ -24,10 +24,6 @@ function login($username, $password) {
         $_SESSION['username'] = $user['username'];
         $_SESSION['role_code'] = $user['role_code'];
         
-        // Обновление времени последнего входа
-        $updateStmt = $pdo->prepare("UPDATE users SET last_login = NOW() WHERE id = ?");
-        $updateStmt->execute([$user['id']]);
-        
         logActivity('login', 'user', $user['id']);
         
         return true;

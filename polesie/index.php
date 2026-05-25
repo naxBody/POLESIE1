@@ -47,7 +47,23 @@ $stats['warehouse_products'] = $stmt->fetchColumn() ?? 0;
 
 // Последние заказы
 $recentOrders = $pdo->query("
-    SELECT o.*, c.name as contractor_name, u.full_name as responsible_name
+    SELECT o.*, c.name as contractor_name, u.full_name as responsible_name,
+        CASE o.status
+            WHEN 'new' THEN 'Новый'
+            WHEN 'processing' THEN 'В работе'
+            WHEN 'ready' THEN 'Готов'
+            WHEN 'shipped' THEN 'Отгружен'
+            WHEN 'cancelled' THEN 'Отменен'
+            ELSE o.status
+        END as status_name,
+        CASE o.status
+            WHEN 'new' THEN '#3498db'
+            WHEN 'processing' THEN '#f39c12'
+            WHEN 'ready' THEN '#27ae60'
+            WHEN 'shipped' THEN '#9b59b6'
+            WHEN 'cancelled' THEN '#e74c3c'
+            ELSE '#95a5a6'
+        END as status_color
     FROM orders o
     LEFT JOIN contractors c ON o.customer_id = c.id
     LEFT JOIN users u ON o.responsible_user_id = u.id
@@ -57,7 +73,21 @@ $recentOrders = $pdo->query("
 
 // Активные производственные задания
 $activeProduction = $pdo->query("
-    SELECT pt.*, p.name as product_name, u.full_name as responsible_name
+    SELECT pt.*, p.name as product_name, u.full_name as responsible_name,
+        CASE pt.status
+            WHEN 'planned' THEN 'Запланировано'
+            WHEN 'in_progress' THEN 'В работе'
+            WHEN 'completed' THEN 'Завершено'
+            WHEN 'cancelled' THEN 'Отменено'
+            ELSE pt.status
+        END as status_name,
+        CASE pt.status
+            WHEN 'planned' THEN '#3498db'
+            WHEN 'in_progress' THEN '#f39c12'
+            WHEN 'completed' THEN '#27ae60'
+            WHEN 'cancelled' THEN '#e74c3c'
+            ELSE '#95a5a6'
+        END as status_color
     FROM production_tasks pt
     JOIN products p ON pt.product_id = p.id
     LEFT JOIN users u ON pt.responsible_id = u.id

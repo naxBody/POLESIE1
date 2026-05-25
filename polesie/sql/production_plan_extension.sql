@@ -378,7 +378,7 @@ WHERE pp.id BETWEEN 1 AND 10;
 -- Обновление статусов (дефицит для некоторых материалов)
 UPDATE `production_material_requirements`
 SET status = 'shortage'
-WHERE plan_id IN (3, 5) AND material_id IN (SELECT id FROM materials LIMIT 2);
+WHERE plan_id IN (3, 5) AND material_id IN (1, 2);
 
 -- Резервирование для первого плана
 UPDATE `production_material_requirements`

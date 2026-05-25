@@ -139,110 +139,139 @@ $costingData = $stmt->fetchAll();
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= asset('assets/css/style.css') ?>">
     <style>
-        .kpi-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        .kpi-card {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--primary-color);
-        }
-        .kpi-card.warning { border-left-color: #f59e0b; }
-        .kpi-card.danger { border-left-color: #ef4444; }
-        .kpi-card.success { border-left-color: #10b981; }
-        .kpi-value {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin: 10px 0;
-        }
-        .kpi-label {
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-        .section-card {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 24px;
-            margin-bottom: 24px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        .section-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: var(--text-primary);
+        .top-nav {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
         }
-        .trend-up { color: #10b981; font-size: 14px; }
-        .trend-down { color: #ef4444; font-size: 14px; }
+        .nav-btn {
+            padding: 10px 16px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+        .nav-btn:hover {
+            background: #f9fafb;
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+        .nav-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+        .compact-section {
+            display: none;
+        }
+        .compact-section.active {
+            display: block;
+        }
+        .compact-table-container {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .compact-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        .compact-table th {
+            background: #f9fafb;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .compact-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+        .compact-table tr:last-child td {
+            border-bottom: none;
+        }
+        .compact-table tr:hover {
+            background: #f9fafb;
+        }
+        .mini-kpi-bar {
+            display: flex;
+            gap: 16px;
+            background: white;
+            padding: 12px 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            align-items: center;
+        }
+        .mini-kpi-item {
+            display: flex;
+            flex-direction: column;
+            padding-right: 16px;
+            border-right: 1px solid var(--border-color);
+        }
+        .mini-kpi-item:last-child {
+            border-right: none;
+        }
+        .mini-kpi-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .mini-kpi-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+        .trend-up { color: #10b981; }
+        .trend-down { color: #ef4444; }
         .priority-badge {
             display: inline-block;
             padding: 2px 8px;
             border-radius: 12px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
         }
         .priority-1 { background: #fee2e2; color: #dc2626; }
         .priority-2 { background: #fef3c7; color: #d97706; }
         .priority-3 { background: #dbeafe; color: #2563eb; }
         .shortage-row { background: #fef2f2 !important; }
-        .progress-bar {
-            width: 100%;
-            height: 8px;
+        .progress-mini {
+            width: 60px;
+            height: 6px;
             background: #e5e7eb;
-            border-radius: 4px;
+            border-radius: 3px;
             overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
         }
-        .progress-fill {
+        .progress-fill-mini {
             height: 100%;
             background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            transition: width 0.3s;
         }
-        .cost-breakdown {
+        .cost-bar {
             display: flex;
-            gap: 4px;
-            height: 12px;
-            border-radius: 6px;
+            gap: 2px;
+            height: 8px;
+            border-radius: 4px;
             overflow: hidden;
-            margin-top: 8px;
+            width: 80px;
         }
         .cost-material { background: #3b82f6; }
         .cost-labor { background: #10b981; }
         .cost-overhead { background: #f59e0b; }
-        .tab-container {
-            margin-bottom: 20px;
-        }
-        .tab-buttons {
-            display: flex;
-            gap: 8px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 0;
-        }
-        .tab-btn {
-            padding: 12px 20px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            font-weight: 500;
-            color: var(--text-secondary);
-            border-bottom: 2px solid transparent;
-            margin-bottom: -2px;
-            transition: all 0.2s;
-        }
-        .tab-btn.active {
-            color: var(--primary-color);
-            border-bottom-color: var(--primary-color);
-        }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
     </style>
 </head>
 <body>
@@ -257,7 +286,7 @@ $costingData = $stmt->fetchAll();
                     <div class="page-header">
                         <div class="page-header-title">
                             <h2>📊 План производства</h2>
-                            <p>Комплексное планирование на <?= date('d.m.Y', strtotime($weekStart)) ?> - <?= date('d.m.Y', strtotime($weekEnd)) ?></p>
+                            <p><?= date('d.m.Y', strtotime($weekStart)) ?> - <?= date('d.m.Y', strtotime($weekEnd)) ?></p>
                         </div>
                         <div class="page-header-actions">
                             <button class="btn btn-outline" onclick="window.print()">🖨️ Печать</button>
@@ -265,63 +294,52 @@ $costingData = $stmt->fetchAll();
                         </div>
                     </div>
 
-                    <!-- KPI Карточки -->
-                    <div class="kpi-grid">
-                        <div class="kpi-card">
-                            <div class="kpi-label">Планы на неделю</div>
-                            <div class="kpi-value"><?= $weekStats['total'] ?? 0 ?></div>
-                            <div style="font-size: 13px; color: var(--text-secondary);">
-                                В работе: <strong><?= $weekStats['in_progress'] ?? 0 ?></strong> | 
-                                В плане: <strong><?= $weekStats['planned'] ?? 0 ?></strong>
-                            </div>
+                    <!-- Мини KPI панель -->
+                    <div class="mini-kpi-bar">
+                        <div class="mini-kpi-item">
+                            <span class="mini-kpi-value"><?= $weekStats['total'] ?? 0 ?></span>
+                            <span class="mini-kpi-label">Планов</span>
                         </div>
-                        <div class="kpi-card warning">
-                            <div class="kpi-label">⚠️ Дефицит материалов</div>
-                            <div class="kpi-value" style="color: #f59e0b;"><?= $shortageCount ?></div>
-                            <div style="font-size: 13px; color: var(--text-secondary);">
-                                Требуют внимания
-                            </div>
+                        <div class="mini-kpi-item">
+                            <span class="mini-kpi-value" style="color: #3b82f6;"><?= $weekStats['in_progress'] ?? 0 ?></span>
+                            <span class="mini-kpi-label">В работе</span>
                         </div>
-                        <div class="kpi-card success">
-                            <div class="kpi-label">💰 Себестоимость недели</div>
-                            <div class="kpi-value"><?= number_format($weekCost, 2, ',', ' ') ?> BYN</div>
-                            <div style="font-size: 13px; color: var(--text-secondary);">
-                                Средняя: <?= $weekStats['total'] > 0 ? number_format($weekCost / $weekStats['total'], 2, ',', ' ') : 0 ?> BYN/план
-                            </div>
+                        <div class="mini-kpi-item">
+                            <span class="mini-kpi-value" style="color: #f59e0b;"><?= $shortageCount ?></span>
+                            <span class="mini-kpi-label">Дефицит</span>
                         </div>
-                        <div class="kpi-card">
-                            <div class="kpi-label">🏭 Загрузка мощностей</div>
-                            <div class="kpi-value"><?= $shiftsCount ?></div>
-                            <div style="font-size: 13px; color: var(--text-secondary);">
-                                Производственных смен
-                            </div>
+                        <div class="mini-kpi-item">
+                            <span class="mini-kpi-value" style="color: #10b981;"><?= number_format($weekCost, 0, ',', ' ') ?></span>
+                            <span class="mini-kpi-label">Себест., BYN</span>
+                        </div>
+                        <div class="mini-kpi-item">
+                            <span class="mini-kpi-value"><?= $shiftsCount ?></span>
+                            <span class="mini-kpi-label">Смен</span>
                         </div>
                     </div>
 
-                    <!-- Вкладки -->
-                    <div class="section-card">
-                        <div class="tab-container">
-                            <div class="tab-buttons">
-                                <button class="tab-btn active" onclick="switchTab('demand')">📈 Анализ спроса</button>
-                                <button class="tab-btn" onclick="switchTab('plans')">📋 Планы на неделю</button>
-                                <button class="tab-btn" onclick="switchTab('materials')">📦 Материалы</button>
-                                <button class="tab-btn" onclick="switchTab('schedule')">🕐 График</button>
-                                <button class="tab-btn" onclick="switchTab('costing')">💵 Себестоимость</button>
-                            </div>
-                        </div>
+                    <!-- Навигация по разделам -->
+                    <div class="top-nav">
+                        <button class="nav-btn active" onclick="showSection('demand')">📈 Анализ спроса</button>
+                        <button class="nav-btn" onclick="showSection('plans')">📋 Планы на неделю</button>
+                        <button class="nav-btn" onclick="showSection('materials')">📦 Материалы</button>
+                        <button class="nav-btn" onclick="showSection('schedule')">🕐 График</button>
+                        <button class="nav-btn" onclick="showSection('costing')">💵 Себестоимость</button>
+                    </div>
 
-                        <!-- Анализ спроса -->
-                        <div id="tab-demand" class="tab-content active">
-                            <table class="data-table">
+                    <!-- Секции с таблицами -->
+                    <div id="section-demand" class="compact-section active">
+                        <div class="compact-table-container">
+                            <table class="compact-table">
                                 <thead>
                                     <tr>
                                         <th>Продукция</th>
-                                        <th>Историческое среднее</th>
+                                        <th>Истор. среднее</th>
                                         <th>Прогноз</th>
                                         <th>Тренд</th>
                                         <th>Сезонность</th>
                                         <th>План на сегодня</th>
-                                        <th>Статус</th>
+                                        <th>Уверенность</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -347,8 +365,8 @@ $costingData = $stmt->fetchAll();
                                         <td><?= round($da['seasonality_factor'], 2) ?></td>
                                         <td><?= $da['today_plan'] ?? '—' ?> <?= $planStatus ?></td>
                                         <td>
-                                            <div class="progress-bar" style="width: 100px;">
-                                                <div class="progress-fill" style="width: <?= min($da['confidence_level'], 100) ?>%"></div>
+                                            <div class="progress-mini">
+                                                <div class="progress-fill-mini" style="width: <?= min($da['confidence_level'], 100) ?>%"></div>
                                             </div>
                                             <small><?= round($da['confidence_level']) ?>%</small>
                                         </td>
@@ -364,22 +382,24 @@ $costingData = $stmt->fetchAll();
                                 </div>
                             <?php endif; ?>
                         </div>
+                    </div>
 
-                        <!-- Планы на неделю -->
-                        <div id="tab-plans" class="tab-content">
-                            <table class="data-table">
+                    <!-- Планы на неделю -->
+                    <div id="section-plans" class="compact-section">
+                        <div class="compact-table-container">
+                            <table class="compact-table">
                                 <thead>
                                     <tr>
                                         <th>Дата</th>
                                         <th>План №</th>
                                         <th>Продукция</th>
-                                        <th>Количество</th>
-                                        <th>Прогноз спроса</th>
+                                        <th>Кол-во</th>
+                                        <th>Прогноз</th>
                                         <th>Приоритет</th>
-                                        <th>Себестоимость</th>
+                                        <th>Себест.</th>
                                         <th>За ед.</th>
                                         <th>Статус</th>
-                                        <th>Ответственный</th>
+                                        <th>Ответств.</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -393,8 +413,8 @@ $costingData = $stmt->fetchAll();
                                         <td><span class="priority-badge priority-<?= $plan['priority'] ?>">
                                             <?php if ($plan['priority'] == 1): ?>Высокий<?php elseif ($plan['priority'] == 2): ?>Средний<?php else: ?>Низкий<?php endif; ?>
                                         </span></td>
-                                        <td><strong><?= number_format($plan['total_cost'] ?? 0, 2, ',', ' ') ?> BYN</strong></td>
-                                        <td><?= number_format($plan['cost_per_unit'] ?? 0, 2, ',', ' ') ?> BYN</td>
+                                        <td><strong><?= number_format($plan['total_cost'] ?? 0, 2, ',', ' ') ?></strong></td>
+                                        <td><?= number_format($plan['cost_per_unit'] ?? 0, 2, ',', ' ') ?></td>
                                         <td>
                                             <?php if ($plan['status'] === 'planned'): ?>
                                                 <span class="badge badge-warning">План</span>
@@ -419,16 +439,17 @@ $costingData = $stmt->fetchAll();
                                 </div>
                             <?php endif; ?>
                         </div>
+                    </div>
 
-                        <!-- Потребность в материалах -->
-                        <div id="tab-materials" class="tab-content">
-                            <table class="data-table">
+                    <!-- Потребность в материалах -->
+                    <div id="section-materials" class="compact-section">
+                        <div class="compact-table-container">
+                            <table class="compact-table">
                                 <thead>
                                     <tr>
-                                        <th>Дата плана</th>
+                                        <th>Дата</th>
                                         <th>Продукция</th>
                                         <th>Материал</th>
-                                        <th>Норма расхода</th>
                                         <th>Требуется</th>
                                         <th>На складе</th>
                                         <th>Статус</th>
@@ -441,7 +462,6 @@ $costingData = $stmt->fetchAll();
                                         <td><?= date('d.m.Y', strtotime($mr['plan_date'])) ?></td>
                                         <td><strong><?= e($mr['product_name']) ?></strong><br><small><?= e($mr['plan_number']) ?></small></td>
                                         <td><strong><?= e($mr['material_name']) ?></strong><br><small style="color:var(--text-secondary)"><?= e($mr['code']) ?></small></td>
-                                        <td><?= $mr['consumption_rate'] ?></td>
                                         <td><strong style="color: <?= $mr['is_shortage'] ? '#ef4444' : 'inherit' ?>;"><?= $mr['required_quantity'] ?></strong></td>
                                         <td><?= $mr['current_stock'] ?></td>
                                         <td>
@@ -455,7 +475,7 @@ $costingData = $stmt->fetchAll();
                                                 <span class="badge badge-secondary">В ожидании</span>
                                             <?php endif; ?>
                                         </td>
-                                        <td><?= number_format($mr['total_cost'], 2, ',', ' ') ?> BYN</td>
+                                        <td><?= number_format($mr['total_cost'], 2, ',', ' ') ?></td>
                                     </tr>
                                     <?php endforeach; ?>
                                 </tbody>
@@ -468,10 +488,12 @@ $costingData = $stmt->fetchAll();
                                 </div>
                             <?php endif; ?>
                         </div>
+                    </div>
 
-                        <!-- Рабочий график -->
-                        <div id="tab-schedule" class="tab-content">
-                            <table class="data-table">
+                    <!-- Рабочий график -->
+                    <div id="section-schedule" class="compact-section">
+                        <div class="compact-table-container">
+                            <table class="compact-table">
                                 <thead>
                                     <tr>
                                         <th>Дата</th>
@@ -479,7 +501,6 @@ $costingData = $stmt->fetchAll();
                                         <th>Смена</th>
                                         <th>Время</th>
                                         <th>План часов</th>
-                                        <th>Факт часов</th>
                                         <th>Рабочих</th>
                                         <th>Эффективность</th>
                                         <th>Продукция</th>
@@ -489,9 +510,9 @@ $costingData = $stmt->fetchAll();
                                     <?php foreach ($schedules as $sch): ?>
                                     <?php 
                                         $shiftLabel = [
-                                            'morning' => '☀️ Утренняя',
-                                            'afternoon' => '🌤️ Дневная',
-                                            'night' => '🌙 Ночная'
+                                            'morning' => '☀️ Утр.',
+                                            'afternoon' => '🌤️ Днев.',
+                                            'night' => '🌙 Ноч.'
                                         ][$sch['shift_type']] ?? $sch['shift_type'];
                                         $efficiency = $sch['efficiency_percent'] ?? 0;
                                     ?>
@@ -501,12 +522,11 @@ $costingData = $stmt->fetchAll();
                                         <td><?= $shiftLabel ?></td>
                                         <td><?= substr($sch['start_time'], 0, 5) ?> - <?= substr($sch['end_time'], 0, 5) ?></td>
                                         <td><?= $sch['planned_hours'] ?></td>
-                                        <td><?= $sch['actual_hours'] ?? '—' ?></td>
                                         <td><?= $sch['workers_count'] ?></td>
                                         <td>
                                             <div style="display: flex; align-items: center; gap: 8px;">
-                                                <div class="progress-bar" style="width: 100px;">
-                                                    <div class="progress-fill" style="width: <?= min($efficiency, 100) ?>%"></div>
+                                                <div class="progress-mini">
+                                                    <div class="progress-fill-mini" style="width: <?= min($efficiency, 100) ?>%"></div>
                                                 </div>
                                                 <span><?= round($efficiency) ?>%</span>
                                             </div>
@@ -524,17 +544,19 @@ $costingData = $stmt->fetchAll();
                                 </div>
                             <?php endif; ?>
                         </div>
+                    </div>
 
-                        <!-- Расчет себестоимости -->
-                        <div id="tab-costing" class="tab-content">
-                            <table class="data-table">
+                    <!-- Расчет себестоимости -->
+                    <div id="section-costing" class="compact-section">
+                        <div class="compact-table-container">
+                            <table class="compact-table">
                                 <thead>
                                     <tr>
                                         <th>Дата</th>
                                         <th>План №</th>
                                         <th>Продукция</th>
                                         <th>Кол-во</th>
-                                        <th>Структура затрат</th>
+                                        <th>Структура</th>
                                         <th>Материалы</th>
                                         <th>Работа</th>
                                         <th>Накладные</th>
@@ -557,20 +579,17 @@ $costingData = $stmt->fetchAll();
                                         <td><strong><?= e($cost['product_name']) ?></strong></td>
                                         <td><?= $cost['planned_quantity'] ?></td>
                                         <td>
-                                            <div class="cost-breakdown">
+                                            <div class="cost-bar">
                                                 <div class="cost-material" style="width: <?= $matPct ?>%"></div>
                                                 <div class="cost-labor" style="width: <?= $labPct ?>%"></div>
                                                 <div class="cost-overhead" style="width: <?= $ovhPct ?>%"></div>
-                                            </div>
-                                            <div style="font-size: 11px; margin-top: 4px; color: var(--text-secondary);">
-                                                Мат: <?= round($matPct) ?>% | Раб: <?= round($labPct) ?>% | Накл: <?= round($ovhPct) ?>%
                                             </div>
                                         </td>
                                         <td><?= number_format($cost['material_cost'], 2, ',', ' ') ?></td>
                                         <td><?= number_format($cost['labor_cost'], 2, ',', ' ') ?></td>
                                         <td><?= number_format($cost['overhead_cost'], 2, ',', ' ') ?></td>
-                                        <td><strong><?= number_format($total, 2, ',', ' ') ?> BYN</strong></td>
-                                        <td><?= number_format($cost['cost_per_unit'], 2, ',', ' ') ?> BYN</td>
+                                        <td><strong><?= number_format($total, 2, ',', ' ') ?></strong></td>
+                                        <td><?= number_format($cost['cost_per_unit'], 2, ',', ' ') ?></td>
                                         <td>
                                             <?php if ($cost['status'] === 'planned'): ?>
                                                 <span class="badge badge-warning">План</span>
@@ -601,13 +620,13 @@ $costingData = $stmt->fetchAll();
     </div>
 
     <script>
-        function switchTab(tabName) {
-            // Скрыть все контенты
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+        function showSection(sectionName) {
+            // Скрыть все секции
+            document.querySelectorAll('.compact-section').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
             
-            // Показать выбранный
-            document.getElementById('tab-' + tabName).classList.add('active');
+            // Показать выбранную
+            document.getElementById('section-' + sectionName).classList.add('active');
             event.target.classList.add('active');
         }
     </script>

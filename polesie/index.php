@@ -25,50 +25,44 @@ $stats['total_orders'] = $stmt->fetchColumn();
 
 // Заказы в работе
 $stmt = $pdo->query("
-    SELECT COUNT(*) FROM orders o 
-    JOIN order_statuses os ON o.status_id = os.id 
-    WHERE os.name IN ('В производстве', 'Подтвержден')
+    SELECT COUNT(*) FROM orders 
+    WHERE status IN ('processing', 'ready')
 ");
 $stats['orders_in_progress'] = $stmt->fetchColumn();
 
 // Производственные задания
-$stmt = $pdo->query("SELECT COUNT(*) FROM production_orders");
+$stmt = $pdo->query("SELECT COUNT(*) FROM production_tasks");
 $stats['production_orders'] = $stmt->fetchColumn();
 
 // Задания в работе
 $stmt = $pdo->query("
-    SELECT COUNT(*) FROM production_orders po 
-    JOIN production_statuses ps ON po.status_id = ps.id 
-    WHERE ps.name = 'В работе'
+    SELECT COUNT(*) FROM production_tasks 
+    WHERE status = 'in_progress'
 ");
 $stats['production_active'] = $stmt->fetchColumn();
 
-// Продукция на складе
-$stmt = $pdo->query("SELECT SUM(quantity) FROM warehouse_products");
+// Продукция на складе (сумма по всем продуктам)
+$stmt = $pdo->query("SELECT COUNT(*) FROM product_serial_numbers WHERE status = 'active'");
 $stats['warehouse_products'] = $stmt->fetchColumn() ?? 0;
 
 // Последние заказы
 $recentOrders = $pdo->query("
-    SELECT o.*, c.name as contractor_name, os.name as status_name, os.color as status_color,
-           u.full_name as responsible_name
+    SELECT o.*, c.name as contractor_name, u.full_name as responsible_name
     FROM orders o
-    JOIN contractors c ON o.contractor_id = c.id
-    JOIN order_statuses os ON o.status_id = os.id
+    LEFT JOIN contractors c ON o.customer_id = c.id
     LEFT JOIN users u ON o.responsible_user_id = u.id
-    ORDER BY o.created_at DESC
+    ORDER BY o.order_date DESC
     LIMIT 5
 ")->fetchAll();
 
 // Активные производственные задания
 $activeProduction = $pdo->query("
-    SELECT po.*, p.name as product_name, ps.name as status_name, ps.color as status_color,
-           u.full_name as responsible_name
-    FROM production_orders po
-    JOIN products p ON po.product_id = p.id
-    JOIN production_statuses ps ON po.status_id = ps.id
-    LEFT JOIN users u ON po.responsible_user_id = u.id
-    WHERE ps.name = 'В работе'
-    ORDER BY po.created_at DESC
+    SELECT pt.*, p.name as product_name, u.full_name as responsible_name
+    FROM production_tasks pt
+    JOIN products p ON pt.product_id = p.id
+    LEFT JOIN users u ON pt.responsible_id = u.id
+    WHERE pt.status = 'in_progress'
+    ORDER BY pt.start_date DESC
     LIMIT 5
 ")->fetchAll();
 

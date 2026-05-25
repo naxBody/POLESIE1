@@ -23,16 +23,18 @@ INSERT INTO `base_units` (`name`, `code`, `symbol`) VALUES
 -- 2. РОЛИ ПОЛЬЗОВАТЕЛЕЙ
 INSERT INTO `user_roles` (`name`, `code`, `description`, `permissions`) VALUES
 ('Администратор', 'admin', 'Полный доступ', '{"all": true}'),
+('Директор', 'director', 'Руководство', '{"all": true}'),
 ('Менеджер', 'sales_manager', 'Заказы и клиенты', '{"orders": ["read", "create"], "products": ["read"]}'),
 ('Технолог', 'technologist', 'Производство', '{"production": ["read", "create"], "materials": ["read"]}'),
 ('Кладовщик', 'storekeeper', 'Склад', '{"warehouse": ["read", "create"], "materials": ["read", "update"]}');
 
--- 3. ПОЛЬЗОВАТЕЛИ (пароль: admin123 для всех)
+-- 3. ПОЛЬЗОВАТЕЛИ (пароли в открытом виде)
 INSERT INTO `users` (`username`, `password_hash`, `full_name`, `email`, `role_id`) VALUES
-('admin', '$2a$10$XQxvKqZ5hJ9kL8mN3oP4qR6sT7uV8wX9yY0zA1bC2dD3eE4fF5gG6', 'Администратор Системы', 'admin@polesie.by', 1),
-('ivanov', '$2a$10$XQxvKqZ5hJ9kL8mN3oP4qR6sT7uV8wX9yY0zA1bC2dD3eE4fF5gG6', 'Иванов Иван', 'ivanov@polesie.by', 2),
-('petrov', '$2a$10$XQxvKqZ5hJ9kL8mN3oP4qR6sT7uV8wX9yY0zA1bC2dD3eE4fF5gG6', 'Петров Петр', 'petrov@polesie.by', 3),
-('sidorov', '$2a$10$XQxvKqZ5hJ9kL8mN3oP4qR6sT7uV8wX9yY0zA1bC2dD3eE4fF5gG6', 'Сидоров Сидор', 'sidorov@polesie.by', 4);
+('admin', 'admin123', 'Администратор Системы', 'admin@polesie.by', 1),
+('director', 'director123', 'Директор Предприятия', 'director@polesie.by', 2),
+('ivanov', 'admin123', 'Иванов Иван', 'ivanov@polesie.by', 3),
+('petrov', 'admin123', 'Петров Петр', 'petrov@polesie.by', 4),
+('sidorov', 'admin123', 'Сидоров Сидор', 'sidorov@polesie.by', 5);
 
 -- 4. КОНТРАГЕНТЫ
 INSERT INTO `contractors` (`name`, `inn`, `type`, `contact_person`, `phone`, `email`, `address`) VALUES

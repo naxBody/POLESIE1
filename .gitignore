@@ -1,1 +1,1 @@
-Nothing should be ignored since only a SQL source file was added without any build artifacts, dependencies, or temporary files.
+Nothing should be ignored based on the provided file changes. The only modified file is `polesie/sql/test_data.sql`, which is a SQL source file and should not be ignored.

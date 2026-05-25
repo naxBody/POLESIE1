@@ -1,39 +1,48 @@
 ```
-# Environment
-.env
-.env.local
-*.env.*
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+
+# Dependencies
+node_modules/
+venv/
+.venv/
 
 # Logs and temp files
 *.log
 *.tmp
 *.swp
 
+# Environment
+.env
+.env.local
+*.env.*
+
 # Editors
 .vscode/
 .idea/
 
-# Dependencies
-node_modules/
-vendor/
-polesie/vendor/
-polesie/node_modules/
-
-# Build artifacts
-polesie/build/
-polesie/dist/
-polesie/composer.lock
+# Build directories
+dist/
+build/
+target/
 
 # OS generated files
 .DS_Store
 Thumbs.db
 
-# PHP specific
-polesie/modules/production/*.log
-polesie/sql/*.sql.bak
-polesie/sql/*.sql~
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
 
-# Cache directories
-polesie/cache/
-polesie/tmp/
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.bak
+*.backup
+*~
 ```

@@ -24,12 +24,27 @@ $dateTo = $_GET['date_to'] ?? '';
 
 // Построение запроса
 $sql = "
-    SELECT o.*, c.name as contractor_name, os.name as status_name, os.color as status_color,
+    SELECT o.*, c.name as contractor_name,
            u.full_name as responsible_name,
-           COUNT(oi.id) as items_count
+           COUNT(oi.id) as items_count,
+           CASE o.status
+               WHEN 'new' THEN 'Новый'
+               WHEN 'processing' THEN 'В работе'
+               WHEN 'ready' THEN 'Готов'
+               WHEN 'shipped' THEN 'Отгружен'
+               WHEN 'cancelled' THEN 'Отменен'
+               ELSE o.status
+           END as status_name,
+           CASE o.status
+               WHEN 'new' THEN '#3498db'
+               WHEN 'processing' THEN '#f39c12'
+               WHEN 'ready' THEN '#27ae60'
+               WHEN 'shipped' THEN '#9b59b6'
+               WHEN 'cancelled' THEN '#e74c3c'
+               ELSE '#95a5a6'
+           END as status_color
     FROM orders o
-    JOIN contractors c ON o.contractor_id = c.id
-    JOIN order_statuses os ON o.status_id = os.id
+    JOIN contractors c ON o.customer_id = c.id
     LEFT JOIN users u ON o.responsible_user_id = u.id
     LEFT JOIN order_items oi ON o.id = oi.order_id
     WHERE 1=1
@@ -44,12 +59,12 @@ if ($search) {
 }
 
 if ($statusId) {
-    $sql .= " AND o.status_id = ?";
+    $sql .= " AND o.status = ?";
     $params[] = $statusId;
 }
 
 if ($contractorId) {
-    $sql .= " AND o.contractor_id = ?";
+    $sql .= " AND o.customer_id = ?";
     $params[] = $contractorId;
 }
 
@@ -72,11 +87,11 @@ $offset = ($page - 1) * $perPage;
 
 // Общее количество
 $countSql = "SELECT COUNT(DISTINCT o.id) FROM orders o 
-             JOIN contractors c ON o.contractor_id = c.id 
+             JOIN contractors c ON o.customer_id = c.id 
              WHERE 1=1" . 
              ($search ? " AND (o.order_number LIKE ? OR c.name LIKE ?)" : "") .
-             ($statusId ? " AND o.status_id = ?" : "") .
-             ($contractorId ? " AND o.contractor_id = ?" : "") .
+             ($statusId ? " AND o.status = ?" : "") .
+             ($contractorId ? " AND o.customer_id = ?" : "") .
              ($dateFrom ? " AND o.order_date >= ?" : "") .
              ($dateTo ? " AND o.order_date <= ?" : "");
 
@@ -91,8 +106,14 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute($params);
 $orders = $stmt->fetchAll();
 
-// Получение статусов для фильтра
-$statuses = $pdo->query("SELECT * FROM order_statuses WHERE is_active = TRUE ORDER BY sort_order")->fetchAll();
+// Получение статусов для фильтра (статические значения)
+$statuses = [
+    ['id' => 'new', 'name' => 'Новый', 'color' => '#3498db'],
+    ['id' => 'processing', 'name' => 'В работе', 'color' => '#f39c12'],
+    ['id' => 'ready', 'name' => 'Готов', 'color' => '#27ae60'],
+    ['id' => 'shipped', 'name' => 'Отгружен', 'color' => '#9b59b6'],
+    ['id' => 'cancelled', 'name' => 'Отменен', 'color' => '#e74c3c'],
+];
 
 // Получение контрагентов для фильтра
 $contractors = $pdo->query("SELECT id, name FROM contractors WHERE is_active = TRUE ORDER BY name LIMIT 100")->fetchAll();

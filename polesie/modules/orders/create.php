@@ -28,7 +28,15 @@ $products = $pdo->query("SELECT p.*, pc.name as category_name, u.short_name as u
                          LEFT JOIN product_categories pc ON p.category_id = pc.id 
                          LEFT JOIN units u ON p.unit_id = u.id 
                          WHERE p.is_active = TRUE ORDER BY p.name")->fetchAll();
-$statuses = $pdo->query("SELECT * FROM order_statuses WHERE is_active = TRUE ORDER BY sort_order")->fetchAll();
+
+// Статусы заказов (статические значения)
+$statuses = [
+    ['id' => 1, 'name' => 'Новый'],
+    ['id' => 2, 'name' => 'В работе'],
+    ['id' => 3, 'name' => 'Готов'],
+    ['id' => 4, 'name' => 'Отгружен'],
+    ['id' => 5, 'name' => 'Отменен'],
+];
 
 // Обработка формы
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -62,14 +70,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             // Создание заказа
             $stmt = $pdo->prepare("
-                INSERT INTO orders (order_number, contractor_id, status_id, order_date, delivery_date, 
+                INSERT INTO orders (order_number, customer_id, status, order_date, delivery_date, 
                                    delivery_address, payment_terms, notes, contract_number, contract_date,
                                    responsible_user_id, created_by, total_amount, currency)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, 'BYN')
             ");
             
+            // Маппинг ID статуса в строковое значение
+            $statusMap = [
+                1 => 'new',
+                2 => 'processing',
+                3 => 'ready',
+                4 => 'shipped',
+                5 => 'cancelled',
+            ];
+            $statusValue = $statusMap[$statusId] ?? 'new';
+            
             $stmt->execute([
-                $orderNumber, $contractorId, $statusId, $orderDate, $deliveryDate,
+                $orderNumber, $contractorId, $statusValue, $orderDate, $deliveryDate,
                 $deliveryAddress, $paymentTerms, $notes, $contractNumber, $contractDate,
                 $responsibleUserId, $user['id']
             ]);

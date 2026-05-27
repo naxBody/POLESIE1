@@ -59,6 +59,10 @@
         <!-- Производство -->
         <div class="sidebar-nav-section">
             <div class="sidebar-nav-title">Производство</div>
+            <a href="<?= pageUrl('modules/production/release_plan.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/production/release_plan.php' ? 'active' : '' ?>">
+                <span class="sidebar-nav-icon">📋</span>
+                <span>План выпуска</span>
+            </a>
             <a href="<?= pageUrl('modules/production/plan.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/production/plan.php' ? 'active' : '' ?>">
                 <span class="sidebar-nav-icon">📊</span>
                 <span>План производства</span>
@@ -117,15 +121,6 @@
             <a href="<?= pageUrl('modules/employees/list.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/employees/list.php' ? 'active' : '' ?>">
                 <span class="sidebar-nav-icon">👥</span>
                 <span>Все сотрудники</span>
-            </a>
-        </div>
-        
-        <!-- Отчеты -->
-        <div class="sidebar-nav-section">
-            <div class="sidebar-nav-title">Отчеты</div>
-            <a href="<?= pageUrl('modules/reports/index.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/reports/index.php' ? 'active' : '' ?>">
-                <span class="sidebar-nav-icon">📊</span>
-                <span>Производство</span>
             </a>
         </div>
     </nav>

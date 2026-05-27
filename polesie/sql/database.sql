@@ -1,12 +1,17 @@
 -- ============================================
--- ПОЛЕСЬЕ ПРОДАКШН: СХЕМА БАЗЫ ДАННЫХ
--- Оптимизированная структура
+-- ПОЛЕСЬЕ ПРОДАКШН: ОПТИМИЗИРОВАННАЯ СХЕМА И ДАННЫЕ
+-- Таблицы создаются первыми, данные вставляются строго по зависимостям
 -- ============================================
+
 CREATE DATABASE IF NOT EXISTS polesie_production CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `polesie_production`;
+
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
--- Полное удаление всех таблиц
+-- ============================================
+-- 1. УДАЛЕНИЕ СТАРЫХ ОБЪЕКТОВ
+-- ============================================
 DROP TABLE IF EXISTS `product_documents`;
 DROP TABLE IF EXISTS `product_serial_numbers`;
 DROP TABLE IF EXISTS `quality_checks`;
@@ -14,6 +19,12 @@ DROP TABLE IF EXISTS `production_tasks_materials`;
 DROP TABLE IF EXISTS `production_tasks`;
 DROP TABLE IF EXISTS `order_items`;
 DROP TABLE IF EXISTS `orders`;
+DROP TABLE IF EXISTS `production_costing`;
+DROP TABLE IF EXISTS `production_schedules`;
+DROP TABLE IF EXISTS `production_material_requirements`;
+DROP TABLE IF EXISTS `production_plans`;
+DROP TABLE IF EXISTS `demand_analysis`;
+DROP TABLE IF EXISTS `work_centers`;
 DROP TABLE IF EXISTS `products`;
 DROP TABLE IF EXISTS `materials`;
 DROP TABLE IF EXISTS `product_categories`;
@@ -23,9 +34,9 @@ DROP TABLE IF EXISTS `users`;
 DROP TABLE IF EXISTS `user_roles`;
 DROP TABLE IF EXISTS `base_units`;
 
-SET FOREIGN_KEY_CHECKS = 1;
-
--- 1. ЕДИНИЦЫ ИЗМЕРЕНИЯ
+-- ============================================
+-- 2. СОЗДАНИЕ ТАБЛИЦ (исправлены опечатки CREAT E -> CREATE)
+-- ============================================
 CREATE TABLE `base_units` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `name` VARCHAR(50) NOT NULL,
@@ -33,7 +44,6 @@ CREATE TABLE `base_units` (
   `symbol` VARCHAR(10)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 2. РОЛИ ПОЛЬЗОВАТЕЛЕЙ
 CREATE TABLE `user_roles` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `name` VARCHAR(100) NOT NULL,
@@ -42,7 +52,6 @@ CREATE TABLE `user_roles` (
   `permissions` JSON
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 3. ПОЛЬЗОВАТЕЛИ
 CREATE TABLE `users` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `username` VARCHAR(50) NOT NULL UNIQUE,
@@ -52,10 +61,9 @@ CREATE TABLE `users` (
   `role_id` INT,
   `is_active` BOOLEAN DEFAULT TRUE,
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  CONSTRAINT `fk_users_role` FOREIGN KEY (`role_id`) REFERENCES `user_roles`(`id`) ON DELETE SET NULL
+  CONSTRAINT `fk_users_role` FOREIGN KEY (`role_id`) REFERENCES `user_roles` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 4. КОНТРАГЕНТЫ
 CREATE TABLE `contractors` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `name` VARCHAR(200) NOT NULL,
@@ -68,27 +76,24 @@ CREATE TABLE `contractors` (
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 5. КАТЕГОРИИ МАТЕРИАЛОВ
 CREATE TABLE `material_categories` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `parent_id` INT,
   `name` VARCHAR(100) NOT NULL,
   `code` VARCHAR(50) UNIQUE,
   `description` TEXT,
-  CONSTRAINT `fk_mat_cat_parent` FOREIGN KEY (`parent_id`) REFERENCES `material_categories`(`id`) ON DELETE CASCADE
+  CONSTRAINT `fk_mat_cat_parent` FOREIGN KEY (`parent_id`) REFERENCES `material_categories` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 6. КАТЕГОРИИ ПРОДУКЦИИ
 CREATE TABLE `product_categories` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `parent_id` INT,
   `name` VARCHAR(100) NOT NULL,
   `code` VARCHAR(50) UNIQUE,
   `description` TEXT,
-  CONSTRAINT `fk_prod_cat_parent` FOREIGN KEY (`parent_id`) REFERENCES `product_categories`(`id`) ON DELETE CASCADE
+  CONSTRAINT `fk_prod_cat_parent` FOREIGN KEY (`parent_id`) REFERENCES `product_categories` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 7. МАТЕРИАЛЫ
 CREATE TABLE `materials` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `code` VARCHAR(50) NOT NULL UNIQUE,
@@ -105,12 +110,11 @@ CREATE TABLE `materials` (
   `currency` CHAR(3) DEFAULT 'BYN',
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  CONSTRAINT `fk_mat_category` FOREIGN KEY (`category_id`) REFERENCES `material_categories`(`id`) ON DELETE SET NULL,
-  CONSTRAINT `fk_mat_unit` FOREIGN KEY (`base_unit_id`) REFERENCES `base_units`(`id`) ON DELETE SET NULL,
-  CONSTRAINT `fk_mat_supplier` FOREIGN KEY (`supplier_id`) REFERENCES `contractors`(`id`) ON DELETE SET NULL
+  CONSTRAINT `fk_mat_category` FOREIGN KEY (`category_id`) REFERENCES `material_categories` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `fk_mat_unit` FOREIGN KEY (`base_unit_id`) REFERENCES `base_units` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `fk_mat_supplier` FOREIGN KEY (`supplier_id`) REFERENCES `contractors` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 8. ПРОДУКЦИЯ
 CREATE TABLE `products` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `article` VARCHAR(50) NOT NULL UNIQUE,
@@ -123,11 +127,10 @@ CREATE TABLE `products` (
   `currency` CHAR(3) DEFAULT 'BYN',
   `is_active` BOOLEAN DEFAULT TRUE,
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  CONSTRAINT `fk_prod_category` FOREIGN KEY (`category_id`) REFERENCES `product_categories`(`id`) ON DELETE SET NULL,
-  CONSTRAINT `fk_prod_unit` FOREIGN KEY (`base_unit_id`) REFERENCES `base_units`(`id`) ON DELETE SET NULL
+  CONSTRAINT `fk_prod_category` FOREIGN KEY (`category_id`) REFERENCES `product_categories` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `fk_prod_unit` FOREIGN KEY (`base_unit_id`) REFERENCES `base_units` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 9. ЗАКАЗЫ
 CREATE TABLE `orders` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `order_number` VARCHAR(50) NOT NULL UNIQUE,
@@ -137,11 +140,10 @@ CREATE TABLE `orders` (
   `order_date` DATE NOT NULL,
   `total_amount` DECIMAL(15,2),
   `notes` TEXT,
-  CONSTRAINT `fk_order_customer` FOREIGN KEY (`customer_id`) REFERENCES `contractors`(`id`) ON DELETE SET NULL,
-  CONSTRAINT `fk_order_responsible` FOREIGN KEY (`responsible_user_id`) REFERENCES `users`(`id`) ON DELETE SET NULL
+  CONSTRAINT `fk_order_customer` FOREIGN KEY (`customer_id`) REFERENCES `contractors` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `fk_order_responsible` FOREIGN KEY (`responsible_user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 10. ПОЗИЦИИ ЗАКАЗОВ
 CREATE TABLE `order_items` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `order_id` INT NOT NULL,
@@ -149,11 +151,10 @@ CREATE TABLE `order_items` (
   `quantity` DECIMAL(15,3) NOT NULL,
   `price` DECIMAL(15,2) NOT NULL,
   `total` DECIMAL(15,2) NOT NULL,
-  CONSTRAINT `fk_item_order` FOREIGN KEY (`order_id`) REFERENCES `orders`(`id`) ON DELETE CASCADE,
-  CONSTRAINT `fk_item_product` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE RESTRICT
+  CONSTRAINT `fk_item_order` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_item_product` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 11. ПРОИЗВОДСТВЕННЫЕ ЗАДАНИЯ
 CREATE TABLE `production_tasks` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `task_number` VARCHAR(50) UNIQUE,
@@ -164,22 +165,20 @@ CREATE TABLE `production_tasks` (
   `start_date` DATE,
   `end_date` DATE,
   `responsible_id` INT,
-  CONSTRAINT `fk_task_product` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE SET NULL,
-  CONSTRAINT `fk_task_user` FOREIGN KEY (`responsible_id`) REFERENCES `users`(`id`) ON DELETE SET NULL
+  CONSTRAINT `fk_task_product` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `fk_task_user` FOREIGN KEY (`responsible_id`) REFERENCES `users` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 12. МАТЕРИАЛЫ ДЛЯ ЗАДАНИЙ
 CREATE TABLE `production_tasks_materials` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `task_id` INT NOT NULL,
   `material_id` INT NOT NULL,
   `quantity_required` DECIMAL(15,3) NOT NULL,
   `quantity_used` DECIMAL(15,3) DEFAULT 0,
-  CONSTRAINT `fk_ptm_task` FOREIGN KEY (`task_id`) REFERENCES `production_tasks`(`id`) ON DELETE CASCADE,
-  CONSTRAINT `fk_ptm_material` FOREIGN KEY (`material_id`) REFERENCES `materials`(`id`) ON DELETE RESTRICT
+  CONSTRAINT `fk_ptm_task` FOREIGN KEY (`task_id`) REFERENCES `production_tasks` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_ptm_material` FOREIGN KEY (`material_id`) REFERENCES `materials` (`id`) ON DELETE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 13. ПРОВЕРКИ КАЧЕСТВА
 CREATE TABLE `quality_checks` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `task_id` INT,
@@ -190,12 +189,11 @@ CREATE TABLE `quality_checks` (
   `defect_description` TEXT,
   `quantity_checked` INT,
   `quantity_defective` INT DEFAULT 0,
-  CONSTRAINT `fk_qc_task` FOREIGN KEY (`task_id`) REFERENCES `production_tasks`(`id`) ON DELETE SET NULL,
-  CONSTRAINT `fk_qc_product` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE SET NULL,
-  CONSTRAINT `fk_qc_inspector` FOREIGN KEY (`inspector_id`) REFERENCES `users`(`id`) ON DELETE SET NULL
+  CONSTRAINT `fk_qc_task` FOREIGN KEY (`task_id`) REFERENCES `production_tasks` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `fk_qc_product` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `fk_qc_inspector` FOREIGN KEY (`inspector_id`) REFERENCES `users` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 14. СЕРИЙНЫЕ НОМЕРА ПРОДУКЦИИ
 CREATE TABLE `product_serial_numbers` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `product_id` INT NOT NULL,
@@ -210,11 +208,10 @@ CREATE TABLE `product_serial_numbers` (
   `passport_data` JSON,
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  CONSTRAINT `fk_psn_product` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE CASCADE,
-  CONSTRAINT `fk_psn_task` FOREIGN KEY (`task_id`) REFERENCES `production_tasks`(`id`) ON DELETE SET NULL
+  CONSTRAINT `fk_psn_product` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_psn_task` FOREIGN KEY (`task_id`) REFERENCES `production_tasks` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 15. ДОКУМЕНТЫ ПРОДУКЦИИ
 CREATE TABLE `product_documents` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `serial_number_id` INT NOT NULL,
@@ -226,35 +223,11 @@ CREATE TABLE `product_documents` (
   `description` TEXT,
   `uploaded_by` INT,
   `uploaded_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  CONSTRAINT `fk_pd_serial` FOREIGN KEY (`serial_number_id`) REFERENCES `product_serial_numbers`(`id`) ON DELETE CASCADE,
-  CONSTRAINT `fk_pd_user` FOREIGN KEY (`uploaded_by`) REFERENCES `users`(`id`) ON DELETE SET NULL
+  CONSTRAINT `fk_pd_serial` FOREIGN KEY (`serial_number_id`) REFERENCES `product_serial_numbers` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_pd_user` FOREIGN KEY (`uploaded_by`) REFERENCES `users` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 16. ДОПОЛНИТЕЛЬНАЯ ТАБЛИЦА (закомментировано, используется product_serial_numbers)
--- DROP TABLE IF EXISTS `serial_numbers`;
-
-
--- ============================================
--- ПЛАН ПРОИЗВОДСТВА: РАСШИРЕНИЕ БАЗЫ ДАННЫХ
--- 5 новых таблиц для комплексного планирования
--- ============================================
-SET NAMES utf8mb4;
-SET FOREIGN_KEY_CHECKS = 0;
-
--- Удаление старых таблиц (если существуют)
-DROP TABLE IF EXISTS `production_costing`;
-DROP TABLE IF EXISTS `production_schedules`;
-DROP TABLE IF EXISTS `production_material_requirements`;
-DROP TABLE IF EXISTS `production_plans`;
-DROP TABLE IF EXISTS `demand_analysis`;
-DROP TABLE IF EXISTS `work_centers`;
-
-SET FOREIGN_KEY_CHECKS = 1;
-
--- ============================================
--- ДОПОЛНИТЕЛЬНАЯ ТАБЛИЦА: РАБОЧИЕ ЦЕНТРЫ
--- (нужна для графиков производства)
--- ============================================
+-- === НОВЫЕ ТАБЛИЦЫ ПЛАНИРОВАНИЯ ===
 CREATE TABLE `work_centers` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `code` VARCHAR(50) NOT NULL UNIQUE,
@@ -267,10 +240,6 @@ CREATE TABLE `work_centers` (
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Рабочие центры/участки производства';
 
--- ============================================
--- 1. АНАЛИЗ СПРОСА
--- Прогнозы и тренды для планирования
--- ============================================
 CREATE TABLE `demand_analysis` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `product_id` INT NOT NULL,
@@ -284,15 +253,11 @@ CREATE TABLE `demand_analysis` (
   `variance_percent` DECIMAL(5,2) DEFAULT 0.0 COMMENT 'Отклонение %',
   `notes` TEXT,
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  CONSTRAINT `fk_da_product` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_da_product` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
   INDEX `idx_da_product_date` (`product_id`, `analysis_date`),
   INDEX `idx_da_period` (`period_type`, `analysis_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Анализ и прогноз спроса на продукцию';
 
--- ============================================
--- 2. ПЛАНЫ ПРОИЗВОДСТВА
--- Основная таблица с производственными планами
--- ============================================
 CREATE TABLE `production_plans` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `plan_number` VARCHAR(50) UNIQUE COMMENT 'Номер плана',
@@ -308,18 +273,14 @@ CREATE TABLE `production_plans` (
   `notes` TEXT,
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  CONSTRAINT `fk_pp_product` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE CASCADE,
-  CONSTRAINT `fk_pp_responsible` FOREIGN KEY (`responsible_id`) REFERENCES `users`(`id`) ON DELETE SET NULL,
-  CONSTRAINT `fk_pp_order` FOREIGN KEY (`order_id`) REFERENCES `orders`(`id`) ON DELETE SET NULL,
+  CONSTRAINT `fk_pp_product` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_pp_responsible` FOREIGN KEY (`responsible_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `fk_pp_order` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE SET NULL,
   INDEX `idx_pp_date` (`plan_date`),
   INDEX `idx_pp_status` (`status`),
   INDEX `idx_pp_product_date` (`product_id`, `plan_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Планы производства продукции';
 
--- ============================================
--- 3. ПОТРЕБНОСТЬ В МАТЕРИАЛАХ
--- Расчет материалов на основе норм расхода
--- ============================================
 CREATE TABLE `production_material_requirements` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `plan_id` INT NOT NULL,
@@ -333,17 +294,13 @@ CREATE TABLE `production_material_requirements` (
   `status` ENUM('pending', 'reserved', 'consumed', 'shortage') DEFAULT 'pending',
   `notes` TEXT,
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  CONSTRAINT `fk_pmr_plan` FOREIGN KEY (`plan_id`) REFERENCES `production_plans`(`id`) ON DELETE CASCADE,
-  CONSTRAINT `fk_pmr_material` FOREIGN KEY (`material_id`) REFERENCES `materials`(`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_pmr_plan` FOREIGN KEY (`plan_id`) REFERENCES `production_plans` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_pmr_material` FOREIGN KEY (`material_id`) REFERENCES `materials` (`id`) ON DELETE CASCADE,
   INDEX `idx_pmr_plan` (`plan_id`),
   INDEX `idx_pmr_material` (`material_id`),
   INDEX `idx_pmr_status` (`status`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Потребность в материалах для планов производства';
 
--- ============================================
--- 4. РАБОЧИЕ ГРАФИКИ
--- Загрузка мощностей по сменам
--- ============================================
 CREATE TABLE `production_schedules` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `plan_id` INT NOT NULL,
@@ -359,17 +316,13 @@ CREATE TABLE `production_schedules` (
   `notes` TEXT,
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  CONSTRAINT `fk_ps_plan` FOREIGN KEY (`plan_id`) REFERENCES `production_plans`(`id`) ON DELETE CASCADE,
-  CONSTRAINT `fk_ps_work_center` FOREIGN KEY (`work_center_id`) REFERENCES `work_centers`(`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_ps_plan` FOREIGN KEY (`plan_id`) REFERENCES `production_plans` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_ps_work_center` FOREIGN KEY (`work_center_id`) REFERENCES `work_centers` (`id`) ON DELETE CASCADE,
   INDEX `idx_ps_plan` (`plan_id`),
   INDEX `idx_ps_date` (`schedule_date`),
   INDEX `idx_ps_shift` (`shift_type`, `schedule_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Графики работы производственных мощностей';
 
--- ============================================
--- 5. РАСЧЕТ СЕБЕСТОИМОСТИ
--- Агрегированные затраты на план
--- ============================================
 CREATE TABLE `production_costing` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `plan_id` INT NOT NULL UNIQUE COMMENT 'Связь с планом (один к одному)',
@@ -380,276 +333,19 @@ CREATE TABLE `production_costing` (
   `cost_per_unit` DECIMAL(15,2) DEFAULT 0 COMMENT 'Себестоимость за единицу',
   `calculated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `notes` TEXT,
-  CONSTRAINT `fk_pc_plan` FOREIGN KEY (`plan_id`) REFERENCES `production_plans`(`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_pc_plan` FOREIGN KEY (`plan_id`) REFERENCES `production_plans` (`id`) ON DELETE CASCADE,
   INDEX `idx_pc_plan` (`plan_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Расчет себестоимости производства';
 
 -- ============================================
--- ПРЕДСТАВЛЕНИЯ ДЛЯ АНАЛИТИКИ
+-- 3. ВСТАВКА ДАННЫХ (СТРОГО ПО ЗАВИСИМОСТЯМ)
 -- ============================================
 
--- Общая сводка по планам
-CREATE OR REPLACE VIEW `v_production_plan_summary` AS
-SELECT 
-    pp.id,
-    pp.plan_number,
-    pp.product_id,
-    p.name as product_name,
-    p.article as product_article,
-    pp.plan_date,
-    pp.planned_quantity,
-    pp.actual_quantity,
-    pp.demand_forecast,
-    pp.priority,
-    pp.status,
-    COALESCE(pc.total_cost, 0) as total_cost,
-    COALESCE(pc.cost_per_unit, 0) as cost_per_unit,
-    u.full_name as responsible_name
-FROM production_plans pp
-JOIN products p ON pp.product_id = p.id
-LEFT JOIN production_costing pc ON pp.id = pc.plan_id
-LEFT JOIN users u ON pp.responsible_id = u.id;
-
--- Детализация материалов по планам
-CREATE OR REPLACE VIEW `v_material_requirements_detail` AS
-SELECT 
-    pmr.id,
-    pmr.plan_id,
-    pp.plan_number,
-    pp.product_id,
-    p.name as product_name,
-    pp.plan_date,
-    pmr.material_id,
-    m.name_full as material_name,
-    m.code as material_code,
-    m.current_stock,
-    pmr.consumption_rate,
-    pmr.required_quantity,
-    pmr.reserved_quantity,
-    pmr.actual_quantity,
-    pmr.unit_cost,
-    pmr.total_cost,
-    pmr.status,
-    CASE 
-        WHEN pmr.required_quantity > m.current_stock THEN 'shortage'
-        ELSE 'ok'
-    END as stock_status
-FROM production_material_requirements pmr
-JOIN production_plans pp ON pmr.plan_id = pp.id
-JOIN products p ON pp.product_id = p.id
-JOIN materials m ON pmr.material_id = m.id;
-
--- Загрузка рабочих центров
-CREATE OR REPLACE VIEW `v_work_center_load` AS
-SELECT 
-    ps.id,
-    ps.plan_id,
-    ps.work_center_id,
-    wc.name as work_center_name,
-    ps.schedule_date,
-    ps.shift_type,
-    ps.start_time,
-    ps.end_time,
-    ps.planned_hours,
-    ps.actual_hours,
-    ps.workers_count,
-    ps.efficiency_percent,
-    pp.plan_number,
-    p.name as product_name
-FROM production_schedules ps
-JOIN work_centers wc ON ps.work_center_id = wc.id
-JOIN production_plans pp ON ps.plan_id = pp.id
-JOIN products p ON pp.product_id = p.id;
-
--- ============================================
--- ТЕСТОВЫЕ ДАННЫЕ ДЛЯ ДЕМО
--- ============================================
-
--- Рабочие центры
-INSERT INTO `work_centers` (`code`, `name`, `type`, `capacity_hours`, `workers_max`, `hourly_rate`) VALUES
-('WC-001', 'Сборочный цех №1', 'assembly', 8.0, 15, 25.00),
-('WC-002', 'Сборочный цех №2', 'assembly', 8.0, 12, 25.00),
-('WC-003', 'Упаковочный участок', 'packaging', 8.0, 8, 20.00),
-('WC-004', 'Контроль качества', 'quality_control', 8.0, 4, 30.00),
-('WC-005', 'Склад готовой продукции', 'storage', 8.0, 6, 18.00);
-
--- Анализ спроса (на основе существующих products)
-INSERT INTO `demand_analysis` (`product_id`, `analysis_date`, `period_type`, `historical_avg`, `forecast_value`, `trend_coefficient`, `seasonality_factor`, `confidence_level`, `variance_percent`)
-SELECT 
-    id,
-    CURDATE(),
-    'weekly',
-    ROUND(RAND() * 50 + 10, 0),
-    ROUND(RAND() * 60 + 15, 0),
-    ROUND(0.9 + RAND() * 0.3, 3),
-    ROUND(0.85 + RAND() * 0.3, 3),
-    ROUND(75 + RAND() * 20, 2),
-    ROUND(-15 + RAND() * 30, 2)
-FROM products
-WHERE is_active = 1
-LIMIT 10;
-
--- Прогноз на завтра
-INSERT INTO `demand_analysis` (`product_id`, `analysis_date`, `period_type`, `historical_avg`, `forecast_value`, `trend_coefficient`, `seasonality_factor`, `confidence_level`, `variance_percent`)
-SELECT 
-    id,
-    DATE_ADD(CURDATE(), INTERVAL 1 DAY),
-    'daily',
-    ROUND(RAND() * 20 + 5, 0),
-    ROUND(RAND() * 25 + 8, 0),
-    ROUND(0.95 + RAND() * 0.2, 3),
-    1.0,
-    ROUND(80 + RAND() * 15, 2),
-    ROUND(-10 + RAND() * 20, 2)
-FROM products
-WHERE is_active = 1
-LIMIT 8;
-
--- Планы производства
-INSERT INTO `production_plans` (`plan_number`, `product_id`, `plan_date`, `planned_quantity`, `demand_forecast`, `priority`, `status`, `responsible_id`, `notes`)
-VALUES
-('PLAN-2025-001', 1, CURDATE(), 25, 22, 1, 'in_progress', 1, 'Срочный заказ'),
-('PLAN-2025-002', 2, CURDATE(), 15, 18, 2, 'planned', 2, NULL),
-('PLAN-2025-003', 3, DATE_ADD(CURDATE(), INTERVAL 1 DAY), 30, 28, 1, 'planned', 1, 'Плановое производство'),
-('PLAN-2025-004', 1, DATE_ADD(CURDATE(), INTERVAL 1 DAY), 20, 22, 2, 'planned', 3, NULL),
-('PLAN-2025-005', 4, DATE_ADD(CURDATE(), INTERVAL 2 DAY), 40, 35, 2, 'planned', 2, 'Большая партия'),
-('PLAN-2025-006', 5, DATE_ADD(CURDATE(), INTERVAL 2 DAY), 12, 15, 3, 'planned', 1, NULL),
-('PLAN-2025-007', 2, DATE_ADD(CURDATE(), INTERVAL 3 DAY), 18, 20, 1, 'planned', 3, 'Приоритетный заказ'),
-('PLAN-2025-008', 3, DATE_ADD(CURDATE(), INTERVAL 3 DAY), 25, 28, 2, 'planned', 2, NULL),
-('PLAN-2025-009', 1, DATE_ADD(CURDATE(), INTERVAL 4 DAY), 22, 22, 2, 'planned', 1, NULL),
-('PLAN-2025-010', 4, DATE_ADD(CURDATE(), INTERVAL 5 DAY), 35, 35, 3, 'planned', 3, 'На склад');
-
--- Потребность в материалах для планов
--- PLAN-2025-001 (product_id=1, quantity=25)
-INSERT INTO `production_material_requirements` (`plan_id`, `material_id`, `consumption_rate`, `required_quantity`, `unit_cost`, `total_cost`, `status`)
-SELECT 1, id, 
-       CASE WHEN id % 3 = 1 THEN 0.5 WHEN id % 3 = 2 THEN 0.3 ELSE 0.8 END,
-       ROUND(25 * CASE WHEN id % 3 = 1 THEN 0.5 WHEN id % 3 = 2 THEN 0.3 ELSE 0.8 END, 2),
-       COALESCE(last_price, 10),
-       ROUND(25 * CASE WHEN id % 3 = 1 THEN 0.5 WHEN id % 3 = 2 THEN 0.3 ELSE 0.8 END * COALESCE(last_price, 10), 2),
-       'reserved'
-FROM materials LIMIT 5;
-
--- PLAN-2025-002 (product_id=2, quantity=15)
-INSERT INTO `production_material_requirements` (`plan_id`, `material_id`, `consumption_rate`, `required_quantity`, `unit_cost`, `total_cost`, `status`)
-SELECT 2, id, 
-       CASE WHEN id % 4 = 1 THEN 0.4 WHEN id % 4 = 2 THEN 0.6 ELSE 0.2 END,
-       ROUND(15 * CASE WHEN id % 4 = 1 THEN 0.4 WHEN id % 4 = 2 THEN 0.6 ELSE 0.2 END, 2),
-       COALESCE(last_price, 15),
-       ROUND(15 * CASE WHEN id % 4 = 1 THEN 0.4 WHEN id % 4 = 2 THEN 0.6 ELSE 0.2 END * COALESCE(last_price, 15), 2),
-       'pending'
-FROM materials LIMIT 4;
-
--- PLAN-2025-003 (product_id=3, quantity=30)
-INSERT INTO `production_material_requirements` (`plan_id`, `material_id`, `consumption_rate`, `required_quantity`, `unit_cost`, `total_cost`, `status`)
-SELECT 3, id, 
-       0.5,
-       ROUND(30 * 0.5, 2),
-       COALESCE(last_price, 12),
-       ROUND(30 * 0.5 * COALESCE(last_price, 12), 2),
-       'pending'
-FROM materials LIMIT 6;
-
--- PLAN-2025-004 (product_id=1, quantity=20)
-INSERT INTO `production_material_requirements` (`plan_id`, `material_id`, `consumption_rate`, `required_quantity`, `unit_cost`, `total_cost`, `status`)
-SELECT 4, id, 
-       0.4,
-       ROUND(20 * 0.4, 2),
-       COALESCE(last_price, 10),
-       ROUND(20 * 0.4 * COALESCE(last_price, 10), 2),
-       'pending'
-FROM materials LIMIT 4;
-
--- PLAN-2025-005 (product_id=4, quantity=40)
-INSERT INTO `production_material_requirements` (`plan_id`, `material_id`, `consumption_rate`, `required_quantity`, `unit_cost`, `total_cost`, `status`)
-SELECT 5, id, 
-       0.6,
-       ROUND(40 * 0.6, 2),
-       COALESCE(last_price, 8),
-       ROUND(40 * 0.6 * COALESCE(last_price, 8), 2),
-       'pending'
-FROM materials LIMIT 7;
-
--- Рабочие графики
-INSERT INTO `production_schedules` (`plan_id`, `work_center_id`, `schedule_date`, `shift_type`, `start_time`, `end_time`, `planned_hours`, `workers_count`, `efficiency_percent`)
-VALUES
--- Сегодняшние планы
-(1, 1, CURDATE(), 'morning', '08:00:00', '17:00:00', 8.0, 8, 95.0),
-(1, 3, CURDATE(), 'afternoon', '14:00:00', '22:00:00', 8.0, 4, 90.0),
-(2, 2, CURDATE(), 'morning', '08:00:00', '17:00:00', 8.0, 6, 100.0),
-
--- Завтрашние планы
-(3, 1, DATE_ADD(CURDATE(), INTERVAL 1 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 10, 0),
-(3, 4, DATE_ADD(CURDATE(), INTERVAL 1 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 3, 0),
-(4, 2, DATE_ADD(CURDATE(), INTERVAL 1 DAY), 'afternoon', '14:00:00', '22:00:00', 8.0, 7, 0),
-
--- Планы на следующие дни
-(5, 1, DATE_ADD(CURDATE(), INTERVAL 2 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 12, 0),
-(5, 3, DATE_ADD(CURDATE(), INTERVAL 2 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 5, 0),
-(6, 2, DATE_ADD(CURDATE(), INTERVAL 2 DAY), 'afternoon', '14:00:00', '22:00:00', 8.0, 4, 0),
-
-(7, 1, DATE_ADD(CURDATE(), INTERVAL 3 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 9, 0),
-(8, 2, DATE_ADD(CURDATE(), INTERVAL 3 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 8, 0),
-
-(9, 1, DATE_ADD(CURDATE(), INTERVAL 4 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 7, 0),
-(10, 3, DATE_ADD(CURDATE(), INTERVAL 5 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 6, 0);
-
--- Расчет себестоимости
-INSERT INTO `production_costing` (`plan_id`, `material_cost`, `labor_cost`, `overhead_cost`, `total_cost`, `cost_per_unit`)
-SELECT 
-    pp.id,
-    COALESCE(mat.total_material, 0),
-    ROUND(COALESCE(mat.total_material, 0) * 0.3, 2),
-    ROUND(COALESCE(mat.total_material, 0) * 0.15, 2),
-    ROUND(COALESCE(mat.total_material, 0) * 1.45, 2),
-    ROUND(ROUND(COALESCE(mat.total_material, 0) * 1.45, 2) / pp.planned_quantity, 2)
-FROM production_plans pp
-LEFT JOIN (
-    SELECT plan_id, SUM(total_cost) as total_material
-    FROM production_material_requirements
-    GROUP BY plan_id
-) mat ON pp.id = mat.plan_id
-WHERE pp.id BETWEEN 1 AND 10;
-
--- Обновление статусов (дефицит для некоторых материалов)
-UPDATE `production_material_requirements`
-SET status = 'shortage'
-WHERE plan_id IN (3, 5) AND material_id IN (1, 2);
-
--- Резервирование для первого плана
-UPDATE `production_material_requirements`
-SET reserved_quantity = required_quantity, status = 'reserved'
-WHERE plan_id = 1;
-
-
-
-
-
-
---ВСТАВКА ДАННЫХ
--- ============================================
--- ПОЛЕСЬЕ ПРОДАКШН: ТЕСТОВЫЕ ДАННЫЕ
--- ============================================
-USE `polesie_production`;
-
-
-SET NAMES utf8mb4;
-SET FOREIGN_KEY_CHECKS = 0;
-
-
-
-SET FOREIGN_KEY_CHECKS = 1;
-
--- 1. ЕДИНИЦЫ ИЗМЕРЕНИЯ
+-- 3.1. Базовые справочники
 INSERT INTO `base_units` (`name`, `code`, `symbol`) VALUES
-('Штука', 'pcs', 'шт'),
-('Килограмм', 'kg', 'кг'),
-('Метр', 'm', 'м'),
-('Тонна', 't', 'т'),
-('Литр', 'l', 'л'),
-('Комплект', 'set', 'компл');
+('Штука', 'pcs', 'шт'), ('Килограмм', 'kg', 'кг'), ('Метр', 'm', 'м'),
+('Тонна', 't', 'т'), ('Литр', 'l', 'л'), ('Комплект', 'set', 'компл');
 
--- 2. РОЛИ ПОЛЬЗОВАТЕЛЕЙ
 INSERT INTO `user_roles` (`name`, `code`, `description`, `permissions`) VALUES
 ('Администратор', 'admin', 'Полный доступ', '{"all": true}'),
 ('Директор', 'director', 'Руководство', '{"all": true}'),
@@ -657,7 +353,6 @@ INSERT INTO `user_roles` (`name`, `code`, `description`, `permissions`) VALUES
 ('Технолог', 'technologist', 'Производство', '{"production": ["read", "create"], "materials": ["read"]}'),
 ('Кладовщик', 'storekeeper', 'Склад', '{"warehouse": ["read", "create"], "materials": ["read", "update"]}');
 
--- 3. ПОЛЬЗОВАТЕЛИ (пароли в открытом виде)
 INSERT INTO `users` (`username`, `password_hash`, `full_name`, `email`, `role_id`) VALUES
 ('admin', 'admin123', 'Администратор Системы', 'admin@polesie.by', 1),
 ('director', 'director123', 'Директор Предприятия', 'director@polesie.by', 2),
@@ -665,7 +360,6 @@ INSERT INTO `users` (`username`, `password_hash`, `full_name`, `email`, `role_id
 ('petrov', 'admin123', 'Петров Петр', 'petrov@polesie.by', 4),
 ('sidorov', 'admin123', 'Сидоров Сидор', 'sidorov@polesie.by', 5);
 
--- 4. КОНТРАГЕНТЫ
 INSERT INTO `contractors` (`name`, `inn`, `type`, `contact_person`, `phone`, `email`, `address`) VALUES
 ('ООО "СтальПром"', '100123456', 'supplier', 'Кузнецов А.А.', '+375 29 111-22-33', 'info@stalprom.by', 'г. Минск, ул. Промышленная 10'),
 ('ЗАО "ЭлектроТех"', '200234567', 'supplier', 'Волкова Е.В.', '+375 29 222-33-44', 'sales@electrotech.by', 'г. Гродно, ул. Заводская 5'),
@@ -673,7 +367,6 @@ INSERT INTO `contractors` (`name`, `inn`, `type`, `contact_person`, `phone`, `em
 ('ООО "СтройМонтаж"', '400456789', 'customer', 'Орлов О.О.', '+375 29 444-55-66', 'order@stroymontazh.by', 'г. Гомель, ул. Строителей 20'),
 ('ЧТУП "АгроСервис"', '500567890', 'customer', 'Зеленая З.З.', '+375 29 555-66-77', 'agro@service.by', 'г. Витебск, пер. Полевой 3');
 
--- 5. КАТЕГОРИИ МАТЕРИАЛОВ
 INSERT INTO `material_categories` (`parent_id`, `name`, `code`, `description`) VALUES
 (NULL, 'Металлы', 'METAL', 'Черные и цветные металлы'),
 (1, 'Прутки', 'METAL_BAR', 'Стальные прутки круглого сечения'),
@@ -687,7 +380,6 @@ INSERT INTO `material_categories` (`parent_id`, `name`, `code`, `description`) V
 (8, 'Гайки', 'FAST_NUT', 'Гайки шестигранные'),
 (NULL, 'Подшипники', 'BEARING', 'Подшипники качения');
 
--- 6. КАТЕГОРИИ ПРОДУКЦИИ
 INSERT INTO `product_categories` (`parent_id`, `name`, `code`, `description`) VALUES
 (NULL, 'Электродвигатели', 'MOTOR', 'Асинхронные электродвигатели'),
 (NULL, 'Генераторы', 'GENERATOR', 'Дизельные генераторы'),
@@ -695,7 +387,14 @@ INSERT INTO `product_categories` (`parent_id`, `name`, `code`, `description`) VA
 (NULL, 'Щитовое оборудование', 'SWITCHGEAR', 'Распределительные щиты'),
 (NULL, 'Запчасти', 'SPARE_PARTS', 'Запасные части и комплектующие');
 
--- 7. МАТЕРИАЛЫ
+INSERT INTO `work_centers` (`code`, `name`, `type`, `capacity_hours`, `workers_max`, `hourly_rate`) VALUES
+('WC-001', 'Сборочный цех №1', 'assembly', 8.0, 15, 25.00),
+('WC-002', 'Сборочный цех №2', 'assembly', 8.0, 12, 25.00),
+('WC-003', 'Упаковочный участок', 'packaging', 8.0,  8, 20.00),
+('WC-004', 'Контроль качества', 'quality_control', 8.0, 4, 30.00),
+('WC-005', 'Склад готовой продукции', 'storage', 8.0, 6, 18.00);
+
+-- 3.2. Материалы и Продукция
 INSERT INTO `materials` (`code`, `name_full`, `name_short`, `category_id`, `base_unit_id`, `specifications`, `current_stock`, `min_stock`, `location`, `supplier_id`, `last_price`, `currency`) VALUES
 ('ST-BAR-45-010', 'Пруток стальной 45 Ø10мм', 'Пруток 45 Ø10', 2, 3, '{"diameter_mm": 10, "steel_grade": "45", "length_m": 6, "surface": "калиброванный", "gost": "10702-78"}', 321.52, 64.30, 'Склад №1, Секция А', 1, 2.50, 'BYN'),
 ('ST-BAR-40X-010', 'Пруток легированный 40Х Ø10мм', 'Пруток 40Х Ø10', 2, 3, '{"diameter_mm": 10, "steel_grade": "40Х", "length_m": 6, "surface": "горячекатаный", "gost": "2590-2006"}', 17.38, 3.48, 'Склад №1, Секция А', 1, 3.20, 'BYN'),
@@ -713,7 +412,6 @@ INSERT INTO `materials` (`code`, `name_full`, `name_short`, `category_id`, `base
 ('BRG-6205', 'Подшипник 6205-2RS', 'Подшипник 6205', 11, 1, '{"inner_d_mm": 25, "outer_d_mm": 52, "width_mm": 15, "type": "шариковый", "seal": "2RS"}', 150.00, 30.00, 'Склад №5, Ящик 3', 2, 8.50, 'BYN'),
 ('BRG-6305', 'Подшипник 6305-2RS', 'Подшипник 6305', 11, 1, '{"inner_d_mm": 25, "outer_d_mm": 62, "width_mm": 17, "type": "шариковый", "seal": "2RS"}', 120.00, 25.00, 'Склад №5, Ящик 3', 2, 12.30, 'BYN');
 
--- 8. ПРОДУКЦИЯ
 INSERT INTO `products` (`article`, `name`, `category_id`, `base_unit_id`, `specifications`, `image`, `base_price`, `currency`, `is_active`) VALUES
 ('ADM-80A4', 'Двигатель АДМ 80A4', 1, 1, '{"power_kw": 1.1, "rpm": 1500, "voltage_v": 380, "frame": "80A", "efficiency_class": "IE2", "mounting": "IM1081"}', 'motor_adm80a4.jpg', 350.00, 'BYN', TRUE),
 ('ADM-90L4', 'Двигатель АДМ 90L4', 1, 1, '{"power_kw": 2.2, "rpm": 1500, "voltage_v": 380, "frame": "90L", "efficiency_class": "IE2", "mounting": "IM1081"}', 'motor_adm90l4.jpg', 480.00, 'BYN', TRUE),
@@ -729,44 +427,30 @@ INSERT INTO `products` (`article`, `name`, `category_id`, `base_unit_id`, `speci
 ('SP-FAN-80', 'Вентилятор двигателя 80', 5, 1, '{"compatible_with": "ADM-80A4", "diameter_mm": 180, "material": "пластик"}', 'spare_fan80.jpg', 25.00, 'BYN', TRUE),
 ('SP-TERM-BOX', 'Клеммная коробка', 5, 1, '{"compatible_with": "ADM-80A4, ADM-90L4", "terminals": 6, "material": "алюминий"}', 'spare_termbox.jpg', 45.00, 'BYN', TRUE);
 
--- 9. ЗАКАЗЫ
+-- 3.3. Операционные данные (Заказы, Задачи, Анализы)
 INSERT INTO `orders` (`order_number`, `customer_id`, `status`, `order_date`, `total_amount`, `notes`) VALUES
 ('ORD-2024-001', 4, 'processing', '2024-01-15', 2450.00, 'Срочный заказ'),
 ('ORD-2024-002', 5, 'ready', '2024-01-18', 1850.00, 'Отгрузка со склада'),
 ('ORD-2024-003', 4, 'new', '2024-01-20', 3200.00, 'Новый заказ на двигатели');
 
--- 10. ПОЗИЦИИ ЗАКАЗОВ
 INSERT INTO `order_items` (`order_id`, `product_id`, `quantity`, `price`, `total`) VALUES
-(1, 1, 2, 350.00, 700.00),
-(1, 2, 3, 480.00, 1440.00),
-(1, 11, 10, 15.00, 150.00),
-(2, 5, 1, 2500.00, 2500.00),
-(2, 12, 5, 25.00, 125.00),
-(3, 3, 4, 650.00, 2600.00),
-(3, 4, 1, 820.00, 820.00);
+(1, 1, 2, 350.00, 700.00), (1, 2, 3, 480.00, 1440.00), (1, 11, 10, 15.00, 150.00),
+(2, 5, 1, 2500.00, 2500.00), (2, 12, 5, 25.00, 125.00),
+(3, 3, 4, 650.00, 2600.00), (3, 4, 1, 820.00, 820.00);
 
--- 11. ПРОИЗВОДСТВЕННЫЕ ЗАДАНИЯ
 INSERT INTO `production_tasks` (`task_number`, `product_id`, `quantity_plan`, `quantity_fact`, `status`, `start_date`, `end_date`, `responsible_id`) VALUES
 ('TASK-2024-001', 1, 10, 10, 'completed', '2024-01-10', '2024-01-12', 3),
 ('TASK-2024-002', 2, 5, 5, 'completed', '2024-01-13', '2024-01-15', 3),
-('TASK-2024-003', 3, 8, 6, 'in_progress', '2024-01-16', '2024-01-20', 3),
+('TASK-2024-003', 3, 8, 6 , 'in_progress', '2024-01-16', '2024-01-20', 3),
 ('TASK-2024-004', 4, 3, 0, 'planned', '2024-01-22', '2024-01-25', 3),
 ('TASK-2024-005', 5, 2, 0, 'planned', '2024-01-25', '2024-01-28', 3);
 
--- 12. МАТЕРИАЛЫ ДЛЯ ЗАДАНИЙ
 INSERT INTO `production_tasks_materials` (`task_id`, `material_id`, `quantity_required`, `quantity_used`) VALUES
-(1, 1, 60, 60),
-(1, 7, 100, 100),
-(1, 14, 20, 20),
-(2, 2, 30, 30),
-(2, 8, 75, 75),
-(2, 15, 10, 10),
-(3, 3, 48, 36),
-(3, 9, 24, 18),
-(4, 4, 18, 0),
-(4, 10, 48, 0);
+(1, 1, 60, 60), (1, 7, 100, 100), (1, 14, 20, 20),
+(2, 2, 30, 30), (2, 8, 75, 75), (2, 15, 10, 10),
+(3, 3, 48, 36), (3, 9, 24, 18),
+(4, 4, 18, 0), (4, 10, 48, 0);
 
--- 13. ПРОВЕРКИ КАЧЕСТВА
 INSERT INTO `quality_checks` (`task_id`, `product_id`, `check_date`, `inspector_id`, `status`, `defect_description`, `quantity_checked`, `quantity_defective`) VALUES
 (1, 1, '2024-01-12 14:00:00', 2, 'pass', NULL, 10, 0),
 (2, 2, '2024-01-15 15:30:00', 2, 'pass', NULL, 5, 0),
@@ -776,7 +460,6 @@ INSERT INTO `quality_checks` (`task_id`, `product_id`, `check_date`, `inspector_
 (5, 5, '2024-01-22 16:00:00', 2, 'rework', 'Требуется балансировка ротора', 2, 1),
 (5, 5, '2024-01-23 10:00:00', 2, 'pass', NULL, 1, 0);
 
--- 14. СЕРИЙНЫЕ НОМЕРА
 INSERT INTO `product_serial_numbers` (`product_id`, `serial_number`, `production_date`, `task_id`, `status`) VALUES
 (1, 'SN-ADM80A4-2024-0001', '2024-01-12', 1, 'active'),
 (1, 'SN-ADM80A4-2024-0002', '2024-01-12', 1, 'active'),
@@ -784,4 +467,111 @@ INSERT INTO `product_serial_numbers` (`product_id`, `serial_number`, `production
 (3, 'SN-ADM100L4-2024-0001', '2024-01-18', 3, 'active'),
 (5, 'SN-DG5000-2024-0001', '2024-01-22', 5, 'warranty');
 
+INSERT INTO `demand_analysis` (`product_id`, `analysis_date`, `period_type`, `historical_avg`, `forecast_value`, `trend_coefficient`, `seasonality_factor`, `confidence_level`, `variance_percent`)
+SELECT id, CURDATE(), 'weekly', ROUND(RAND() * 50 + 10, 0), ROUND(RAND() * 60 + 15, 0), ROUND(0.9 + RAND() * 0.3, 3), ROUND(0.85 + RAND() * 0.3, 3), ROUND(75 + RAND() * 20, 2), ROUND(-15 + RAND() * 30, 2)
+FROM products WHERE is_active = 1 LIMIT 10;
 
+INSERT INTO `demand_analysis` (`product_id`, `analysis_date`, `period_type`, `historical_avg`, `forecast_value`, `trend_coefficient`, `seasonality_factor`, `confidence_level`, `variance_percent`)
+SELECT id, DATE_ADD(CURDATE(), INTERVAL 1 DAY), 'daily', ROUND(RAND() * 20 + 5, 0), ROUND(RAND() * 25 + 8, 0), ROUND(0.95 + RAND() * 0.2, 3), 1.0, ROUND(80 + RAND() * 15, 2), ROUND(-10 + RAND() * 20, 2)
+FROM products WHERE is_active = 1 LIMIT 8;
+
+-- 3.4. Планирование (вставляются после products, users, orders)
+INSERT INTO `production_plans` (`plan_number`, `product_id`, `plan_date`, `planned_quantity`, `demand_forecast`, `priority`, `status`, `responsible_id`, `notes`) VALUES
+('PLAN-2025-001', 1, CURDATE(), 25, 22, 1, 'in_progress', 1, 'Срочный заказ'),
+('PLAN-2025-002', 2, CURDATE(), 15, 18, 2, 'planned', 2, NULL),
+('PLAN-2025-003', 3, DATE_ADD(CURDATE(), INTERVAL 1 DAY), 30, 28, 1, 'planned', 1, 'Плановое производство'),
+('PLAN-2025-004', 1, DATE_ADD(CURDATE(), INTERVAL 1 DAY), 20, 22, 2, 'planned', 3, NULL),
+('PLAN-2025-005', 4, DATE_ADD(CURDATE(), INTERVAL 2 DAY), 40, 35, 2, 'planned', 2, 'Большая партия'),
+('PLAN-2025-006', 5, DATE_ADD(CURDATE(), INTERVAL 2 DAY), 12, 15, 3, 'planned', 1, NULL ),
+('PLAN-2025-007', 2, DATE_ADD(CURDATE(), INTERVAL 3 DAY), 18, 20, 1, 'planned', 3, 'Приоритетный заказ'),
+('PLAN-2025-008', 3, DATE_ADD(CURDATE(), INTERVAL 3 DAY), 25, 28, 2, 'planned', 2, NULL),
+('PLAN-2025-009', 1, DATE_ADD(CURDATE(), INTERVAL 4 DAY), 22, 22, 2, 'planned', 1, NULL),
+('PLAN-2025-010', 4, DATE_ADD(CURDATE(), INTERVAL 5 DAY), 35, 35, 3, 'planned', 3, 'На склад');
+
+INSERT INTO `production_material_requirements` (`plan_id`, `material_id`, `consumption_rate`, `required_quantity`, `unit_cost`, `total_cost`, `status`)
+SELECT 1, id, CASE WHEN id % 3 = 1 THEN 0.5 WHEN id % 3 = 2 THEN 0.3 ELSE 0.8 END,
+ROUND(25 * CASE WHEN id % 3 = 1 THEN 0.5 WHEN id % 3 = 2 THEN 0.3 ELSE 0.8 END, 2),
+COALESCE(last_price, 10), ROUND(25 * CASE WHEN id % 3 = 1 THEN 0.5 WHEN id % 3 = 2 THEN 0.3 ELSE 0.8 END * COALESCE(last_price, 10), 2), 'reserved'
+FROM materials LIMIT 5;
+
+INSERT INTO `production_material_requirements` (`plan_id`, `material_id`, `consumption_rate`, `required_quantity`, `unit_cost`, `total_cost`, `status`)
+SELECT 2, id, CASE WHEN id % 4 = 1 THEN 0.4 WHEN id % 4 = 2 THEN 0.6 ELSE 0.2 END,
+ROUND(15 * CASE WHEN id % 4 = 1 THEN 0.4 WHEN id % 4 = 2 THEN 0.6 ELSE 0.2 END, 2),
+COALESCE(last_price, 15), ROUND(15 * CASE WHEN id % 4 = 1 THEN 0.4 WHEN id % 4 = 2 THEN 0.6 ELSE 0.2 END * COALESCE(last_price, 15), 2), 'pending'
+FROM materials LIMIT 4;
+
+INSERT INTO `production_material_requirements` (`plan_id`, `material_id`, `consumption_rate`, `required_quantity`, `unit_cost`, `total_cost`, `status`)
+SELECT 3, id, 0.5, ROUND(30 * 0.5, 2), COALESCE(last_price, 12), ROUND(30 * 0.5 * COALESCE(last_price, 12), 2), 'pending'
+FROM materials LIMIT 6;
+
+INSERT INTO `production_material_requirements` (`plan_id`, `material_id`, `consumption_rate`, `required_quantity`, `unit_cost`, `total_cost`, `status`)
+SELECT 4, id, 0.4, ROUND(20 * 0.4, 2), COALESCE(last_price, 10), ROUND(20 * 0.4 * COALESCE(last_price, 10), 2), 'pending'
+FROM materials LIMIT 4;
+
+INSERT INTO `production_material_requirements` (`plan_id`, `material_id`, `consumption_rate`, `required_quantity`, `unit_cost`, `total_cost`, `status`)
+SELECT 5, id, 0.6, ROUND(40 * 0.6, 2), COALESCE(last_price, 8), ROUND(40 * 0.6 * COALESCE(last_price, 8), 2), 'pending'
+FROM materials LIMIT 7;
+
+INSERT INTO `production_schedules` (`plan_id`, `work_center_id`, `schedule_date`, `shift_type`, `start_time`, `end_time`, `planned_hours`, `workers_count`, `efficiency_percent`) VALUES
+(1, 1, CURDATE(), 'morning', '08:00:00', '17:00:00', 8.0, 8, 95.0),
+(1, 3, CURDATE(), 'afternoon', '14:00:00', '22:00:00', 8.0, 4, 90.0),
+(2, 2, CURDATE(), 'morning', '08:00:00', '17:00:00', 8.0, 6, 100.0),
+(3, 1, DATE_ADD(CURDATE(), INTERVAL 1 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 10, 0),
+(3, 4, DATE_ADD(CURDATE(), INTERVAL 1 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 3, 0),
+(4, 2, DATE_ADD(CURDATE(), INTERVAL 1 DAY), 'afternoon', '14:00:00', '22:00:00', 8.0, 7, 0),
+(5, 1, DATE_ADD(CURDATE(), INTERVAL 2 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 12, 0),
+(5, 3, DATE_ADD(CURDATE(), INTERVAL 2 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 5, 0),
+(6, 2, DATE_ADD(CURDATE(), INTERVAL 2 DAY), 'afternoon', '14:00:00', '22:00:00', 8.0, 4, 0),
+(7, 1, DATE_ADD(CURDATE(), INTERVAL 3 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 9, 0),
+(8, 2, DATE_ADD(CURDATE(), INTERVAL 3 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 8, 0),
+(9, 1, DATE_ADD(CURDATE(), INTERVAL 4 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 7, 0),
+(10, 3, DATE_ADD(CURDATE(), INTERVAL 5 DAY), 'morning', '08:00:00', '17:00:00', 8.0, 6, 0);
+
+INSERT INTO `production_costing` (`plan_id`, `material_cost`, `labor_cost`, `overhead_cost`, `total_cost`, `cost_per_unit`)
+SELECT pp.id, COALESCE(mat.total_material, 0), ROUND(COALESCE(mat.total_material, 0) * 0.3, 2),
+ROUND(COALESCE(mat.total_material, 0) * 0.15, 2), ROUND(COALESCE(mat.total_material, 0) * 1.45, 2),
+ROUND(ROUND(COALESCE(mat.total_material, 0) * 1.45, 2) / pp.planned_quantity, 2)
+FROM production_plans pp
+LEFT JOIN (SELECT plan_id, SUM(total_cost) as total_material FROM production_material_requirements GROUP BY plan_id) mat ON pp.id = mat.plan_id
+WHERE pp.id BETWEEN 1 AND 10;
+
+-- 3.5. Финальные обновления
+UPDATE `production_material_requirements` SET status = 'shortage' WHERE plan_id IN (3, 5) AND material_id IN (1, 2);
+UPDATE `production_material_requirements` SET reserved_quantity = required_quantity, status = 'reserved' WHERE plan_id = 1;
+
+-- ============================================
+-- 4. ПРЕДСТАВЛЕНИЯ (VIEWS)
+-- ============================================
+CREATE OR REPLACE VIEW `v_production_plan_summary` AS
+SELECT pp.id, pp.plan_number, pp.product_id, p.name as product_name, p.article as product_article,
+pp.plan_date, pp.planned_quantity, pp.actual_quantity, pp.demand_forecast, pp.priority, pp.status,
+COALESCE(pc.total_cost, 0) as total_cost, COALESCE(pc.cost_per_unit, 0) as cost_per_unit, u.full_name as responsible_name
+FROM production_plans pp
+JOIN products p ON pp.product_id = p.id
+LEFT JOIN production_costing pc ON pp.id = pc.plan_id
+LEFT JOIN users u ON pp.responsible_id = u.id;
+
+CREATE OR REPLACE VIEW `v_material_requirements_detail` AS
+SELECT pmr.id, pmr.plan_id, pp.plan_number, pp.product_id, p.name as product_name, pp.plan_date,
+pmr.material_id, m.name_full as material_name, m.code as material_code, m.current_stock,
+pmr.consumption_rate, pmr.required_quantity, pmr.reserved_quantity, pmr.actual_quantity,
+pmr.unit_cost, pmr.total_cost, pmr.status,
+CASE WHEN pmr.required_quantity > m.current_stock THEN 'shortage' ELSE 'ok' END as stock_status
+FROM production_material_requirements pmr
+JOIN production_plans pp ON pmr.plan_id = pp.id
+JOIN products p ON pp.product_id = p.id
+JOIN materials m ON pmr.material_id = m.id;
+
+CREATE OR REPLACE VIEW `v_work_center_load` AS
+SELECT ps.id, ps.plan_id, ps.work_center_id, wc.name as work_center_name, ps.schedule_date,
+ps.shift_type, ps.start_time, ps.end_time, ps.planned_hours, ps.actual_hours,
+ps.workers_count, ps.efficiency_percent, pp.plan_number, p.name as product_name
+FROM production_schedules ps
+JOIN work_centers wc ON ps.work_center_id = wc.id
+JOIN production_plans pp ON ps.plan_id = pp.id
+JOIN products p ON pp.product_id = p.id;
+
+-- ============================================
+-- 5. ЗАВЕРШЕНИЕ
+-- ============================================
+SET FOREIGN_KEY_CHECKS = 1;

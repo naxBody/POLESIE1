@@ -10,11 +10,11 @@
     <div class="sidebar-user">
         <div class="sidebar-user-info">
             <div class="sidebar-user-avatar">
-                <?= mb_substr($user['full_name'], 0, 1) ?>
+                <?= $user ? mb_substr($user['full_name'], 0, 1) : 'U' ?>
             </div>
             <div class="sidebar-user-details">
-                <div class="sidebar-user-name"><?= e($user['full_name']) ?></div>
-                <div class="sidebar-user-role"><?= e($user['role_name']) ?></div>
+                <div class="sidebar-user-name"><?= $user ? e($user['full_name']) : 'Пользователь' ?></div>
+                <div class="sidebar-user-role"><?= $user && isset($user['role_name']) ? e($user['role_name']) : '' ?></div>
             </div>
         </div>
     </div>
@@ -62,10 +62,6 @@
             <a href="<?= pageUrl('modules/production/release_plan.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/production/release_plan.php' ? 'active' : '' ?>">
                 <span class="sidebar-nav-icon">📋</span>
                 <span>План выпуска</span>
-            </a>
-            <a href="<?= pageUrl('modules/production/plan.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/production/plan.php' ? 'active' : '' ?>">
-                <span class="sidebar-nav-icon">📊</span>
-                <span>План производства</span>
             </a>
             <a href="<?= pageUrl('modules/production/list.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/production/list.php' ? 'active' : '' ?>">
                 <span class="sidebar-nav-icon">⚙️</span>

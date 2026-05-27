@@ -59,10 +59,6 @@
         <!-- Производство -->
         <div class="sidebar-nav-section">
             <div class="sidebar-nav-title">Производство</div>
-            <a href="<?= pageUrl('modules/production/release_plan.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/production/release_plan.php' ? 'active' : '' ?>">
-                <span class="sidebar-nav-icon">📋</span>
-                <span>План выпуска</span>
-            </a>
             <a href="<?= pageUrl('modules/production/list.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/production/list.php' ? 'active' : '' ?>">
                 <span class="sidebar-nav-icon">⚙️</span>
                 <span>Производственные задания</span>

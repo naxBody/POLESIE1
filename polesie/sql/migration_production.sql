@@ -6,6 +6,16 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
+-- Рабочие центры (ДОБАВЛЕНО для исправления ошибки FK)
+CREATE TABLE `work_centers` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(100) NOT NULL,
+  `code` VARCHAR(50) UNIQUE,
+  `description` TEXT,
+  `is_active` BOOLEAN DEFAULT TRUE,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 -- Таблица этапов производства (технологические операции)
 CREATE TABLE IF NOT EXISTS `production_stages` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,

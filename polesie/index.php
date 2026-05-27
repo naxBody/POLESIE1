@@ -209,7 +209,7 @@ $pageTitle = 'Панель управления';
                         <div class="card-header">
                             <h3 class="card-title">Производственные задания</h3>
                             <div class="card-tools">
-                                <a href="<?= pageUrl('modules/production/plan.php') ?>" class="btn btn-sm btn-info" style="margin-right: 5px;">План производства</a>
+                                <a href="<?= pageUrl('modules/production/release_plan.php') ?>" class="btn btn-sm btn-info" style="margin-right: 5px;">План выпуска</a>
                                 <a href="<?= pageUrl('modules/production/list.php') ?>" class="btn btn-sm btn-secondary">Все задания</a>
                             </div>
                         </div>

@@ -59,17 +59,30 @@
         <!-- Производство -->
         <div class="sidebar-nav-section">
             <div class="sidebar-nav-title">Производство</div>
+            <a href="<?= pageUrl('modules/production/release_plan.php') ?>" class="sidebar-nav-item <?= strpos($relativePath, 'release_plan') !== false ? 'active' : '' ?>">
+                <span class="sidebar-nav-icon">📋</span>
+                <span>План выпуска</span>
+            </a>
             <a href="<?= pageUrl('modules/production/list.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/production/list.php' ? 'active' : '' ?>">
                 <span class="sidebar-nav-icon">⚙️</span>
                 <span>Производственные задания</span>
+            </a>
+            <a href="<?= pageUrl('modules/production/plan.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/production/plan.php' ? 'active' : '' ?>">
+                <span class="sidebar-nav-icon">📊</span>
+                <span>План производства</span>
             </a>
             <a href="<?= pageUrl('modules/production/serial_numbers.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/production/serial_numbers.php' ? 'active' : '' ?>">
                 <span class="sidebar-nav-icon">🔢</span>
                 <span>Серийные номера</span>
             </a>
+        </div>
+        
+        <!-- Продукция -->
+        <div class="sidebar-nav-section">
+            <div class="sidebar-nav-title">Продукция</div>
             <a href="<?= pageUrl('modules/products/list.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/products/list.php' ? 'active' : '' ?>">
                 <span class="sidebar-nav-icon">🔧</span>
-                <span>Продукция</span>
+                <span>Каталог продукции</span>
             </a>
             <a href="<?= pageUrl('modules/products/passports.php') ?>" class="sidebar-nav-item <?= $relativePath === 'modules/products/passports.php' ? 'active' : '' ?>">
                 <span class="sidebar-nav-icon">📄</span>
